@@ -29,27 +29,27 @@ header.container.header {
         header.container > .row.top > p {
             color: #999;
         }
-    header.container > .row.bottom {
+    header.container > .row.navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-        header.container > .row.bottom > .logo {
+        header.container > .row.navigation > .logo {
             display: inline-block;
             margin-left: 9%;
         }
-        header.container > .row.bottom > .hamburger {
+        header.container > .row.navigation > .hamburger {
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
 /* font awesome arrows for dropdown span::after */
-        header.container > .row.bottom > .searchlang {
+        header.container > .row.navigation > .searchlang {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-            header.container > .row.bottom > .searchlang > div:first-of-type {
+            header.container > .row.navigation > .searchlang > div:first-of-type {
                 border-right: 1px #9994 solid;;
             }
 
