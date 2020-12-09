@@ -1,0 +1,33 @@
+.container.info {
+    background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+}
+.ourcompany > div:first-of-type {
+    margin: 0px 120px 0px 20px;
+}
+    h3 {
+        color: var(--font-grey);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 645;
+        letter-spacing: 2px;
+    }
+    h2 {
+        color: black;
+        font-size: 44px;
+        font-weight: 600;
+        margin: 20px 0px;
+    }
+        h2 > u {
+            color: var(--font-blue);
+            text-decoration: none;
+        }
+    p {
+        color: var(--font-darkgrey);
+        line-height: 24px;
+    }
+.ourcompany > div:last-of-type {
+    background-color: wheat;
+    margin: 0px 20px 0px 120px;
+}
