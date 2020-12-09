@@ -12,23 +12,23 @@ header.container.header {
         height: 24px;
         margin-top: 6px;
         padding-bottom: 6px;
-        border-bottom: 1px #9994 solid;
+        border-bottom: 1px var(--border-grey) solid;
     }
         header.container > .row.top > a {
             text-transform: capitalize;
-            color: #44f;
+            color: var(--font-blue);
             text-decoration: none;
             transition: 0.75s;
         }
         header.container > .row.top > a:hover {
-            color: hsl(40, 50%, 50%);
+            color: var(--font-orange);
         }
             header.container > .row.top > a::after {
                 content: ':  ';
                 white-space: pre;
             }
         header.container > .row.top > p {
-            color: #999;
+            color: var(--font-grey);
         }
     header.container > .row.navigation {
         display: grid;
@@ -62,6 +62,6 @@ header.container.header {
                 display: flex;
             }
         header.container > .row.navigation > .searchlang > div:first-of-type {
-            border-right: 1px #9994 solid;;
+            border-right: 1px var(--border-grey) solid;;
         }
 
