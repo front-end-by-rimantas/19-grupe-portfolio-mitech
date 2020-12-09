@@ -15,7 +15,7 @@ header.container.header {
     }
         header.container > .row.top > a {
             text-transform: capitalize;
-            color: #11c;
+            color: #44f;
             text-decoration: none;
             transition: 0.75s;
         }

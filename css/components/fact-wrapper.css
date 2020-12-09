@@ -1,0 +1,39 @@
+.container.factwrapper > * {
+    text-align: center;
+}
+.container.factwrapper > .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .container.factwrapper > .row > .facts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        width: 196px;
+        border: 1px #9994 solid;
+        border-right: none;
+    }
+    .container.factwrapper > .row > .facts:last-of-type {
+        border-right: 1px #9994 solid;
+    }
+        .container.factwrapper > .row > .facts > .upper {
+            margin-top: 60px;
+            font-size: 18px;
+        }
+        .container.factwrapper > .row > .facts > .numbers {
+            color: #44f;
+            font-size: 44px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+        .container.factwrapper > .row > .facts > .bottom {
+            color: hsl(40, 50%, 50%);
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 70px;
+        }
