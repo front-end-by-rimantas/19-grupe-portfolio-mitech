@@ -3,6 +3,7 @@
 @import './components/reset.css';
 @import './components/layout.css';
 /* 3rd party components */
+@import './components/font-awesome.min.css';
 /* your components */
 @import './components/button.css';
 @import './components/gallery.css';
