@@ -1,0 +1,103 @@
+
+   .case {
+       background-color: #fbfbfb;
+       background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
+       background-repeat: no-repeat;
+       /* background-size: contain; */
+       background-position: 0% 100%;
+       /* background-size: 100vh */
+   }
+    #case-head {
+        text-align: center;   
+    }
+        #case-head > h6 {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: var(--font-grey);
+        }
+        #case-head > h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        #case-head > h3 > u {
+            text-decoration: none;
+            color: var(--font-blue)
+        }
+
+    #cards-block {
+        /* padding-bottom: 100px; */
+    }
+
+    
+   
+   #cards-block > .col-4 {
+        gap: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 8px 13px 5px 3px #f4f4f4;
+        cursor: pointer;
+    }
+
+    .card > img {
+        max-width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .content > h4 {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 20px 20px 0 20px;
+    }
+    .content > u {
+       line-height: 36px;
+       color: var(--font-blue);
+       text-decoration: none;
+       padding: 0px 20px;
+       
+    }
+    .content > p {
+        margin-top: 10px;
+        color: var(--font-grey);
+        padding: 0px 20px;
+
+    }
+
+    .content>.view {
+        /* position: absolute; */
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+        /* color: var(--font-blue); */
+        border-top: 1px solid #ccc;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: linear-gradient(to top, var(--font-blue) 50%, #fff 50%);
+        background-size: 100% 200%;
+        background-position: top left;
+        transition: all 0.7s ease-out;
+    }
+
+        .content>.view:hover {
+            background-position: bottom left;
+            color: #ffff
+
+        }
+
+.bubbles {
+    text-align: center;
+    font-size: 25px;
+}
+
+.challenge {
+    text-align: center;
+    font-size: 25px;
+}
+    .challenge > p > u {
+        text-decoration: none;
+        color: var(--font-blue)
+    }
