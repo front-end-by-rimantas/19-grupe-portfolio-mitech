@@ -4,52 +4,64 @@ header.container.header {
     header.container > .row {
         grid-column: 1/2;
     }
-/* look for font */
     header.container > .row.top {
         display: flex;
         justify-content: center;
+        align-items: center;
         font-size: 10px;
         height: 24px;
-        padding: 6px 0px;
-        border-bottom: 1px #9994 solid;
+        margin-top: 6px;
+        padding-bottom: 6px;
+        border-bottom: 1px var(--border-grey) solid;
     }
         header.container > .row.top > a {
             text-transform: capitalize;
-            color: #44f;
+            color: var(--font-blue);
             text-decoration: none;
             transition: 0.75s;
         }
         header.container > .row.top > a:hover {
-            color: hsl(40, 50%, 50%);
+            color: var(--font-orange);
         }
             header.container > .row.top > a::after {
                 content: ':  ';
                 white-space: pre;
             }
         header.container > .row.top > p {
-            color: #999;
+            color: var(--font-grey);
         }
     header.container > .row.navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 540px 1fr;
     }
         header.container > .row.navigation > .logo {
             display: inline-block;
-            margin-left: 9%;
+            margin: 9px 28%;
+            grid-column: 1/2;
         }
+            header.container > .row.navigation > .logo > a {
+                display: inline-block;
+            }
+                header.container > .row.navigation > .logo > a > img {
+                    display: inline-block;
+                    height: 32px;
+                }
         header.container > .row.navigation > .hamburger {
+            grid-column: 2/3;
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-/* font awesome arrows for dropdown span::after */
         header.container > .row.navigation > .searchlang {
+            grid-column: 3/4;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-            header.container > .row.navigation > .searchlang > div:first-of-type {
-                border-right: 1px #9994 solid;;
+            header.container > .row.navigation > .searchlang > .language {
+                display: flex;
             }
+        header.container > .row.navigation > .searchlang > div:first-of-type {
+            border-right: 1px var(--border-grey) solid;;
+        }
 
