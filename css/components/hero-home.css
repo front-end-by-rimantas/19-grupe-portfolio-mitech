@@ -14,9 +14,8 @@
    }
 h1.hero {
     width: 100%;
-    font-size: 46px;
+    font-size: 56px;
     color: #333333;
-    font-family: "CerebriSans";
 }
 h5.hero {
     color: var(--font-blue);
