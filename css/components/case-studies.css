@@ -67,12 +67,11 @@
     }
 
     .content>.view {
-        /* position: absolute; */
         margin-top: 30px;
         width: 100%;
         text-align: center;
         padding: 20px 20px 20px 20px;
-        /* color: var(--font-blue); */
+        color: var(--font-blue);
         border-top: 1px solid #ccc;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -90,12 +89,12 @@
 
 .bubbles {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .challenge {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
     .challenge > p > u {
         text-decoration: none;
