@@ -31,6 +31,13 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
+@font-face {
+    font-family: Cerebri;
+    src: url(../fonts/Cerebri\ Sans\ Regular.ttf);
+}
+body * {
+    font-family: Cerebri;
+}
 
 /* header */
 
