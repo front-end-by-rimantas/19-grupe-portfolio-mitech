@@ -1,4 +1,4 @@
-.container.info {
+.container.info-techno {
     background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
     background-size: 25%;
     background-repeat: no-repeat;
@@ -29,5 +29,20 @@
     }
 .ourcompany > div:last-of-type {
     background-color: wheat;
-    margin: 0px 20px 0px 120px;
+    margin: 0px 10px 0px 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
+    .info {
+        display: flex;
+        background-color: thistle;
+        width: 100%;
+        height: 31%;
+        margin: 1% 0px;
+    }
+        .info > .number {
+            width: 10%;
+            color:  var(--font-darkgrey);
+            font-size: 20px;
+        }
