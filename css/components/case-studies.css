@@ -3,9 +3,7 @@
        background-color: #fbfbfb;
        background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
        background-repeat: no-repeat;
-       /* background-size: contain; */
        background-position: 0% 100%;
-       /* background-size: 100vh */
    }
     #case-head {
         text-align: center;   
@@ -33,7 +31,6 @@
         border-radius: 10px;
         box-shadow: 8px 13px 5px 3px #f4f4f4;
         cursor: pointer;
-        bottom: 50px;
         transition: all ease-in-out 0.5s;
     }
 
@@ -68,7 +65,6 @@
         text-align: center;
         padding: 20px 20px 20px 20px;
         color: var(--font-blue);
-        vertical-align: middle;
         border-top: 1px solid #ccc;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
