@@ -57,27 +57,5 @@
                 font-size: 26px;
                 font-weight: 600;
             }
-    .hireus > div:first-of-type {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .hireus > .links {
-        display: flex;
-        gap: 30px;
-    }
-    .hireus a {
-        display: inline-block;
-        width: 100%;
-        position: relative;
-    }
-    .links img {
-        display: inline-block;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: auto;
-    }
 
 
