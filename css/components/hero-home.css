@@ -10,20 +10,21 @@
     flex-flow: column;
     flex-wrap: wrap;
     gap: 15px;
-    margin-left: 30%;
+    margin-left: 10%;
    }
 h1.hero {
     width: 100%;
-    font-size: 40px;
+    font-size: 46px;
     color: #333333;
     font-family: "CerebriSans";
 }
 h5.hero {
     color: var(--font-blue);
+    font-size: 18px;
 }
 p.hero {
     color: var(--font-grey);
-    font-size: 12px;
+    font-size: 15px;
 }
 img.hero {
     max-width: 100%;
