@@ -31,7 +31,10 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
-
+* body{
+    font-size: 15px;
+    font-weight: 400;
+}
 /* header */
 
 /* hero */
