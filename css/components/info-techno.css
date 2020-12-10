@@ -6,20 +6,20 @@
 .ourcompany > div:first-of-type {
     margin: 0px 120px 0px 20px;
 }
-    h3 {
+    .info-techno h6 {
         color: var(--font-grey);
         text-transform: uppercase;
         font-size: 14px;
-        font-weight: 645;
-        letter-spacing: 2px;
+        font-weight: 647;
+        letter-spacing: 3px;
     }
-    h2 {
+    .info-techno h3 {
         color: black;
         font-size: 44px;
         font-weight: 600;
         margin: 20px 0px;
     }
-        h2 > u {
+        .info-techno h3 > u {
             color: var(--font-blue);
             text-decoration: none;
         }
@@ -28,21 +28,56 @@
         line-height: 24px;
     }
 .ourcompany > div:last-of-type {
-    background-color: wheat;
     margin: 0px 10px 0px 100px;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
     .info {
         display: flex;
-        background-color: thistle;
         width: 100%;
-        height: 31%;
-        margin: 1% 0px;
+        height: 30%;
     }
         .info > .number {
             width: 10%;
             color:  var(--font-darkgrey);
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: bold;
         }
+        .info > .line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            height: 60%;
+            align-self: center;
+            border-top: 1px solid var(--border-grey);
+        }
+            .info > .line > * {
+                font-size: 26px;
+                font-weight: 600;
+            }
+    .hireus > div:first-of-type {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hireus > .links {
+        display: flex;
+        gap: 30px;
+    }
+    .hireus a {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+    .links img {
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+    }
+
+
