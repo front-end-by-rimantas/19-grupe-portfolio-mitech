@@ -1,0 +1,50 @@
+.container.footer {
+    background-color: var(--bg-colour);
+    text-align: left;
+}
+#logo-footer {
+    width: 160px;
+    margin-bottom: 30px;
+}
+.footer-column {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--font-grey);
+    list-style-type:none;
+}
+.footer-column > li {
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+#contact-phone {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+#brand-website {
+    color: var(--font-blue);
+}
+#brand-website:hover {
+    color: var(--font-orange);
+}
+.footer-column > li > h6 {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.spaceholder {
+    margin-bottom: 50px;
+}
+.app-btn {
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 20px #3333331a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.app-btn > img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}

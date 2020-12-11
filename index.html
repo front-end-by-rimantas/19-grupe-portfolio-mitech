@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/home-page.css">
 </head>
 
@@ -17,7 +17,7 @@
             <a href="#">now hiring</a>
             <p> Are you a driven and motivated 1st Line IT Support Engineer?</p>
         </div>
-        <!-- top message end -->       
+        <!-- top message end -->
         <!-- navigation begin -->
         <div class="row navigation">
             <div class="logo">
@@ -119,9 +119,33 @@
     
     
     <!-- section SERVICES begin -->
-    <section class="container">
-        <div class="row">
-            SERVICES
+    <section class="container services">
+        <div class="row"> 
+            <h6 class="services col-12"> Our Services</h6>
+            <h3 class="services col-12" > For your very specific industry, we have <u>highly-tailored IT solutions.</u></h3>
+        </div>
+        <div class="row"> 
+            <div class="service col-4">
+                <img src="./img/services-foto/it-design.png" alt="IT design">
+                <h3> IT Design</h3>
+                <p>We provide the most responsive and functional IT design for companies and businesses worldwide.</p>
+                <div class="btn">btn arrow</div>
+            </div>
+            <div class="service col-4">
+                <img src="./img/services-foto/it-management.png" alt="IT Management">
+                <h3> IT Management</h3>
+                <p>It's possible to simultaneously manage and transform information from one server to another</p>
+                <div class="btn">btn arrow</div>
+            </div>
+            <div class="service col-4">
+                <img src="./img/services-foto/data-security.png" alt="Data Security">
+                <h3> Data Security</h3>
+                <p>Back up your database, store in a safe and secure place while still maintaining its accessibility.</p>
+                <div class="btn">btn arrow</div> 
+            </div>
+        </div>
+        <div  class="row"> 
+            <p class="services col-12">Challenges are just opportunities in disguise.<a href="#">Take the challenge!</a></p>
         </div>
     </section>
     <!-- section SERVICES end -->
@@ -170,9 +194,22 @@
     <!-- section FACT WRAPPER end -->
 
     <!-- section VIDEO begin -->
-    <section class="container">
+    <section class="video container">
         <div class="row">
-            VIDEO
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="video-head">
+                    <h2>Share the joy of achieving glorious moments<br>
+                        & climbing up the top.</h2>
+                </div>
+                <div class="video-play">
+                    <a href="##">
+                    <div class="fa fa-play"></div>
+                    <div class="video-text">Watch video <br> intro</div>
+                    </a>
+                </div>
+            </div>
+            
         </div>
     </section>
     <!-- section VIDEO end -->
@@ -181,6 +218,7 @@
     <section class="case container">
         <div class="row">
             <div class="col-12">
+
                 <div id="case-head">
                     <h6>Case studies</h6>
                     <h3>Proud projects that<u> make us stand out</u></h3>
@@ -188,17 +226,19 @@
             </div>
         </div>
         <div class="row" id="cards-block">
-            <div class="col-4">
-                <div class="card">
-                    <img src="./img/case-study/aqua.jpg" alt="card1">
-                    <div class="content">
-                        <h4>Aqua- Research and Energy</h4>
-                        <u>Cyber security</u>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
-                        <div class="view">View case study</div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="./img/case-study/aqua.jpg" alt="card1">
+                        <div class="content">
+                            <h4>Aqua- Research and Energy</h4>
+                            <u>Cyber security</u>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
+                            <div class="view">View case study
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             <div class="col-4">
                 <div class="card">
                     <img src="./img/case-study/mitech.jpg" alt="card1">
@@ -207,6 +247,7 @@
                         <u>Cyber security</u>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
                         <div class="view">View case study
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </div>
                 </div>
                 </div>
@@ -218,7 +259,9 @@
                         <h4>Arden-Internal Network</h4>
                         <u>Cyber security</u>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
-                        <div class="view">View case study</div>
+                        <div class="view">View case study
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,10 +301,106 @@
     <!-- section CONTACT US end -->
 
     <!-- section FOOTER begin -->
-    <section class="container">
+    <section class="container footer" >
         <div class="row">
-            FOOTER
+            <div class="col-4 col-md-6 col-sm-8 col-xs-12">
+                <img id="logo-footer" src="./img/header/logo-dark.png" alt="logo-dark">
+                <ul class="footer-column">
+                    <li>
+                        58 Howard Street #2 San Francisco, CA 941
+                    </li>
+                    <li>
+                        <a class="underline-link" href="mailto:contact@aeroland.com">contact@aeroland.com</a>
+                    </li>
+                    <li>
+                        <a id="contact-phone" href="tel:+68122109876"> (+68)1221 09876 </a>
+                    </li>
+                    <li>
+                        <a class="underline-link" id="brand-website" href="#">www.mitech.xperts.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li>
+                        <h6>IT Services</h6>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Managed IT</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">IT support</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">IT consultancy</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cloud computing</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cyber security</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li>
+                        <h6>Quick links</h6>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Pick up locations</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Terms of payment</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Privacy policy</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Where to find us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li> 
+                        <h6>Support</h6> 
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Forum support</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Help & FAQ</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Contact us</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Pricing and plans</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cookies policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <div class="spaceholder"></div>
+                <ul class="footer-column">
+                    <li>
+                        <a class="app-btn" href="#">
+                            <img src="./img/contacts/google-play.jpeg" alt="Google Play Store">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="app-btn" href="#">
+                            <img src="./img/contacts/app-store.jpeg" alt="Apple App Store">
+                            </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        
     </section>
     <!-- section FOOTER end -->
 
@@ -272,6 +411,18 @@
         </div>
     </section>
     <!-- section SOCIAL ICON & Copyright end -->
+    <div class="toast">
+        <!-- <h3>Hello</h3> -->
+        <a href="#">
+        <i class="fa fa-link"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-life-ring"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+        </a>
+    </div>
 
     <script src="./js/main-home.js" type="module"></script>
 </body>
