@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     color: var(--font-grey);
+    list-style-type:none;
 }
 .footer-column > li {
     margin-bottom: 10px;
