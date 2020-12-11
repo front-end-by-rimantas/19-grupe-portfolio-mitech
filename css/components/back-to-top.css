@@ -1,0 +1,15 @@
+.back > a {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    padding:15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: var(--font-blue);
+}
