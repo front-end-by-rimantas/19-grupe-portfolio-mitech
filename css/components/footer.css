@@ -32,3 +32,18 @@
     font-size: 18px;
     margin-bottom: 20px;
 }
+.spaceholder {
+    margin-bottom: 50px;
+}
+.app-btn {
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 20px #3333331a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.app-btn > img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
