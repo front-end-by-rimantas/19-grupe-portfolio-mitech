@@ -14,8 +14,10 @@
 }
 .footer-column > li {
     margin-bottom: 10px;
+    line-height: 24px;
 }
 #contact-phone {
+    text-decoration: none;
     color: black;
     font-weight: 800;
 }
