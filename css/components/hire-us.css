@@ -1,55 +1,136 @@
+.hireus {
+    margin-top: 80px;
+}
 .hireus > div:first-of-type {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
+.hireus > div.hireus-container:hover {
+    cursor: pointer;
+}
 .hireus > .linklist {
+    padding: 0% 1%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 70px;
 }
     .linklist > div {
         display: inline-block;
         grid-column: auto / span 1;
-        margin-top: 3px;
-        transition: 0.75s;
+        margin: 8px 0px 0px 0px;
+        transition: ease-in-out 0.5s;
     }
     .linklist > div:hover {
-        margin-top: 0px;
+        margin: 0px 0px 8px 0px;
+    }
+    .linklist > div:hover .curtain {
+        background-color: #02ab;
     }
         .linklist a {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            flex-flow: column;
+            justify-content: center;
             width: 100%;
             position: relative;
             border: 0px transparent solid;
-            border-radius: 10px;
+            border-radius: 8px;
+            overflow: hidden;
         }
-            .linklist span {
+            .curtain {
                 display: inline-block;
                 position: absolute;
-                color: white;
-                font-size: 22px;
-                text-align: center;
-                top: 80%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                border: 0px transparent solid;
+                border-radius: 8px;
+                background-color: transparent;
+                transition: ease-in-out 0.5s;
+                z-index: 1;
             }
             .linklist span.btn {
-                display: inline-block;
+                display: flex;
                 position: absolute;
                 color: var(--font-blue);
                 background-color: white;
+                padding: 23px 38px;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform-origin: 50% 100%;
+                height: 61px;
+                transform: translate(-50%, -40%) scaleY(0);
+                border: 0px transparent solid;
+                border-radius: 6px;
+                transition: ease-in-out 0.5s;
+                z-index: 1;
+            }
+            .linklist > div:hover span.btn {
+                transform: translate(-50%, -50%) scaleY(1);
             }
             .linklist img{
                 display: inline-block;
                 width: 100%;
                 border: 0px transparent solid;
                 border-radius: 10px;
+                transform: scale(1, 1);
+                transition: ease-in-out 0.5s;
             }
+            .linklist > div:hover img {
+                transform: scale(1.1, 1.1);
+            }
+            .linklist .overflow {
+                display: inline-block;
+                position: absolute;
+                bottom: 0%;
+                width: 100%;
+                height: 29%;
+                border: 0px transparent solid;
+                border-radius: 8px;
+                background: linear-gradient(#02c0,#1056,#1058);
+                overflow: hidden;
+            }
+                .overflow .bottom {
+                    display: inline-block;
+                    color: white;
+                    font-size: 25px;
+                    padding: 0% 12%;
+                    text-align: center;
+                    font-weight: 650;
+                    transition: ease-in-out 0.5s;
+                }
+                .linklist > div:hover .bottom {
+                    transform: translateY(-150%);
+                }
+                .hireus  p {
+                    display: inline-block;
+                    padding: 20px 3px;
+                    text-align: center;
+                }
+                p > u {
+                    text-decoration: none;
+                    color: #111;
+                }
+                .hireus > div:last-of-type {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .hireus .underline-link {
+                    color: var(--font-blue);
+                    border-bottom: 1px solid var(--font-grey);
+                }
+                .hireus .underline-link::after {
+                    background-color: var(--font-blue);
+                    height: 1px;
+                    bottom: -1px;
+                }
+                .hireus .underline-link:hover {
+                    color: var(--font-blue);
+                }
+                    .hireus .underline-link span {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+
+                
+            
