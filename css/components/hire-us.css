@@ -4,19 +4,52 @@
     justify-content: center;
     align-items: center;
 }
-.hireus > .links {
-    display: flex;
-    gap: 30px;
+.hireus > .linklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
-.hireus a {
-    display: inline-block;
-    width: 100%;
-    position: relative;
-}
-.links img {
-    display: inline-block;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: auto;
-}
+    .linklist > div {
+        display: inline-block;
+        grid-column: auto / span 1;
+        margin-top: 3px;
+        transition: 0.75s;
+    }
+    .linklist > div:hover {
+        margin-top: 0px;
+    }
+        .linklist a {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-flow: column;
+            width: 100%;
+            position: relative;
+            border: 0px transparent solid;
+            border-radius: 10px;
+        }
+            .linklist span {
+                display: inline-block;
+                position: absolute;
+                color: white;
+                font-size: 22px;
+                text-align: center;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .linklist span.btn {
+                display: inline-block;
+                position: absolute;
+                color: var(--font-blue);
+                background-color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .linklist img{
+                display: inline-block;
+                width: 100%;
+                border: 0px transparent solid;
+                border-radius: 10px;
+            }
