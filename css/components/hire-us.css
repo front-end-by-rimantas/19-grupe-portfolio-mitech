@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 }
-.hireus > div.hireus-container:hover {
+.hireus div.hireus-container:hover {
     cursor: pointer;
 }
 .hireus > .linklist {
@@ -116,8 +116,9 @@
                     text-align: center;
                 }
                 .hireus .underline-link {
+                    display: flex;
                     color: var(--font-blue);
-                    border-bottom: 1px solid var(--font-grey);
+                    border-bottom: 1px solid #ccc;
                 }
                 .hireus .underline-link::after {
                     background-color: var(--font-blue);
@@ -130,6 +131,11 @@
                     .hireus .underline-link span {
                         font-size: 18px;
                         font-weight: bold;
+                    }
+                    .hireus .underline-link i {
+                        display: inline-block;
+                        align-self: center;
+                        margin-left: 10px;
                     }
 
                 
