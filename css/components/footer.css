@@ -1,4 +1,5 @@
 .container.footer {
+    background-color: var(--background-colour);
     text-align: left;
 }
 #logo-footer {
@@ -14,14 +15,6 @@
 .footer-column > li {
     margin-bottom: 10px;
 }
-.footer-column> li > a {
-    text-decoration: none;
-    color: var(--font-grey);
-    transition: 0.75s;
-}
-.footer-column > li > a:hover {
-    color: var(--font-orange);
-}
 #contact-phone {
     color: black;
     font-weight: 800;
@@ -31,4 +24,9 @@
 }
 #brand-website:hover {
     color: var(--font-orange);
+}
+.footer-column > li > h6 {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
