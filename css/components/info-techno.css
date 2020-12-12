@@ -1,0 +1,92 @@
+.container.info-techno {
+    background-color: var(--bg-colour2);
+    background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 0px 20%; /* kad siek tiek nusileistu background image */
+}
+.ourcompany > div:first-of-type {
+    margin: 0px 120px 0px 20px; /* kairio stulpelio pozicionavimas */
+}
+.info-techno h6 { /* h6 reikes paimti is default style */
+    color: var(--font-grey);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 647;
+    letter-spacing: 3px;
+}
+.info-techno h3 { /* h3 reikes paimti is default style*/
+    color: black;
+    font-size: 44px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+.info-techno h3 > u { /* h3 > u reikes paimti is default style */
+    color: var(--font-blue);
+    font-weight: 600;
+    font-size: 44px;
+    text-decoration: none;
+}
+p { /* p reikes paimti is default style */
+    color: var(--font-darkgrey);
+    line-height: 24px;
+}
+.ourcompany > div:last-of-type { /* desinio stulpelio pozicionavimas */
+    margin: 0px 10px 0px 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.info { /* bendras skaiciuoko, uzraso ir rodyklytes konteineris */
+    display: flex;
+    width: 100%;
+    height: 22%;
+}
+.info:hover {
+    cursor: pointer;
+}
+.info > .number { /* skaiciukas stovi virsuj kairej info kontainerio */
+    display: inline-block;
+    width: 10%;
+    color:  var(--font-darkgrey);
+    font-size: 24px;
+    font-weight: bold;
+}
+.info:hover .number {
+    color: var(--font-blue)
+}
+.info > .line { /* konteineris uzrasui ir rodyklytei */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* kad rodyklyte galetu buti absolute */
+    width: 88%;
+    height: 75%;
+    margin-left: 2%;
+    border-top: 1px solid var(--border-grey); /* virs teksto esanti pilka linija */
+    align-self: flex-end;
+}
+.info > .line > * { /* del teksto ir rodyklyciu dydzio ir animavimo */
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    transition: ease-in-out 0.5s;
+}
+.info:hover span {
+    color: var(--font-blue)
+}
+.info i { /* 'neuzhoverintos' rodyklytes pozicija */
+    position: absolute;
+    right: 0%;
+}
+.info i:last-of-type{ /* 'nematoma' rodykle animacijai */
+    color: transparent;
+    right: 7%;
+}
+.info:hover i:first-of-type { /* pirma rodykle pradingsta */
+    color: transparent;
+}
+.info:hover i:last-of-type { /* anta atsiranda */
+    color: var(--font-blue);
+    right: 0%;
+}
