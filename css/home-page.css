@@ -1,6 +1,7 @@
 /* reset/main */
 @import './components/variables.css';
 @import './components/reset.css';
+@import './components/fonts.css';
 @import './components/layout.css';
 /* 3rd party components */
 @import './components/font-awesome.min.css';
@@ -31,15 +32,6 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
-@font-face {
-    font-family: Cerebri;
-    src: url(../fonts/Cerebri\ Sans\ Regular.ttf);
-}
-body *{
-    font-size: 15px;
-    font-weight: 400;
-    font-family: Cerebri;
-}
 .underline-link {
     text-decoration: none;
     display: inline-block;
