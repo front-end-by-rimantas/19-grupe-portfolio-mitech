@@ -3,9 +3,7 @@
        background-color: #fbfbfb;
        background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
        background-repeat: no-repeat;
-       /* background-size: contain; */
        background-position: 0% 100%;
-       /* background-size: 100vh */
    }
     #case-head {
         text-align: center;   
@@ -26,12 +24,6 @@
             text-decoration: none;
             color: var(--font-blue)
         }
-
-    #cards-block {
-        /* padding-bottom: 100px; */
-    }
-
-    
    
    #cards-block > .col-4 {
         gap: 20px;
@@ -39,6 +31,7 @@
         border-radius: 10px;
         box-shadow: 8px 13px 5px 3px #f4f4f4;
         cursor: pointer;
+        transition: all ease-in-out 0.5s;
     }
 
     .card > img {
@@ -78,14 +71,23 @@
         background: linear-gradient(to top, var(--font-blue) 50%, #fff 50%);
         background-size: 100% 200%;
         background-position: top left;
-        transition: all 0.7s ease-out;
+        transition: all 0.5s ease-out;
     }
-
-        .content>.view:hover {
-            background-position: bottom left;
-            color: #ffff
-
+        .content>.view > .fa {
+            line-height: 20px;
+            margin-left: 5px;
         }
+
+    #cards-block > .col-4:hover {
+        
+        transform: translateY(-5px);
+    }
+    
+        #cards-block > .col-4:hover > .card > .content > .view {
+                background-position: bottom left;
+                color: #ffff
+
+            }
 
 .bubbles {
     text-align: center;

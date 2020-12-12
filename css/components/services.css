@@ -1,0 +1,10 @@
+.container.services {
+    background-color: #F8F8F8;
+    text-align: center;
+}
+
+.service.col-4 {
+    background-color: #ffffff;
+    margin-top: 60px;
+    padding: 50px 30px 63px 30px;
+}
