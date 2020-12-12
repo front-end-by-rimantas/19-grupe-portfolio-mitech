@@ -1,5 +1,5 @@
 .container.info-techno {
-    background-color: #fefefe;
+    background-color: var(--bg-colour2);
     background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
     background-size: 25%;
     background-repeat: no-repeat;
