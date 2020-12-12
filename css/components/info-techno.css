@@ -33,29 +33,58 @@
         margin: 0px 10px 0px 100px;
         display: flex;
         flex-flow: column;
-        justify-content: space-around;
+        justify-content: space-between;
     }
         .info {
             display: flex;
             width: 100%;
-            height: 30%;
+            height: 22%;
+        }
+        .info:hover {
+            cursor: pointer;
+        }
+        .info:hover .number {
+            color: var(--font-blue)
+        }
+        .info:hover .line > span {
+            color: var(--font-blue)
         }
             .info > .number {
+                display: inline-block;
                 width: 10%;
                 color:  var(--font-darkgrey);
                 font-size: 24px;
                 font-weight: bold;
             }
             .info > .line {
+                position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 90%;
-                height: 60%;
-                align-self: center;
+                width: 88%;
+                margin-left: 2%;
+                height: 75%;
+                align-self: flex-end;
                 border-top: 1px solid var(--border-grey);
             }
                 .info > .line > * {
-                    font-size: 26px;
+                    font-size: 24px;
                     font-weight: 600;
+                    transition: ease-in-out 0.5s;
+                }
+                .info i {
+                    display: inline-block;
+                    position: absolute;
+                    right: 0%;
+                }
+                .info:hover i:first-of-type {
+                    color: transparent;
+                }
+                .info i:last-of-type{
+                    color: transparent;
+                    right: 7%;
+                }
+                .info:hover i:last-of-type {
+                    color: var(--font-blue);
+                    right: 0%;
                 }
