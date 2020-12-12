@@ -1,142 +1,140 @@
 .hireus {
     margin-top: 80px;
 }
-.hireus > div:first-of-type {
+.hireus > div:first-of-type { /*titulinis sekcijos uzrasas */
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
-.hireus div.hireus-container:hover {
-    cursor: pointer;
-}
-.hireus > .linklist {
-    padding: 0% 1%;
+.linklist { /* bendras visu 'paveiksliukiniu' nuorodu konteineris */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* prie responsive sumazes columns kiekis */
+    padding: 0% 1%;
     gap: 70px;
 }
-    .linklist > div {
-        display: inline-block;
-        grid-column: auto / span 1;
-        margin: 8px 0px 0px 0px;
-        transition: ease-in-out 0.5s;
-    }
-    .linklist > div:hover {
-        margin: 0px 0px 8px 0px;
-    }
-    .linklist > div:hover .curtain {
-        background-color: #02ab;
-    }
-        .linklist a {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            position: relative;
-            border: 0px transparent solid;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-            .curtain {
-                display: inline-block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 0px transparent solid;
-                border-radius: 8px;
-                background-color: transparent;
-                transition: ease-in-out 0.5s;
-                z-index: 1;
-            }
-            .linklist span.btn {
-                display: flex;
-                position: absolute;
-                color: var(--font-blue);
-                background-color: white;
-                padding: 23px 38px;
-                top: 50%;
-                left: 50%;
-                transform-origin: 50% 100%;
-                height: 61px;
-                transform: translate(-50%, -40%) scaleY(0);
-                border: 0px transparent solid;
-                border-radius: 6px;
-                transition: ease-in-out 0.5s;
-                z-index: 1;
-            }
-            .linklist > div:hover span.btn {
-                transform: translate(-50%, -50%) scaleY(1);
-            }
-            .linklist img{
-                display: inline-block;
-                width: 100%;
-                border: 0px transparent solid;
-                border-radius: 10px;
-                transform: scale(1, 1);
-                transition: ease-in-out 0.5s;
-            }
-            .linklist > div:hover img {
-                transform: scale(1.1, 1.1);
-            }
-            .linklist .overflow {
-                display: inline-block;
-                position: absolute;
-                bottom: 0%;
-                width: 100%;
-                height: 29%;
-                border: 0px transparent solid;
-                border-radius: 8px;
-                background: linear-gradient(#02c0,#1056,#1058);
-                overflow: hidden;
-            }
-                .overflow .bottom {
-                    display: inline-block;
-                    color: white;
-                    font-size: 25px;
-                    padding: 0% 12%;
-                    text-align: center;
-                    font-weight: 650;
-                    transition: ease-in-out 0.5s;
-                }
-                .linklist > div:hover .bottom {
-                    transform: translateY(-150%);
-                }
-                .hireus  p {
-                    display: inline-block;
-                    padding: 20px 3px;
-                    text-align: center;
-                }
-                p > u {
-                    text-decoration: none;
-                    color: #111;
-                }
-                .hireus > div:last-of-type {
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                }
-                .hireus .underline-link {
-                    display: flex;
-                    color: var(--font-blue);
-                    border-bottom: 1px solid #ccc;
-                }
-                .hireus .underline-link::after {
-                    background-color: var(--font-blue);
-                    height: 1px;
-                    bottom: -1px;
-                }
-                .hireus .underline-link:hover {
-                    color: var(--font-blue);
-                }
-                    .hireus .underline-link span {
-                        font-size: 18px;
-                        font-weight: bold;
-                    }
-                    .hireus .underline-link i {
-                        display: inline-block;
-                        align-self: center;
-                        margin-left: 10px;
-                    }
+.hireus-container {
+    display: inline-block;
+    grid-column: auto / span 1; /* kiekvienas 'paveiksliukinis' linkas uzima viena grido sekcija */
+    margin: 8px 0px 0px 0px;
+    transition: ease-in-out 0.5s;
+}
+.hireus-container:hover {
+    margin: 0px 0px 8px 0px; /* top ir bottom marginai apsikeicia vietom del animacijos */
+    cursor: pointer;
+}
+.linklist a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    overflow: hidden; /* kad neislistu uz krastu padidintas paveiksliukas animacijos metu */
+}
+.curtain { /* 'nematomas' elementas, kuris nuspalvina melynai paveiksliuka uzhoverinsu */
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+}
+.hireus-container:hover .curtain {
+    background-color: #02ab;
+}
+.linklist img{
+    display: inline-block;
+    width: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    transform: scale(1, 1);
+    transition: ease-in-out 0.5s;
+}
+.hireus-container:hover img { /* uzhoverinus priarteja paveiksliukas */
+    transform: scale(1.1, 1.1);
+}
+.hireus-container span.btn { /* pasislepes centrinis btn */
+    display: flex;
+    height: 61px;
+    padding: 23px 38px;
+    background-color: white;
+    color: var(--font-blue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%, -40%) scaleY(0); /* pradine 'nematoma' pozicija */
+    border: 0px transparent solid;
+    border-radius: 6px;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+}
+.hireus-container:hover span.btn { /* isnyrantis btn */
+    transform: translate(-50%, -50%) scaleY(1);
+}
+.linklist .overflow { /* balto pranykstancio teksto konteineris paveikslelio apatineje dalyje */
+    display: inline-block;
+    width: 100%;
+    height: 29%;
+    background: linear-gradient(#02c0,#1056,#1058); /* paveiksleliu apacios is melsvo i transparent gradient'as */
+    position: absolute;
+    bottom: 0%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    overflow: hidden; /* kad animacijos metu kylantis tekstas nusikirstu */
+}
+.overflow span { /* baltas tekstas virs paveikslelio */
+    display: inline-block;
+    padding: 0% 12%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 650;
+    transition: ease-in-out 0.5s;
+}
+.hireus-container:hover span { /* balto teksto animacija */
+    transform: translateY(-150%);
+}
+.hireus p { /* tekstas po paveiksleliu */
+    display: inline-block;
+    padding: 20px 3px;
+    text-align: center;
+}
+.hireus p > u {
+    text-decoration: none;
+    color: #111;
+}
+.hireus > div:last-of-type { /* apatinio linko konteineris */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hireus .underline-link { /* apatinio linko statiskas stilius */
+    display: flex;
+    color: var(--font-blue);
+    border-bottom: 1px solid #ccc;
+}
+.hireus .underline-link span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.hireus .underline-link::after {
+    background-color: var(--font-blue);
+    height: 1px;
+    bottom: -1px; /* pazeminta vienu pikseliu, kad sutaptu su border bottomu */
+}
+.hireus .underline-link i { /* rodyklyte */
+    display: inline-block;
+    align-self: center;
+    margin-left: 10px; /* kad neprilitpu prie teksto */
+}
+.hireus .underline-link:hover {
+    color: var(--font-blue); /* kad custome esanti teksto default orange spalve neperrasytu melynos */
+}
 
                 
             
