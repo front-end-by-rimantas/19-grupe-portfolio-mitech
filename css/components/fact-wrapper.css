@@ -1,39 +1,61 @@
-.container.factwrapper > * {
+.container.factwrapper {
+    width: 100vw; /* will be removed after completion of every section so there is no horizontal scroll */
+    gap: 0px;
+    padding: 0%;
+}
+.container.factwrapper * {
+    font-family: Cerebri-SemiBold;
     text-align: center;
+    gap: 0px;
 }
 .container.factwrapper > .row {
+    grid-template-columns: repeat(4, 1fr); /* how many fact wrappers in one line */
+}
+.facts {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
+    width: 100%;
+    border: 1px var(--border-grey) solid;
+    border-right: none;
+    padding: 100px 0px;
 }
-    .container.factwrapper > .row > .facts {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column;
-        width: 196px;
-        border: 1px var(--border-grey) solid;
-        border-right: none;
+.facts:last-of-type {
+    border-right: 1px var(--border-grey) solid;
+}
+.facts > .upper {
+    font-size: 24px;
+}
+.facts > .numbers {
+    color: var(--font-blue);
+    font-size: 64px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.facts > .bottom {
+    color: var(--font-orange);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1080px) {
+    .container.factwrapper > .row {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .container.factwrapper > .row > .facts:last-of-type {
+    .facts {
+        border-bottom: none;
+    }
+    .facts:nth-of-type(even) {
         border-right: 1px var(--border-grey) solid;
     }
-        .container.factwrapper > .row > .facts > .upper {
-            margin-top: 60px;
-            font-size: 18px;
-        }
-        .container.factwrapper > .row > .facts > .numbers {
-            color: var(--font-blue);
-            font-size: 44px;
-            font-weight: 600;
-            margin-top: 10px;
-            margin-bottom: 2px;
-        }
-        .container.factwrapper > .row > .facts > .bottom {
-            color: var(--font-orange);
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 70px;
-        }
+}
+@media (max-width: 860px) {
+    .container.factwrapper > .row {
+        grid-template-columns: 1fr;
+    }
+    .facts {
+        border-right: 1px var(--border-grey) solid;
+    }  
+}
