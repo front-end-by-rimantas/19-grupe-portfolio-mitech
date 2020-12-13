@@ -1,5 +1,5 @@
 .container.services {
-    background-color: #F8F8F8;
+    background-color: var(--bg-color);
     text-align: center;
 }
 
