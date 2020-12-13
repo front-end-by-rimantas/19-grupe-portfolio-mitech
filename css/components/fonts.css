@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Cerebri-Regular;
+    src: url(../../fonts/CerebriSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: Cerebri-SemiBold;
+    src: url(../../fonts/CerebriSansPro-SemiBold.ttf);
+}
+@font-face {
+    font-family: Cerebri-Bold;
+    src: url(../../fonts/CerebriSansPro-Bold.ttf);
+}
+
+body * {
+    font-size: 15px;
+    font-family: Cerebri-Regular;
+    color: var(--font-black);
+}
+h1 {
+    font-family: Cerebri-SemiBold;
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 48px;
+    font-family: Cerebri-SemiBold;
+    color: white;
+}
+
+h3 {
+    font-family: Cerebri-SemiBold;
+    font-size: 40px;
+    color: var(--font-black);
+}
+
+h3 > u {
+    font-family: Cerebri-SemiBold;
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--font-blue);
+}
+
+h4 {
+    font-size: 18px;
+    color: var(--font-black);
+    font-family: Cerebri-SemiBold;
+}
+
+h4.hero {
+    color: var(--font-blue);
+}
+
+h5 {
+    font-family: Cerebri-SemiBold;
+    font-size: 24px;
+    color: var(--font-black);
+}
+
+h6 {
+    font-family: Cerebri-Bold;
+    font-size: 14px;
+    color: var(--font-grey);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: Cerebri-Regular;
+    font-size: 15px;
+    color: var(--font-darkgrey);
+}
+
+p > u {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--font-black);
+} 
+
+@media (max-width: 1300px) {
+    h1 {
+        font-size: 46px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h3 > u {
+        font-size: 32px;
+    }
+}
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h3 > u {
+        font-size: 28px;
+    }
+}
+@media (max-width: 860px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 680px) {
+    h1 {
+        font-size: 34px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h3 > u {
+        font-size: 25px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+}
