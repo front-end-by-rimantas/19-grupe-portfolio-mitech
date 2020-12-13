@@ -1,0 +1,21 @@
+.blog-column {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* removes default bulletpoints from the li items in the ul */
+}
+.blog-column > li {
+    text-indent: -1.4em;
+}
+.blog-column > li::before {
+    float: left;
+    width: 1.4em;
+    font-family: FontAwesome;
+    content: "fa fa-long-arrow-right";
+}
+.news-frequency {
+    font-size: 32px;
+    color: var(--font-blue);
+    font-weight: 700;
+    font-family: Cerebri-SemiBold;
+}
