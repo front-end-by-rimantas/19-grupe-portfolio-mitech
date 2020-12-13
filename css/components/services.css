@@ -8,3 +8,26 @@
     margin-top: 60px;
     padding: 50px 30px 63px 30px;
 }
+ .services {
+    position: relative;
+}
+
+.fa.btn.right-1 {
+    position:absolute;
+    top: 67%;
+    left: 17%;
+}
+.fa.btn.right-2 {
+    position:absolute;
+    top: 67%;
+    left: 47%;
+}
+.fa.btn.right-3 {
+    position:absolute;
+    top: 67%;
+    left: 79%;
+}
+p.services {
+    padding-top: 30px;
+    margin-top: 60px;
+}
