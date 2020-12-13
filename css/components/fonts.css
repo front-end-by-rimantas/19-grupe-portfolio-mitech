@@ -41,6 +41,12 @@ h3 > u {
     color: var(--font-blue);
 }
 
+h5 {
+    font-family: Cerebri-SemiBold;
+    font-size: 24px;
+    color: var(--font-black);
+}
+
 h6 {
     font-family: Cerebri-Bold;
     font-size: 14px;
@@ -101,5 +107,8 @@ p > u {
     }
     h3 > u {
         font-size: 25px;
+    }
+    h5 {
+        font-size: 20px;
     }
 }
