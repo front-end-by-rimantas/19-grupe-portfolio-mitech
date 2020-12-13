@@ -4,6 +4,7 @@
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 0px 20%; /* kad siek tiek nusileistu background image */
+    width: 100vw; /* will be deleted after horizontal scroll fix */
 }
 
 .ourcompany > div:first-of-type {
@@ -29,11 +30,11 @@
     cursor: pointer;
 }
 .info > .number { /* skaiciukas stovi virsuj kairej info kontainerio */
+    font-family: Cerebri-Bold;
     display: inline-block;
     width: 10%;
-    color:  var(--font-darkgrey);
+    color:  var(--font-grey);
     font-size: 24px;
-    font-weight: bold;
 }
 .info:hover .number {
     color: var(--font-blue)
@@ -44,16 +45,20 @@
     justify-content: space-between;
     position: relative; /* kad rodyklyte galetu buti absolute */
     width: 88%;
-    height: 75%;
+    height: 80%;
     margin-left: 2%;
     border-top: 1px solid var(--border-grey); /* virs teksto esanti pilka linija */
     align-self: flex-end;
 }
 .info > .line > * { /* del teksto ir rodyklyciu dydzio ir animavimo */
     display: inline-block;
-    font-size: 24px;
-    font-weight: 600;
+    margin-top: 10px;
     transition: ease-in-out 0.5s;
+}
+.info span {
+    width: 95%;
+    font-family: Cerebri-Bold;
+    font-size: 24px;
 }
 .info:hover span {
     color: var(--font-blue)
@@ -61,6 +66,7 @@
 .info i { /* 'neuzhoverintos' rodyklytes pozicija */
     position: absolute;
     right: 0%;
+    font-size: 22px;
 }
 .info i:last-of-type{ /* 'nematoma' rodykle animacijai */
     color: transparent;
@@ -72,4 +78,25 @@
 .info:hover i:last-of-type { /* anta atsiranda */
     color: var(--font-blue);
     right: 0%;
+}
+
+@media (max-width: 1300px) {
+    .ourcompany > div:first-of-type {
+        margin: 0px 90px 0px 20px;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 0px 10px 0px 80px;
+    }
+    .info span {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .ourcompany > div:first-of-type {
+        margin: 0px 90px 0px 20px;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 0px 10px 0px 80px;
+    }
 }
