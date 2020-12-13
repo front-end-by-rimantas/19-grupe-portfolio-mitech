@@ -33,6 +33,16 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
+.hover-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: var(--font-blue);
+    transition: 0.6s;
+}
+.hover-link:hover {
+    color: var(--font-orange);
+}
 .underline-link {
     text-decoration: none;
     display: inline-block;
@@ -50,7 +60,7 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
     left: 0; /*positioned at the left of the text block */
     background-color: var(--font-orange);
     transform-origin: bottom right;/* transition starts there */
-    transition: transform 0.6s ease-out; /* changes to transform occur over 0.7s with an ease-out timing function, which is equivalent to cubic-bezier (0, 0, 0.58, 1.0) */
+    transition: transform 0.6s ease-out; /* changes to transform occur over 0.6s with an ease-out timing function, which is equivalent to cubic-bezier (0, 0, 0.58, 1.0) */
 }
 .underline-link:hover::after {
     transform: scaleX(1); /* transitions the width of the pseudo-element to 100% */
