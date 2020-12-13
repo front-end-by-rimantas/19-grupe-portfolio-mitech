@@ -94,9 +94,19 @@
 
 @media (max-width: 1080px) {
     .ourcompany > div:first-of-type {
-        margin: 0px 90px 0px 20px;
+        margin: 0px 6%;
     }
     .ourcompany > div:last-of-type {
-        margin: 0px 10px 0px 80px;
+        margin: 10px 8% 0px 6%;
+    }
+    .info > .line {
+        margin-top: 18px;
+        width: 91%;
+    }
+    .info > .line > * {
+        margin: 24px 0px 48px 0px;
+    }
+    .info > .number {
+        width: 7%;
     }
 }
