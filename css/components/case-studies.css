@@ -92,7 +92,25 @@
 .bubbles {
     text-align: center;
     font-size: 18px;
+    display: inline-block;
 }
+
+    .bubbles .bubble {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: var(--font-grey);
+        border-radius: 50%;
+        /* padding:5px; */
+        margin-right: 10px;
+        transition: all ease-in-out 0.5s;
+    }
+        .bubbles .bubble:hover {
+            transform: translateY(-2px);
+            width: 12px;
+            height: 12px;
+            background-color: var(--font-blue);
+        }
 
 .challenge {
     text-align: center;
