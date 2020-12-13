@@ -1,36 +1,19 @@
 .container.info-techno {
-    background-color: var(--bg-colour2);
+    background-color: #fafafa; /* --bg-colour3 */
     background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 0px 20%; /* kad siek tiek nusileistu background image */
 }
+
 .ourcompany > div:first-of-type {
     margin: 0px 120px 0px 20px; /* kairio stulpelio pozicionavimas */
 }
-.info-techno h6 { /* h6 reikes paimti is default style */
-    color: var(--font-grey);
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 647;
-    letter-spacing: 3px;
-}
-.info-techno h3 { /* h3 reikes paimti is default style*/
-    color: black;
-    font-size: 44px;
-    font-weight: 600;
+
+.info-techno h3 {
     margin: 20px 0px;
 }
-.info-techno h3 > u { /* h3 > u reikes paimti is default style */
-    color: var(--font-blue);
-    font-weight: 600;
-    font-size: 44px;
-    text-decoration: none;
-}
-p { /* p reikes paimti is default style */
-    color: var(--font-darkgrey);
-    line-height: 24px;
-}
+
 .ourcompany > div:last-of-type { /* desinio stulpelio pozicionavimas */
     margin: 0px 10px 0px 100px;
     display: flex;
