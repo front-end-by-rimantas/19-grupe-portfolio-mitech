@@ -10,21 +10,13 @@
         text-align: center;   
     }
         #case-head > h6 {
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
             margin-bottom: 30px;
-            color: var(--font-grey);
         }
         #case-head > h3 {
-            font-size: 32px;
             margin-bottom: 20px;
             padding-bottom: 10px;
         }
-        #case-head > h3 > u {
-            text-decoration: none;
-            color: var(--font-blue)
-        }
+
    
    .cards-block > .col-4 {
         gap: 20px;
@@ -80,7 +72,8 @@
         transition: all 0.5s ease-out;
     }
         .content>.view > .fa {
-            line-height: 20px;
+            transition: all 0.5s ease-out;
+            color: var(--font-blue);
             margin-left: 5px;
         }
 
@@ -89,10 +82,12 @@
         transform: translateY(-5px);
     }
     
-        .cards-block > .col-4:hover > .card > .content > .view {
+        .cards-block > .col-4:hover .view  {
                 background-position: bottom left;
                 color: #ffff
-
+            }
+            .cards-block > .col-4:hover .view .fa {
+                color: white;
             }
 
 .bubbles {
@@ -121,11 +116,28 @@
 
 .challenge {
     text-align: center;
-    font-size: 18px;
 }
-    .challenge > p > u {
+.challenge > p {
+    line-height: 1.4;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+}
+    .challenge > p > a {
+        font-size: 20px;
         text-decoration: none;
-        color: var(--font-blue)
+        color: var(--font-blue);
+        
+    }
+
+    .challenge > p > .underline-link {
+        color: var(--font-blue);
+        border-bottom: 1px solid #ccc;
+    }
+    .challenge .underline-link::after {
+        background-color: var(--font-blue);
+        height: 1px;
+        bottom: -1px;
     }
 @media (max-width: 1300px){
     .cards-block > .col-4:nth-of-type(3){  
