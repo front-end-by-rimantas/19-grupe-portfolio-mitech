@@ -188,15 +188,16 @@
         grid-template-columns: 1fr;
     }
     .hireus-container {
-        width: 60%;
+        width: 68%;
     }
     .hireus-container:nth-of-type(odd) {
-        margin: 8px 20% 0px 20%;
+        margin: 8px 16% 0px 16%;
     }
     .hireus-container:nth-of-type(even) {
-        margin: 8px 20% 0px 20%;
+        margin: 8px 16% 0px 16%;
     }
     .overflow h5 {
+        font-size: 24px;
         padding: 0% 12%;
     }
 }
