@@ -1,7 +1,9 @@
 
 .copyrights {
     padding-bottom: 30px;
-    background-color: var(--bg-colour)
+    background-color: var(--bg-colour);
+    position: relative;
+    max-width: 100vw;
 }
 
 .copyright  {
@@ -17,10 +19,10 @@
     .copyright > a:hover{
         color: var(--font-blue);
     }
-    
-    .socials ul {
-        display: inline-flex;
-        float: right;
+
+    .socials  {
+        
+        text-align: end;
     }
 
     .socials a {
@@ -36,14 +38,88 @@
         background-color: transparent;
         border: 1px solid #e0e0e0;
         transition: all ease-in-out 0.5s;
+        position: relative;
     }
-    .socials li {
-        list-style:none;
-        
-    }
+
 
     .socials a:hover {
         color: white;
         background-color: var(--font-blue);
     }
 
+.socials > .fa-twitter > .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 60px;
+    right: -15px;
+}
+
+
+    .socials > .fa-twitter:hover > .tooltiptext {
+        visibility: visible;
+}
+
+.socials > .fa-facebook > .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 60px;
+    right: -15px;
+}
+    .socials > .fa-facebook:hover > .tooltiptext{
+        visibility: visible;
+    }
+.socials > .fa-instagram > .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 60px;
+    right: -15px;
+}
+    .socials > .fa-instagram:hover > .tooltiptext {
+        visibility: visible;
+    }
+.socials > .fa-linkedin > .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 60px;
+    right: -15px;
+}
+    .socials > .fa-linkedin:hover > .tooltiptext {
+        visibility: visible;
+    }
+
+@media(max-width:680px) {
+    .copyrights {
+        text-align: center;
+    }
+    .copyright {
+        margin-bottom: 20px;
+    }
+    .socials{
+        text-align: center;
+        /* margin-top: 20px; */
+    }
+}
