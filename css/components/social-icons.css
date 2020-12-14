@@ -49,67 +49,108 @@
 
 .socials > .fa-twitter > .tooltiptext {
     visibility: hidden;
-    width: 80px;
-    background-color: black;
+    width: 90px;
+    background-color:var(--font-blue);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
     bottom: 60px;
-    right: -15px;
+    right: -20px;
 }
 
 
     .socials > .fa-twitter:hover > .tooltiptext {
         visibility: visible;
 }
+        .socials > .fa-twitter:hover >  .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; 
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
 
 .socials > .fa-facebook > .tooltiptext {
     visibility: hidden;
-    width: 80px;
-    background-color: black;
+    width: 90px;
+    background-color:var(--font-blue);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
     bottom: 60px;
-    right: -15px;
+    right: -20px;
+    text-align: center;
 }
     .socials > .fa-facebook:hover > .tooltiptext{
         visibility: visible;
     }
+        .socials > .fa-facebook:hover >  .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; 
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
 .socials > .fa-instagram > .tooltiptext {
     visibility: hidden;
-    width: 80px;
-    background-color: black;
+    width: 90px;
+    background-color: var(--font-blue);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
     bottom: 60px;
-    right: -15px;
+    right: -20px;
 }
     .socials > .fa-instagram:hover > .tooltiptext {
         visibility: visible;
     }
+        .socials > .fa-instagram:hover >  .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; 
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
 .socials > .fa-linkedin > .tooltiptext {
     visibility: hidden;
-    width: 80px;
-    background-color: black;
+    width: 90px;
+    background-color:var(--font-blue);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
     bottom: 60px;
-    right: -15px;
+    right: -20px;
 }
     .socials > .fa-linkedin:hover > .tooltiptext {
         visibility: visible;
     }
+        .socials > .fa-linkedin:hover >  .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; 
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
 
 @media(max-width:680px) {
     .copyrights {
