@@ -28,13 +28,13 @@ h2 {
 }
 
 h3 {
-    font-family: Cerebri-SemiBold;
+    font-family: Cerebri-Bold;
     font-size: 40px;
     color: var(--font-black);
 }
 
 h3 > u {
-    font-family: Cerebri-SemiBold;
+    font-family: Cerebri-Bold;
     text-decoration: none;
     font-size: 40px;
     color: var(--font-blue);
@@ -68,6 +68,7 @@ p {
     font-family: Cerebri-Regular;
     font-size: 15px;
     color: var(--font-darkgrey);
+    line-height: 24px;
 }
 
 p > u {
