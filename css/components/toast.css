@@ -10,6 +10,7 @@
     text-align: center;
     text-decoration: none;
     box-shadow: -3px 0 10px -2px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 .toast > .top > .tooltiptext {
@@ -46,7 +47,7 @@
         }
 
     .toast >.middle > .tooltiptext {
-        visibility: hidden;
+        /* visibility: hidden; */
         width: 150px;
         background-color: black;
         color: #fff;
