@@ -1,0 +1,38 @@
+
+.btn {
+    display: inline-block;
+    padding: 18px 36px;
+    background-color: var(--btn-color);
+    opacity: 0.9;
+    color: #fff;
+    font-size: 15px;
+    height: 54px;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transform: translateY(0px);
+    text-decoration: none;
+    border-color: transparent;
+    transition: ease-in-out 0.5s;
+    
+}
+    .btn:hover {
+         opacity: 1;
+         transform: translateY(-3px);
+    } 
+.fa.btn {
+    background-color: #d2a98e;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 24px;
+    line-height: 60px;
+    transform: none;
+} 
+    .fa.btn:hover {
+    background-color: var(--btn-color);
+} 
