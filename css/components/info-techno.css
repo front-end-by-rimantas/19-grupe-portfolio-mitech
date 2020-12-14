@@ -107,10 +107,35 @@
     .info > .line {
         width: 91%;
     }
-     .info > .line > * {
+    .info > .line > * {
        margin: 24px 0px 48px 0px; 
     }
     .info > .number {
         width: 7%;
+    }
+}
+
+@media (max-width: 550px) {
+    .container.info-techno {
+        grid-template-columns: 10px 1fr 10px;
+        gap: 10px;
+    }
+    .container.info-techno .ourcompany {
+        gap: 5px
+    }
+    .ourcompany > div:first-of-type {
+        margin: 0px 0px 0px 0px;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 0px 0px 0px 0px;
+    }
+    .info > .number {
+        width: 14;
+    }
+    .info > .line {
+        width: 86%;
+    }
+    .info span {
+        width: 95%;
     }
 }

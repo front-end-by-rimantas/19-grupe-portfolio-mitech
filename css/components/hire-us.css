@@ -191,16 +191,30 @@
         grid-template-columns: 1fr;
     }
     .hireus-container {
-        width: 66%;
+        width: 68%;
     }
     .hireus-container:nth-of-type(odd) {
-        margin: 8px 17% 0px 17%;
+        margin: 8px 18% 0px 18%;
     }
     .hireus-container:nth-of-type(even) {
-        margin: 8px 17% 0px 17%;
+        margin: 8px 18% 0px 18%;
     }
     .overflow h5 {
         font-size: 24px;
         padding: 0% 12%;
+    }
+}
+@media (max-width: 550px) {
+    .container.info-techno .hireus {
+        gap: 5px
+    }
+    .hireus-container {
+        width: 90%;
+    }
+    .hireus-container:nth-of-type(odd) {
+        margin: 8px 5% 0px 5%;
+    }
+    .hireus-container:nth-of-type(even) {
+        margin: 8px 5% 0px 5%;
     }
 }
