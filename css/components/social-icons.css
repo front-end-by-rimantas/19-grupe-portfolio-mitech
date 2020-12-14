@@ -58,11 +58,17 @@
     position: absolute;
     bottom: 60px;
     right: -20px;
+    box-shadow: 3px 3px 8px 1px #ccc;
+    opacity: 0;
+    transition: all 0.4s;
 }
 
 
     .socials > .fa-twitter:hover > .tooltiptext {
         visibility: visible;
+        opacity: 1;
+        animation: bounce-top 0.7s ;
+        transition: ease-in-out;
 }
         .socials > .fa-twitter:hover >  .tooltiptext::after {
             content: " ";
@@ -87,9 +93,15 @@
     bottom: 60px;
     right: -20px;
     text-align: center;
+    box-shadow: 3px 3px 8px 1px #ccc;
+    opacity: 0;
+    transition: all 0.4s;
 }
     .socials > .fa-facebook:hover > .tooltiptext{
         visibility: visible;
+        opacity: 1;
+        animation: bounce-top 0.7s ;
+        transition: ease-in-out;
     }
         .socials > .fa-facebook:hover >  .tooltiptext::after {
             content: " ";
@@ -112,9 +124,15 @@
     position: absolute;
     bottom: 60px;
     right: -20px;
+    box-shadow: 3px 3px 8px 1px #ccc;
+    opacity: 0;
+    transition: all 0.4s;
 }
     .socials > .fa-instagram:hover > .tooltiptext {
         visibility: visible;
+        opacity: 1;
+        animation: bounce-top 0.7s ;
+        transition: ease-in-out;
     }
         .socials > .fa-instagram:hover >  .tooltiptext::after {
             content: " ";
@@ -137,9 +155,15 @@
     position: absolute;
     bottom: 60px;
     right: -20px;
+    box-shadow: 3px 3px 8px 1px #ccc;
+    opacity: 0;
+    transition: all 0.4s;
 }
     .socials > .fa-linkedin:hover > .tooltiptext {
         visibility: visible;
+        opacity: 1;
+        animation: bounce-top 0.7s ;
+        transition: ease-in-out;
     }
         .socials > .fa-linkedin:hover >  .tooltiptext::after {
             content: " ";
@@ -152,6 +176,15 @@
             border-color: black transparent transparent transparent;
         }
 
+ @keyframes bounce-top {
+     0% {opacity: 0;}
+     100% {
+         transform: translateY(0px);
+     }
+     50% {
+         transform: translateY(-10px);
+     }
+    }
 @media(max-width:680px) {
     .copyrights {
         text-align: center;
