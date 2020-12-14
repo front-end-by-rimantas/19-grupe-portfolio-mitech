@@ -31,3 +31,45 @@ p.services {
     padding-top: 30px;
     margin-top: 60px;
 }
+
+@media (max-width: 1080px) {
+    .container.services {
+        background-color: aqua;
+    }
+    .fa.btn.right-1 {
+        position:absolute;
+        top: 69%;
+        left: 22%;
+    }
+    .fa.btn.right-2 {
+        position:absolute;
+        top: 69%;
+        left: 47%;
+    }
+    .fa.btn.right-3 {
+        position:absolute;
+        top: 69%;
+        left: 72%;
+    }
+}
+
+@media (max-width: 860px) {
+    .container.services {
+        background-color: rgb(21, 180, 180);
+    }
+    .fa.btn.right-1 {
+        position:absolute;
+        top: 33%;
+        left: 47%;
+    }
+    .fa.btn.right-2 {
+        position:absolute;
+        top: 58%;
+        left: 47%;
+    }
+    .fa.btn.right-3 {
+        position:absolute;
+        top: 83%;
+        left: 47%;
+    }
+}
