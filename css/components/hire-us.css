@@ -114,6 +114,9 @@
     padding: 20px 3px;
     text-align: center;
 }
+.hireus p > u {
+    font-family: Cerebri-SemiBold;
+}
 .hireus > div:last-of-type { /* apatinio linko konteineris */
     display: flex;
     justify-content: center;
@@ -188,13 +191,13 @@
         grid-template-columns: 1fr;
     }
     .hireus-container {
-        width: 68%;
+        width: 66%;
     }
     .hireus-container:nth-of-type(odd) {
-        margin: 8px 16% 0px 16%;
+        margin: 8px 17% 0px 17%;
     }
     .hireus-container:nth-of-type(even) {
-        margin: 8px 16% 0px 16%;
+        margin: 8px 17% 0px 17%;
     }
     .overflow h5 {
         font-size: 24px;
