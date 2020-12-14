@@ -3,10 +3,10 @@
     height: 90vh;
     background-size: cover;
     color: white;
+    max-width: 100%;
 }
 
     .video .video-head > h2 {
-        /* font-size: 48px; */
         padding:30px;
         margin-top: 40px;
         max-width: 100vw;
@@ -15,7 +15,7 @@
     
 
     .video .video-play {
-        margin-left: 50px;
+        margin-left: 30px;
         align-items: center;
         margin-top: 30px;
     }
@@ -42,11 +42,20 @@
             border-radius: 50%;
             width: 70px;
             height: 70px;
- 
+            position: relative;
         }
+            .video .video-play > a > .fa::before {
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
 @media (max-width: 1080px) {
     .video {
         align-content: center;
+        height: 70vh;
     }
     .video .col-6:nth-of-type(1) {
         display: none;
@@ -58,6 +67,7 @@
 @media (max-width: 860px){
     .video .col-6:nth-of-type(2) {
         text-align: start;
+        max-width: 100%;
     }
     .video {
         align-content: center;
@@ -73,5 +83,12 @@
 }
 
 @media (max-width: 680px) {
+    
+    .video .video-play > a > .video-text {
+        margin-left: 30px;
+    }
+    .video {
+        height: 90vh;
+    }
     
 }
