@@ -4,38 +4,36 @@
        background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
        background-repeat: no-repeat;
        background-position: 0% 100%;
+       max-width: 100vw;
    }
     #case-head {
         text-align: center;   
     }
         #case-head > h6 {
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
             margin-bottom: 30px;
-            color: var(--font-grey);
         }
         #case-head > h3 {
-            font-size: 32px;
             margin-bottom: 20px;
             padding-bottom: 10px;
         }
-        #case-head > h3 > u {
-            text-decoration: none;
-            color: var(--font-blue)
-        }
+
    
-   #cards-block > .col-4 {
+   .cards-block > .col-4 {
         gap: 20px;
         background-color: white;
         border-radius: 10px;
         box-shadow: 8px 13px 5px 3px #f4f4f4;
         cursor: pointer;
         transition: all ease-in-out 0.5s;
+    
     }
+.cards-block >.col-4 > .card {
+    max-width: 100vw;
+    
+}
 
     .card > img {
-        max-width: 100%;
+        width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -74,22 +72,26 @@
         transition: all 0.5s ease-out;
     }
         .content>.view > .fa {
-            line-height: 20px;
+            transition: all 0.5s ease-out;
+            color: var(--font-blue);
             margin-left: 5px;
         }
 
-    #cards-block > .col-4:hover {
+    .cards-block > .col-4:hover {
         
         transform: translateY(-5px);
     }
     
-        #cards-block > .col-4:hover > .card > .content > .view {
+        .cards-block > .col-4:hover .view  {
                 background-position: bottom left;
                 color: #ffff
-
+            }
+            .cards-block > .col-4:hover .view .fa {
+                color: white;
             }
 
 .bubbles {
+    margin-top: 20px;
     text-align: center;
     font-size: 18px;
     display: inline-block;
@@ -114,9 +116,37 @@
 
 .challenge {
     text-align: center;
-    font-size: 18px;
 }
-    .challenge > p > u {
+.challenge > p {
+    line-height: 1.4;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+}
+    .challenge > p > a {
+        font-size: 20px;
         text-decoration: none;
-        color: var(--font-blue)
+        color: var(--font-blue);
+        
     }
+
+    .challenge > p > .underline-link {
+        color: var(--font-blue);
+        border-bottom: 1px solid #ccc;
+    }
+    .challenge .underline-link::after {
+        background-color: var(--font-blue);
+        height: 1px;
+        bottom: -1px;
+    }
+@media (max-width: 1300px){
+    .cards-block > .col-4:nth-of-type(3){  
+        display: none;
+
+}
+    }
+@media (max-width: 860px) {
+    .cards-block > .col-4:nth-of-type(2){
+        display: none;
+    }
+}
