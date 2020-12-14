@@ -1,0 +1,18 @@
+.contact-us {
+background-color: #fbfbfb;
+    background-image: url(../../img/contacts/contact-bg.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+
+.contact-us .text-message {
+    margin: 0px 0px 0px 20px;   
+}
+
+.contact-us .contact-now {
+    margin: 0px 10px 0px 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
