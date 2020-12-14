@@ -6,13 +6,56 @@ background-color: #fbfbfb;
     background-position: 0% 0%;
 }
 
+/* Left column */
 .contact-us .text-message {
-    margin: 0px 0px 0px 20px;   
+    margin: 0px 0px 0px 0px;   
+    
+}
+.text-message h3 {
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+
+}
+.text-message p {
+    color: var(--font-darkgrey);
+    margin: 10px;
+    line-height: 30px;
 }
 
+
+/* Right column */
 .contact-us .contact-now {
-    margin: 0px 10px 0px 100px;
+    
+    margin: 40px 10px 0px 100px;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
 }
+
+.contact-us .phone-icon  {
+    padding-left: 0%;
+    padding-bottom: 0px;
+}
+
+.contact-us h6 {
+    
+    font-size: 20px;
+    padding: 0% 0% 0%;
+    margin-bottom: 0px;
+
+
+}
+.contact-now u {
+    text-decoration: none;
+    color: var(--font-blue);
+    font-weight: 600;
+    font-size: 44px;
+ 
+}
+
+
+.phone-icon .btn {
+
+}
+
