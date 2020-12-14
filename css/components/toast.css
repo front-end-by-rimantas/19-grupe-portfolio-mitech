@@ -14,21 +14,36 @@
 
 .toast > .top > .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 150px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
-    z-index: 1;
-    top: 10px;
+    top: 0px;
     right: 130%;
     box-shadow: 3px 3px 8px 1px #606060;
+    opacity: 0;
+    transition: all 0.4s;
+
 }
     .toast > .top:hover > .tooltiptext {
         visibility: visible;
+        opacity: 1;
+        animation: bounce 0.7s ;
+        transition: ease-in-out;
     }
+        .toast > .top > .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%; /* Rodykle is desines */
+            margin-top: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent black;
+        }
 
     .toast >.middle > .tooltiptext {
         visibility: hidden;
@@ -39,7 +54,6 @@
         border-radius: 6px;
         padding: 10px;
         position: absolute;
-        z-index: 1;
         top: 45px;
         right: 130%;
         box-shadow: 3px 3px 8px 1px #606060;
@@ -83,7 +97,6 @@
         border-radius: 6px;
         padding: 10px;
         position: absolute;
-        z-index: 1;
         top: 90px;
         right: 130%;
         box-shadow: 3px 3px 8px 1px #606060;
@@ -92,6 +105,9 @@
     }
         .toast >.bottom:hover > .tooltiptext {
             visibility: visible;
+            opacity: 1;
+            animation: bounce 0.7s ;
+            transition: ease-in-out;
         }
         .toast > .bottom > .tooltiptext::after {
             content: " ";
