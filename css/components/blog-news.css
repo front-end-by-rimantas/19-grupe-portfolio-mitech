@@ -1,0 +1,68 @@
+h3 {
+    line-height: 1.41;
+}
+.news-column {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 1.5em;
+    padding: 0;
+    list-style: outside none none; /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
+}
+.news-column > li {
+    position: relative;
+    padding-left: 1em;
+
+}
+.news-column > li::marker { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
+    float: left;
+    width: 1.5em;
+    font-family: FontAwesome;
+    content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
+    
+}
+.news-column > li > a::before {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.news-column> li > a::after {
+   
+}
+.news-frequency {
+    font-size: 32px;
+    color: var(--font-blue);
+    font-weight: 700;
+    font-family: Cerebri-SemiBold;
+}
+.blog-column {
+    transform: translateY(-2px);
+}
+.blog-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.blog-post {
+    margin-top: 20px;
+}
+.post-date {
+    margin-left: 15px;
+}
+.post-date::before {
+    float: left;
+    font-family: FontAwesome;
+    content:"\f133";
+}
+.post-title {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.post-title > a {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: Cerebri-Bold;
+    text-decoration: none;
+}
+.hover-link {
+    border-bottom: 1px solid #CCC;
+}
