@@ -122,3 +122,29 @@ header.container {
         height: 100%;
         border-left: 1px var(--border-grey) solid;
     }
+        .searchlang .search {
+            display: inline-block;
+            width: 70%;
+            border: none;
+            margin-left: 5%;
+        }
+        .searchlang .search::placeholder {
+            color: var(--font-darkgrey);
+        }
+        .searchlang .search:focus {
+            outline: none;
+        }
+        .searchlang .searchsubmit {
+            display: inline-block;
+            cursor: pointer;
+            width: 25%;
+            height: auto;
+            background-color: transparent;
+            border: none;
+        }
+        .searchlang .searchsubmit:focus {
+            outline: none;
+        }
+        .searchlang .searchsubmit::before {
+            font-size: 20px;
+        }
