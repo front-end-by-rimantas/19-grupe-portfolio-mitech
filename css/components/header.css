@@ -34,7 +34,7 @@ header.container {
 .navigation .logo {
     display: inline-block;
     margin-left: 30%;
-    padding: 11px 0;
+    padding: 12px 0;
 }
     .navigation .logo > img {
         display: inline-block;
@@ -54,7 +54,7 @@ header.container {
         font-weight: 16px;
         text-decoration: none;
         color: var(--font-black);
-        padding: 28px 4px;
+        padding: 29px 4px;
         position: relative;
         transition: 0.5s ease-out;
     }
@@ -85,4 +85,40 @@ header.container {
             content: " \f107";
             white-space: pre;
         }
-
+.searchlang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .searchlang a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Cerebri-SemiBold;
+        font-size: 15px;
+        margin-right: 5%;
+        position: relative;
+    }
+    .searchlang a::before {
+        content: url(../../img/header/en.png);
+        padding-right: 12px;
+    }
+    .searchlang a::after {
+        font-family: FontAwesome;
+        content: " \f107";
+        white-space: pre;
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .searchlang form {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-left: 1px var(--border-grey) solid;
+    }
