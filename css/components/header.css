@@ -31,31 +31,58 @@ header.container {
         header.container .row.top p {
             color: var(--font-darkgrey);
         }
-header.container > .navigation > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+.navigation .logo {
+    display: inline-block;
+    margin-left: 30%;
+    padding: 11px 0;
 }
-    .navigation .logo {
+    .navigation .logo > img {
         display: inline-block;
-        margin-left: 8%;
-        padding: 10px 0;
+        height: 50px;
     }
-        .navigation .logo > img {
-            display: inline-block;
-            height: 50px;
-        }
-    .navigation nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+.navigation nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+    .navigation nav a {
+        display: inline-block;
         height: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        font-family: Cerebri-Bold;
+        font-weight: 16px;
+        text-decoration: none;
+        color: var(--font-black);
+        padding: 28px 4px;
+        position: relative;
+        transition: 0.5s ease-out;
     }
-    a::after {
-        content: "\f107";
+    .navigation nav a:hover {
+        color: var(--font-blue);
     }
+    .navigation nav a:first-of-type {
+        color: var(--font-blue);
+        border-bottom: 4px var(--font-blue) solid;
+    }
+    .navigation nav a:not(:first-of-type):before { /* copy from underline-link with few tweaks*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--font-blue);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+.navigation nav a:not(:first-of-type):hover::before {
+    transform: scaleX(1);
+}
+        .navigation nav a::after {
+            font-family: FontAwesome;
+            content: " \f107";
+            white-space: pre;
+        }
 
