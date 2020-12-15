@@ -2,6 +2,7 @@
     background-color: #F4EFE9;
     position: relative;
     padding: 0;
+    z-index: 1;
 } 
 
 .hero-text {
@@ -40,7 +41,4 @@ img.hero-back-img {
     position: absolute;
     top: 1%;
     left: 54%;
-    
-    
-  
 }
