@@ -23,8 +23,7 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    height: 80%;
-    background-color: palevioletred;
+    height: 90%;
 }
 .info { /* bendras skaiciuoko, uzraso ir rodyklytes konteineris */
     display: flex;
