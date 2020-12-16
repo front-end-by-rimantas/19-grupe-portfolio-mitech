@@ -148,3 +148,20 @@ header.container {
         .searchlang .searchsubmit::before {
             font-size: 20px;
         }
+
+
+@media (max-width: 1300px) {
+    .navigation .logo {
+        margin-left: 8%;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    .header .row.navigation nav {
+        display: none;
+    }
+    .header .row.navigation .searchlang {
+        grid-column: 9/12;
+    }
+}
