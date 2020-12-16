@@ -1,67 +1,205 @@
-header.container.header {
+header.container {
     grid-template-columns: 1fr;
+    padding: 5px 0 0 0;
+    gap: 0px;
 }
     header.container > .row {
         grid-column: 1/2;
     }
-    header.container > .row.top {
+    header.container > .row.top > div {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
-        height: 24px;
-        margin-top: 6px;
-        padding-bottom: 6px;
+        flex-wrap: wrap;
+        min-height: 34px;
+        padding: 10px 20px;
         border-bottom: 1px var(--border-grey) solid;
     }
-        header.container > .row.top > a {
-            text-transform: capitalize;
-            color: var(--font-blue);
-            text-decoration: none;
-            transition: 0.75s;
-        }
-        header.container > .row.top > a:hover {
-            color: var(--font-orange);
-        }
-            header.container > .row.top > a::after {
-                content: ':  ';
-                white-space: pre;
-            }
-        header.container > .row.top > p {
-            color: var(--font-grey);
-        }
-    header.container > .row.navigation {
-        display: grid;
-        grid-template-columns: 1fr 540px 1fr;
-    }
-        header.container > .row.navigation > .logo {
-            display: inline-block;
-            margin: 9px 28%;
-            grid-column: 1/2;
-        }
-            header.container > .row.navigation > .logo > a {
-                display: inline-block;
-            }
-                header.container > .row.navigation > .logo > a > img {
-                    display: inline-block;
-                    height: 32px;
-                }
-        header.container > .row.navigation > .hamburger {
-            grid-column: 2/3;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        header.container > .row.navigation > .searchlang {
-            grid-column: 3/4;
+        header.container .row.top a {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            text-decoration: none;
+            order: 1;
         }
-            header.container > .row.navigation > .searchlang > .language {
-                display: flex;
-            }
-        header.container > .row.navigation > .searchlang > div:first-of-type {
-            border-right: 1px var(--border-grey) solid;;
+        header.container .row.top a > span {
+            text-transform: capitalize;
+            font-size: 14px;
+            color: var(--font-blue);
+            transition: ease-in-out 0.5s;
+            text-align: center;
+        }
+        header.container .row.top a > span:hover {
+            color: var(--font-orange);
+        }
+        header.container .row.top a > span > u {
+            text-decoration: none;
+            color: var(--font-darkgrey);
+            font-size: 14px;
+        }
+.navigation .logo {
+    display: inline-block;
+    margin-left: 30%;
+    padding: 12px 0;
+    order: 1;
+}
+    .navigation .logo > img {
+        display: inline-block;
+        height: 50px;
+    }
+.navigation nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    order: 2;
+}
+    .navigation nav a {
+        display: inline-block;
+        height: 100%;
+        font-family: Cerebri-Bold;
+        font-weight: 16px;
+        text-decoration: none;
+        color: var(--font-black);
+        padding: 29px 4px;
+        position: relative;
+        transition: 0.5s ease-out;
+        order: 2;
+    }
+    .navigation nav a:hover {
+        color: var(--font-blue);
+    }
+    .navigation nav a:first-of-type {
+        color: var(--font-blue);
+        border-bottom: 4px var(--font-blue) solid;
+    }
+    .navigation nav a:not(:first-of-type):before { /* copy from underline-link with few tweaks*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--font-blue);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+.navigation nav a:not(:first-of-type):hover::before {
+    transform: scaleX(1);
+}
+        .navigation nav a::after {
+            font-family: FontAwesome;
+            content: " \f107";
+            white-space: pre;
+        }
+.searchlang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+}
+    .searchlang a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Cerebri-SemiBold;
+        font-size: 15px;
+        margin-right: 5%;
+        position: relative;
+    }
+    .searchlang a::before {
+        content: url(../../img/header/en.png);
+        padding-right: 12px;
+    }
+    .searchlang a::after {
+        font-family: FontAwesome;
+        content: " \f107";
+        white-space: pre;
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .searchlang form {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-left: 1px var(--border-grey) solid;
+    }
+        .searchlang .search {
+            display: inline-block;
+            width: 70%;
+            border: none;
+            margin-left: 5%;
+        }
+        .searchlang .search::placeholder {
+            color: var(--font-darkgrey);
+        }
+        .searchlang .search:focus {
+            outline: none;
+        }
+        .searchlang .searchsubmit {
+            display: inline-block;
+            cursor: pointer;
+            width: 25%;
+            height: auto;
+            background-color: transparent;
+            border: none;
+        }
+        .searchlang .searchsubmit:focus {
+            outline: none;
+        }
+        .searchlang .searchsubmit::before {
+            font-size: 20px;
         }
 
+
+@media (max-width: 1300px) {
+    .header .navigation .logo {
+        order: 1;
+        margin-left: 8%;
+    }
+    .header .row.navigation nav{
+        order: 2;
+    }
+    .header .row.navigation .searchlang {
+        order: 3;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header .navigation .logo {
+        order: 1;
+    }
+    .header .row.navigation .searchlang {
+        order: 2;
+        grid-column: 8/12;
+    }
+    .header .row.navigation nav {
+        grid-column: 12/13;
+        order: 3;
+    }
+    .header .row.navigation nav a:not(:first-of-type) {
+        display: none; /* gonna be changed when hamburger is applied*/
+    }
+}
+
+@media (max-width: 860px) {
+    .navigation .logo {
+        order: 1;
+    }
+    .header .row.navigation .searchlang {
+        display: none; /* gonna be changed when hamburger is applied*/
+    }
+    .header .row.navigation nav{
+        grid-column: 10/13;
+        order: 2;
+    }
+}
