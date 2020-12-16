@@ -78,7 +78,7 @@
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: black transparent transparent transparent;
+            border-color: var(--font-blue) transparent transparent transparent;
         }
 
 .socials > .fa-facebook > .tooltiptext {
@@ -111,7 +111,7 @@
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: black transparent transparent transparent;
+            border-color: var(--font-blue) transparent transparent transparent;
         }
 .socials > .fa-instagram > .tooltiptext {
     visibility: hidden;
@@ -142,7 +142,7 @@
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: black transparent transparent transparent;
+            border-color: var(--font-blue) transparent transparent transparent;
         }
 .socials > .fa-linkedin > .tooltiptext {
     visibility: hidden;
@@ -173,7 +173,7 @@
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: black transparent transparent transparent;
+            border-color: var(--font-blue) transparent transparent transparent;
         }
 
  @keyframes bounce-top {
