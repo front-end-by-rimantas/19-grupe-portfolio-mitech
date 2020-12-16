@@ -59,7 +59,7 @@
                 position: absolute;
                 border-radius: 50%;
                 border: 1px solid var(--font-blue);
-                top: -25px;
+                top: -25px; /* Sitais dydziais reguliuoji pulsuojanciu ziedu issipudtimo dydi */
                 right: -25px;
                 bottom: -25px;
                 left: -25px;
