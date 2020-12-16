@@ -26,20 +26,21 @@ background-color: #fbfbfb;
 
 /* Right column */
 .contact-us .contact-now {
-    
-    margin: 40px 10px 0px 100px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .contact-us .phone-icon  {
-    padding-left: 0%;
-    padding-bottom: 0px;
+    background-color: aqua;
+    font-size: 60px;
+    transform: scaleX(-1) ;
+
 }
 
 .contact-us h6 {
-    
+     
     font-size: 20px;
     padding: 0% 0% 0%;
     margin-bottom: 0px;
@@ -55,7 +56,15 @@ background-color: #fbfbfb;
 }
 
 
-.phone-icon .btn {
+.btn {
+    background-color: #d2a98e;
+    margin-bottom: 0 px;
+
 
 }
 
+ .btn:hover {
+         opacity: 1;
+         transform: translateY(-3px);
+         background-color: var(--btn-color);
+    } 
