@@ -1,26 +1,17 @@
 .contact-us {
 background-color: #fbfbfb;
     background-image: url(../../img/contacts/contact-bg.jpeg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: 50% 0%;
 }
 
 /* Left column */
-.contact-us .text-message {
-    margin: 0px 0px 0px 0px;   
-    
-}
-.text-message h3 {
-    font-weight: 600;
-    font-size: 40px;
-    text-decoration: none;
 
-}
 .text-message p {
     color: var(--font-darkgrey);
     margin: 10px;
-    line-height: 30px;
+   
 }
 
 
@@ -29,38 +20,54 @@ background-color: #fbfbfb;
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
+
 }
 
 .contact-us .phone-icon  {
-    background-color: aqua;
     font-size: 60px;
-    transform: scaleX(-1) ;
+    transform: scaleX(-1);
+    padding: 0px;
+    height: 60px;
+
 
 }
 
 .contact-us h6 {
-     
-    font-size: 20px;
-    padding: 0% 0% 0%;
-    margin-bottom: 0px;
-
+      font-size: 20px;
 
 }
-.contact-now u {
+.contact-now  u {
     text-decoration: none;
     color: var(--font-blue);
-    font-weight: 600;
     font-size: 44px;
- 
+    font-family: Cerebri-Bold;
+    line-height: 0px;
+    
+}
+
+.contact-now .phone-nr > a  {
+    text-decoration: none;
+    margin:30px 0px 0px 0px;
+    
+}   {
+    text-decoration: none;
+    margin:30px 0px 0px 0px;
+    
+}  
+
+.contact-now > .phone-nr > .underline-link {
+    color: var(--font-blue);
+}
+.contact-now > .phone-nr > .underline-link:after {
+    color: var(--font-blue);
 }
 
 
 .btn {
     background-color: #d2a98e;
     margin-bottom: 0 px;
-
-
+    margin-top: 15px;
 }
 
  .btn:hover {
@@ -68,3 +75,7 @@ background-color: #fbfbfb;
          transform: translateY(-3px);
          background-color: var(--btn-color);
     } 
+
+    .contact-us .phone-icon  .fa {
+        color: var(--font-blue);
+    }
