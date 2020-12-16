@@ -33,13 +33,20 @@ p.service {
 .service.col-12 > p {
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.40;
+    line-height: 1.4;
     color: #333333;
     margin-top: 60px;
     padding-top: 30px;
 }
+.challenge > p {
+    line-height: 1.4;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    
+}
     .service > p > a {
-        font-size: 18px;
+        font-size: 20px;
         text-decoration: none;
         color: var(--font-blue);
 }
@@ -58,15 +65,17 @@ p.service {
     left:42%;
     
 }
-.fa.btn:hover {
+.fa.btn:hover:after {  /* Ant btn paspausdus pelyte atsiranda pulsavimas */
+    content: "";
+    display: block;
     position: absolute;
-    animation: pulse 1s;
-}
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0px, 0 0 0 0px var(--btn-color);
-      }
-      100% {
-        box-shadow: 0 0 0 15px, 0 0 0 15px var(--btn-color);
-      }
-    }
+    color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid var(--font-blue);
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    animation: pulse 2s cubic-bezier(0, 0, 0.5, 1) infinite;
+    opacity: 0;
+} 
