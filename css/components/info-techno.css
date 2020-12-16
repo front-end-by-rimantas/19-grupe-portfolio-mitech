@@ -1,0 +1,141 @@
+.container.info-techno {
+    background-color: #fafafa; /* --bg-colour3 */
+    background-image: url(../../img/info-techno-hire-us/mitech-infotechno-hireus-bg.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 0px 20%; /* kad siek tiek nusileistu background image */
+    width: 100vw; /* will be deleted after horizontal scroll fix */
+}
+
+.ourcompany > div:first-of-type {
+    margin: 0px 120px 0px 20px; /* kairio stulpelio pozicionavimas */
+}
+
+.info-techno h3 {
+    margin: 20px 0px;
+}
+
+.ourcompany > div:last-of-type { /* desinio stulpelio pozicionavimas */
+    margin: 0px 10px 0px 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.info { /* bendras skaiciuoko, uzraso ir rodyklytes konteineris */
+    display: flex;
+    width: 100%;
+    height: 33%;
+}
+.info:hover {
+    cursor: pointer;
+}
+.info > .number { /* skaiciukas stovi virsuj kairej info kontainerio */
+    font-family: Cerebri-Bold;
+    display: inline-block;
+    width: 10%;
+    color:  var(--font-grey);
+    font-size: 24px;
+}
+.info:hover .number {
+    color: var(--font-blue)
+}
+.info > .line { /* konteineris uzrasui ir rodyklytei */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* kad rodyklyte galetu buti absolute */
+    width: 88%;
+    height: 80%;
+    margin-left: 2%;
+    border-top: 1px solid var(--border-grey); /* virs teksto esanti pilka linija */
+    align-self: flex-end;
+}
+.info > .line > * { /* del teksto ir rodyklyciu dydzio ir animavimo */
+    display: inline-block;
+    margin-top: 10px;
+    transition: ease-in-out 0.5s;
+}
+.info span {
+    display: inline-block;
+    width: 95%;
+    font-family: Cerebri-Bold;
+    font-size: 24px;
+}
+.info:hover span {
+    color: var(--font-blue)
+}
+.info i { /* 'neuzhoverintos' rodyklytes pozicija */
+    position: absolute; 
+    right: 0%;
+    display: inline-block;
+    font-size: 22px;
+}
+.info i:last-of-type{ /* 'nematoma' rodykle animacijai */
+    color: transparent;
+    right: 7%;
+}
+.info:hover i:first-of-type { /* pirma rodykle pradingsta */
+    color: transparent;
+}
+.info:hover i:last-of-type { /* anta atsiranda */
+    color: var(--font-blue);
+    right: 0%;
+}
+
+@media (max-width: 1300px) {
+    .ourcompany > div:first-of-type {
+        margin: 0px 90px 0px 20px;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 0px 10px 0px 80px;
+    }
+    .info span {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .ourcompany > div:first-of-type {
+        margin: 0px 6%;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 10px 8% 0px 6%;
+    }
+    .info {
+        height: 100px;
+    }
+    .info > .line {
+        width: 91%;
+    }
+    .info > .line > * {
+       margin: 24px 0px 48px 0px; 
+    }
+    .info > .number {
+        width: 7%;
+    }
+}
+
+@media (max-width: 550px) {
+    .container.info-techno {
+        grid-template-columns: 10px 1fr 10px;
+        gap: 10px;
+    }
+    .container.info-techno .ourcompany {
+        gap: 5px
+    }
+    .ourcompany > div:first-of-type {
+        margin: 0px 0px 0px 0px;
+    }
+    .ourcompany > div:last-of-type {
+        margin: 0px 0px 0px 0px;
+    }
+    .info > .number {
+        width: 14;
+    }
+    .info > .line {
+        width: 86%;
+    }
+    .info span {
+        width: 95%;
+    }
+}

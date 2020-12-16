@@ -5,129 +5,675 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/home-page.css">
 </head>
 
 <body>
-    <!-- header begin -->
-    <header class="container">
-        <div class="row">
-            HEADER: logo + nav
+    <!-- header area begin -->
+    <header class="container header">
+        <!-- top message begin -->
+        <div class="row top">
+            <a href="#">now hiring</a>
+            <p> Are you a driven and motivated 1st Line IT Support Engineer?</p>
         </div>
+        <!-- top message end -->
+        <!-- navigation begin -->
+        <div class="row navigation">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/header/logo-dark.png" alt="logo-dark">
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="dropdown">
+                    <span>home</span>
+                </div>
+                <div class="dropdown">
+                    <span>company</span>
+                </div>
+                <div class="dropdown">
+                    <span>IT solutions</span>
+                </div>
+                <div class="dropdown">
+                    <span>elements</span>
+                </div>
+                <div class="dropdown">
+                    <span>case studies</span>
+                </div>
+                <div class="dropdown">
+                    <span>blog</span>
+                </div>
+            </div>
+            <div class="searchlang">
+                <!-- <div>english</div> -->
+                <!-- <div> -->
+                <div class="language">
+                    english
+                </div>
+                <div>
+                    <form class="search">
+                        <input type="text" placeholder="Search...">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- navigation end -->
     </header>
-    <!-- header end -->
+    <!-- header area end -->
 
     <!-- section HERO begin -->
-    <section class="container">
+    <section class="container hero">
         <div class="row">
-            HERO
+            <div class="col-6 col-sm-9 col-xs-12 hero-text ">
+                <h5 class="hero"> IT Design & Consulting</h5>
+                <h1 class="hero">Facilitate All Local IT-retated Service Providers</h1>
+                <p class="hero">Highly Tailored IT Design, Management & Support Services.</p>
+                <div class="col-1">
+                    <a href="#" class="hero btn">Get details</a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-9 col-xs-12">
+                <img class="hero " src="./img/hero/hero.png" alt="HERO">
+                <img class="hero-back-img" src="./img/hero/hero-back-img.png" alt="Backround">
+            </div>
         </div>
     </section>
     <!-- section HERO end -->
 
-    <!-- section FEATURES begin -->
-    <section class="container">
-        <div class="row">
-            FEATURES
-        </div>
-    </section>
-    <!-- section FEATURES end -->
+    <!-- BRAND slider begin -->
+        <section class="container">
 
-    <!-- section APP PROMO begin -->
-    <section class="container">
-        <div class="row">
-            APP PROMO
-        </div>
-    </section>
-    <!-- section APP PROMO end -->
+            <div class="row">
+                <a href="#">
+                    <img src="./img/brand-slider/logo-1.png" alt="logo-1">
+                 </a> 
+                <a href="#">
+                    <img src="./img/brand-slider/logo-2.png" alt="logo-2">
+                 </a>     
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-3.png" alt="logo-3">
+                 </a> 
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-4.png" alt="logo-4">
+                 </a>  
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-5.png" alt="logo-5">
+                 </a>
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-6.png" alt="logo-6">
+                 </a>  
+                 <!-- INFORMACIJA BUS NAUDOJAMA PAJUNGUS JS -->
+                 <!-- <a href="#">
+                    <img src="./img/brand-slider/logo-7.png" alt="logo-7">
+                 </a>  
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-8.png" alt="logo-8">
+                 </a>  
+                 <a href="#">
+                    <img src="./img/brand-slider/logo-9.png" alt="logo-9">
+                 </a>     -->
+                </div>
 
-    <!-- section APP PROMO 2 begin -->
-    <section class="container">
-        <div class="row">
-            APP PROMO 2
-        </div>
-    </section>
-    <!-- section APP PROMO 2 end -->
+        </section>
 
-    <!-- section HOW WORKS? begin -->
-    <section class="container">
-        <div class="row">
-            HOW WORKS?
+    <!-- BRAND slider end -->
+    
+    
+    <!-- section SERVICES begin -->
+    <section class="container services">
+        <div class="row"> 
+            <h6 class="service col-12"> Our Services</h6>
+            <h3 class="service col-12" > For your very specific industry, we have <u>highly-tailored IT solutions.</u></h3>
+        </div>
+        <div class="row"> 
+            <div class="service col-4 col-md-6 col-sm-12">
+                <img src="./img/services-foto/it-design.png" alt="IT design">
+                <h3> IT Design</h3>
+                <p>We provide the most responsive and functional IT design for companies and businesses worldwide.</p>
+                <i class="fa fa-long-arrow-right btn" aria-hidden="true"></i>
+            </div>
+            <div class="service col-4 col-md-6 col-sm-12">
+                <img src="./img/services-foto/it-management.png" alt="IT Management">
+                <h3> IT Management</h3>
+                <p>It's possible to simultaneously manage and transform information from one server to another</p>
+                <i class="fa fa-long-arrow-right btn" aria-hidden="true"></i>
+            </div>
+            <div class="service col-4 col-md-6 col-sm-12">
+                <img src="./img/services-foto/data-security.png" alt="Data Security">
+                <h3> Data Security</h3>
+                <p>Back up your database, store in a safe and secure place while still maintaining its accessibility.</p>
+                <i class=" fa fa-long-arrow-right btn" aria-hidden="true"></i> 
+            </div>
+        </div>
+        <div  class="row"> 
+            <p class="service col-12">Challenges are just opportunities in disguise.<a href="#">Take the challenge!</a></p>
         </div>
     </section>
-    <!-- section HOW WORKS? end -->
+    <!-- section SERVICES end -->
 
-    <!-- section GALLERY begin -->
-    <section class="container">
-        <div class="row">
-            GALLERY
+    <!-- section info-techno begin -->
+    <section class="container info-techno">
+        <div class="row ourcompany">
+            <div class="col-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h6>our company</h6>
+                <h3>We've been thriving in <u>38 years</u></h3>
+                <p>Mitech specializes in technological and IT-related services such as product engineering, warranty management, building cloud, infrastructure, network, etc. 
+                    We put a strong focus on the needs of your business to figure out solutions that best fits your demand and nail it.</p>
+                <a href="#" class="btn">join us now</a>
+            </div>
+            <div class="col-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="info">
+                    <div class="number">01</div>
+                    <div class="line">
+                        <span>How can we help your business?</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="number">02</div>
+                    <div class="line">
+                        <span>Why become our partner?</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> 
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="number">03</div>
+                    <div class="line">
+                        <span>What are the best of Mitech?</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section info-techno end -->
+        <!-- section HIRE US begin -->
+        <div class="row hireus">
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h6>hire us, why not?</h6>
+                <h3>How we claim to <u>excel?</u></h3>
+            </div>
+            <div class="linklist col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hireus-container" >
+                    <a href="#">
+                        <div class="curtain"></div>
+                        <img src="./img/info-techno-hire-us/mms-thumbnail.jpg" alt="">
+                        <div class="learn">
+                            <span>Learn</span>
+                            <span> more</span>
+                        </div>
+                        <div class="overflow">
+                            <h5>Mitech Management Systems</h5>
+                        </div>
+                    </a>
+                    <p>Our technical experts have a flair for developing 
+                        <u>clean-coded websites</u> based on customers' needs, global guidelines and trends.
+                    </p>
+                </div>
+                <div class="hireus-container" >
+                    <a href="#">
+                        <div class="curtain"></div>
+                        <img src="./img/info-techno-hire-us/eds-thumbnail.jpeg" alt="eds-thumbnail">
+                        <div class="learn">
+                            <span>Learn</span>
+                            <span> more</span>
+                        </div>
+                        <div class="overflow">
+                            <h5>Efficient Database Security</h5>
+                        </div>
+                    </a>
+                    <p>Our technical experts have a flair for developing 
+                        <u>clean-coded websites</u> based on customers' needs, global guidelines and trends.
+                    </p>
+                </div>
+                <div class="hireus-container" >
+                    <a href="#">
+                        <div class="curtain"></div>
+                        <img src="./img/info-techno-hire-us/rmft-thumbnail.jpeg" alt="rmft-thumbnail">
+                        <div class="learn">
+                            <span>Learn</span>
+                            <span> more</span>
+                        </div>
+                        <div class="overflow">
+                            <h5>Reliable Multi-functional Technology</h5>
+                        </div>
+                    </a>
+                    <p>Our technical experts have a flair for developing 
+                        <u>clean-coded websites</u> based on customers' needs, global guidelines and trends.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a class="underline-link" href="#">
+                    <span>Learn more about how we work span</span>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </section>
-    <!-- section GALLERY end -->
+    <!-- section HIRE US end -->
+
+    <!-- section FACT WRAPPER begin -->
+    <section class="container factwrapper">
+        <div class="row">
+            <div class="facts">
+                <span class="upper" >Successfully work<br>with</span>
+                <div class="numbers">1056</div>
+                <span class="bottom">happy clients</span>
+            </div>
+            <div class="facts">
+                <span class="upper" >Successfully<br>completed</span>
+                <div class="numbers">491</div>
+                <span class="bottom">finished projects</span>
+            </div>
+            <div class="facts">
+                <span class="upper" >Recruit more<br>than</span>
+                <div class="numbers">245</div>
+                <span class="bottom">skilled experts</span>
+            </div>
+            <div class="facts">
+                <span class="upper" >Blog<br>update</span>
+                <div class="numbers">1090</div>
+                <span class="bottom">media posts</span>
+            </div>
+        </div>
+    </section>
+    <!-- section FACT WRAPPER end -->
+
+    <!-- section VIDEO begin -->
+    <section class="container video">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="video-head">
+                    <h2>Share the joy of achieving glorious moments<br>
+                        & climbing up the top.</h2>
+                </div>
+                <div class="video-play">
+                    <a href="##">
+                    <div class="fa fa-play"></div>
+                    <div class="video-text">Watch video <br> intro</div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- section VIDEO end -->
+
+    <!-- section CASE STUDIES begin -->
+    <section class="case container">
+        <div class="row">
+            <div class="col-12">
+
+                <div id="case-head">
+                    <h6>Case studies</h6>
+                    <h3>Proud projects that<u> make us stand out</u></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row cards-block" >
+                <div class="col-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <img src="./img/case-study/aqua.jpg" alt="card1">
+                        <div class="content">
+                            <h4>Aqua- Research and Energy</h4>
+                            <u>Cyber security</u>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
+                            <div class="view">View case study
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-4 col-lg-6 col-md-6 ">
+                <div class="card">
+                    <img src="./img/case-study/mitech.jpg" alt="card1">
+                    <div class="content">
+                        <h4>Mitech- Smart Vision</h4>
+                        <u>Cyber security</u>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
+                        <div class="view">View case study
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="./img/case-study/arden.jpg" alt="card1">
+                    <div class="content">
+                        <h4>Arden-Internal Network</h4>
+                        <u>Cyber security</u>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, temporibus.</p>
+                        <div class="view">View case study
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bubbles col-12">
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+            </div>
+            <div class="challenge col-12">
+                <p>Challenges are just opportunities in disguise.<a href="#" class="underline-link">Take the challenge!</a></p>
+            </div>
+        </div>
+
+    </section>
+    <!-- section CASE STUDIES end -->
 
     <!-- section TESTIMONIALS begin -->
-    <section class="container">
-        <div class="row">
-            TESTIMONIALS
-        </div>
-    </section>
+     <section class="testimonial container">
+           <div class="row">
+              <div class="col-12">
+               <div class="testimonial-head">
+                  <h6>testimonials</h6>
+                  <h3>Why do people praise about <u>Mitech?</u></h3>
+              </div>
+            </div>
+           </div>
+          <div class="row testimonial-slide" >              
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="box">
+                                <h6>The Mitech team works really hard to ensure high level of quality</h6>
+                                <div class="testimo-text"><u>There are thousands of IT service companies in the US. But there’s nothing like @Mitech.
+                                Their popularity and reputation are just evident.</u></div>
+                            <div class="author-info">
+                                <img src="./img/testimonials/1-maggie.jpeg" alt="1-maggie">
+                                <div class="author-title"> 
+                                    <h6 class=author-name>Steven King</h6>
+                                    <p class="author-specialty">/Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="card">
+                        <div class="box">
+                            <h6>The Mitech team works really hard to ensure high level of quality</h6>
+                            <div class="testimo-text"><u>There are thousands of IT service companies in the US. But there’s nothing like @Mitech.
+                            Their popularity and reputation are just evident.</u></div>
+                        <div class="author-info">
+                            <img src="./img/testimonials/2-robert.jpeg" alt="2-robert">
+                            <div class="author-title"> 
+                                <h6 class=author-name>Steven King</h6>
+                                <p class="author-specialty">/Marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                    <div class="box">
+                        <h6>The Mitech team works really hard to ensure high level of quality</h6>
+                        <div class="testimo-text"><u>There are thousands of IT service companies in the US. But there’s nothing like @Mitech.
+                        Their popularity and reputation are just evident.</u></div>
+                    <div class="author-info">
+                        <img src="./img/testimonials/3-stephen.jpeg" alt="3-stephen">
+                        <div class="author-title"> 
+                            <h6 class=author-name>Steven King</h6>
+                            <p class="author-specialty">/Marketing</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+          </div>
+          <!-- INFORMACIJA BUS NAUDOJAMA PAJUNGUS JS -->
+          <!-- <div class="col-4">
+            <div class="card">
+                <div class="box">
+                    <h6>The Mitech team works really hard to ensure high level of quality</h6>
+                    <div class="testimo-text"><u>There are thousands of IT service companies in the US. But there’s nothing like @Mitech.
+                    Their popularity and reputation are just evident.</u></div>
+                <div class="author-info">
+                    <img src="./img/testimonials/4-monica.jpeg" alt="4-monica">
+                    <div class="author-title"> 
+                        <h6 class=author-name>Steven King</h6>
+                        <p class="author-specialty">/Marketing</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>    -->
+            <div class="col-12">
+               <div class="swiper-btn">
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+                   <span class="dot"></span>
+               
+               </div>
+            </div> 
+     </section>
     <!-- section TESTIMONIALS end -->
 
-    <!-- section PRICING begin -->
+    <!-- section BLOG & NEWS begin -->
     <section class="container">
         <div class="row">
-            PRICING
+            <div class="col-4 col-md-6 col-sm-8 col-xs-12">
+                <h6>blogs & news</h6>
+                <h3> Interesting articles <span class="news-frequency">updated daily</span> <!-- contains a section of text to be styled separately from the rest of the text block--> </h3>
+                    <ul class="news-column">
+                    <li>
+                        <a href="#">Ideas for high returns on investment</a>
+                    </li>
+                    <li>
+                        <a href="#">How technology made businesses more efficient</a>
+                    </li>
+                    <li>
+                        <a href="#">Data secure on transitioning to a new office</a>
+                    </li>
+                    <li>
+                        <a href="#">The keys to persuading customeres nowadays</a>
+                    </li>
+                    <li>
+                        <a href="#"> Blockchain technology effects on logistics sector?</a>
+                    </li>
+                    </ul>
+            </div>
+            <div class="blog-column col-4 col-md-6 col-sm-8 col-xs-12">
+                <a href="#">
+                    <img class="blog-thumbnail" src="./img/blog-news/1-tech-improved-business.jpeg" alt="Blog thumbnail image">
+                </a>
+                <div class="blog-post">
+                    <span class="post-date">
+                        February 28, 2019
+                    </span>
+                    <h5 class="post-title">
+                        <a href="#"> 5 Ways technology has improved business today </a>
+                    </h5>
+                    <div class="post-exerpt">
+                        <p>They play a role in making operations more seamless, bridging the gap between authorities, consumers and businesses. …</p>
+                    </div>
+                    <span class="hover-link">
+                        <a href="#">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a>
+                    </span>
+                </div>
+            </div>
+            <div class="blog-column col-4 col-md-6 col-sm-8 col-xs-12">
+                <a href="#"> 
+                    <img class="blog-thumbnail" src="./img/blog-news/2-wireless-tech.jpeg" alt="Blog thumbnail image">
+                </a>
+                <div class="blog-post">
+                    <span class="post-date">
+                        February 28, 2019
+                    </span>
+                    <h5 class="post-title">
+                        <a href="#">How wireless technology is changing business</a>
+                    </h5>
+                    <div class="post-exerpt">
+                        <p>It is far wiser to do your own installations and ensure that all data flowing through the organization has end-to-end encryption. …</p>
+                    </div>
+                    <span>
+                        <a class="hover-link" href="#">Read more <i class="hover-link fa fa-long-arrow-right" aria-hidden="true"></i> </a>
+                    </span>
+                </div>
+            </div>
+        
         </div>
     </section>
-    <!-- section PRICING end -->
+    <!-- section BLOG & NEWS end -->
 
-    <!-- section FAQ begin -->
+    <!-- section CONTACT US begin -->
     <section class="container">
         <div class="row">
-            FAQ
+            CONTACT US
         </div>
     </section>
-    <!-- section FAQ end -->
+    <!-- section CONTACT US end -->
 
-    <!-- section TEAM begin -->
-    <section class="container">
+    <!-- section FOOTER begin -->
+    <section class="container footer" >
         <div class="row">
-            TEAM
+            <div class="col-4 col-md-6 col-sm-8 col-xs-12">
+                <img id="logo-footer" src="./img/header/logo-dark.png" alt="logo-dark">
+                <ul class="footer-column">
+                    <li>
+                        58 Howard Street #2 San Francisco, CA 941
+                    </li>
+                    <li>
+                        <a class="underline-link" href="mailto:contact@aeroland.com">contact@aeroland.com</a>
+                    </li>
+                    <li>
+                        <a id="contact-phone" href="tel:+68122109876"> (+68)1221 09876 </a>
+                    </li>
+                    <li>
+                        <a class="underline-link" id="brand-website" href="#">www.mitech.xperts.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li>
+                        <h6>IT Services</h6>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Managed IT</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">IT support</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">IT consultancy</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cloud computing</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cyber security</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li>
+                        <h6>Quick links</h6>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Pick up locations</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Terms of payment</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Privacy policy</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Where to find us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <ul class="footer-column">
+                    <li> 
+                        <h6>Support</h6> 
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Forum support</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Help & FAQ</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Contact us</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Pricing and plans</a>
+                    </li>
+                    <li>
+                        <a class="underline-link" href="#">Cookies policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 col-md-2 col-sm-4 col-xs-12">
+                <div class="spaceholder"></div>
+                <ul class="footer-column">
+                    <li>
+                        <a class="app-btn" href="#">
+                            <img src="./img/contacts/google-play.jpeg" alt="Google Play Store">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="app-btn" href="#">
+                            <img src="./img/contacts/app-store.jpeg" alt="Apple App Store">
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <!-- section FOOTER end -->
+
+    <!-- section SOCIAL ICON & Copyright begin -->
+    <section class="copyrights container">
+        <div class="row">
+            <div class="copyright col-6">
+                © 2019 Mitech. <a href="#">All rights reserved</a>
+            </div>
+            <div class="socials col-6">
+                <ul>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+            </div>
         </div>
     </section>
-    <!-- section TEAM end -->
-
-    <!-- section APP STORE begin -->
-    <section class="container">
-        <div class="row">
-            APP STORE
-        </div>
-    </section>
-    <!-- section APP STORE end -->
-
-    <!-- section SUBSCRIBE begin -->
-    <section class="container">
-        <div class="row">
-            SUBSCRIBE
-        </div>
-    </section>
-    <!-- section SUBSCRIBE end -->
-
-    <!-- section CONTACT begin -->
-    <section class="container">
-        <div class="row">
-            CONTACT
-        </div>
-    </section>
-    <!-- section CONTACT end -->
-
-    <!-- footer begin -->
-    <footer class="container">
-        <div class="row">
-            FOOTER
-        </div>
-    </footer>
-    <!-- footer end -->
+    <!-- section SOCIAL ICON & Copyright end -->
+    <div class="toast">
+        <a class="top" href="#">
+            <i class="first fa fa-link"></i>
+            <span class="tooltiptext">Quick Options</span>
+        </a>
+        <a class="middle" href="#">
+            <i class="fa fa-life-ring"></i>
+            <span class="tooltiptext">Support Center</span>
+        </a>
+        <a class="bottom" href="#">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="tooltiptext">Purchase Mitech</span>
+        </a>
+    </div>
+    <div class="backtotop">
+        <a href="#">
+            <i class="fa fa-long-arrow-up"></i>
+            <i class="fa fa-long-arrow-up"></i>
+        </a>
+    </div>  
 
     <script src="./js/main-home.js" type="module"></script>
 </body>

@@ -1,0 +1,220 @@
+.hireus {
+    margin-top: 80px;
+}
+.hireus > div:first-of-type { /*titulinis sekcijos uzrasas */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.linklist { /* bendras visu 'paveiksliukiniu' nuorodu konteineris */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* prie responsive sumazes columns kiekis */
+    padding: 0% 1%;
+    gap: 70px;
+}
+.hireus-container {
+    display: inline-block;
+    grid-column: auto / span 1; /* kiekvienas 'paveiksliukinis' linkas uzima viena grido sekcija */
+    margin: 8px 0px 0px 0px;
+    transition: ease-in-out 0.5s;
+    width: 100%;
+    padding: 0%;
+}
+.hireus-container:hover {
+    margin-top: 0px; /* top ir bottom marginai apsikeicia vietom del animacijos */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.linklist a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    overflow: hidden; /* kad neislistu uz krastu padidintas paveiksliukas animacijos metu */
+}
+.curtain { /* 'nematomas' elementas, kuris nuspalvina melynai paveiksliuka uzhoverinsu */
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+}
+.hireus-container:hover .curtain {
+    background-color: #02ab;
+}
+.linklist img{
+    display: inline-block;
+    width: 100%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    transform: scale(1, 1);
+    transition: ease-in-out 0.5s;
+}
+.hireus-container:hover img { /* uzhoverinus priarteja paveiksliukas */
+    transform: scale(1.1, 1.1);
+}
+.hireus-container .learn { /* pasislepes centrinis button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+    padding: 23px 38px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%, -40%) scaleY(0); /* pradine 'nematoma' pozicija */
+    border: 0px transparent solid;
+    border-radius: 6px;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+}
+.learn span {
+    display: inline;
+    font-family: Cerebri-SemiBold;
+    color: var(--font-blue);
+    white-space: pre;
+    text-align: center;
+}
+
+.hireus-container:hover .learn { /* isnyrantis button */
+    transform: translate(-50%, -50%) scaleY(1);
+}
+.linklist .overflow { /* balto pranykstancio teksto konteineris paveikslelio apatineje dalyje */
+    display: inline-block;
+    width: 100%;
+    height: 29%;
+    background: linear-gradient(#02c0,#1056,#1058); /* paveiksleliu apacios is melsvo i transparent gradient'as */
+    position: absolute;
+    bottom: 0%;
+    border: 0px transparent solid;
+    border-radius: 8px;
+    overflow: hidden; /* kad animacijos metu kylantis tekstas nusikirstu */
+}
+.overflow h5 { /* baltas tekstas virs paveikslelio */
+    display: inline-block;
+    padding: 0% 12%;
+    text-align: center;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+.hireus-container:hover h5 { /* balto teksto animacija */
+    transform: translateY(-150%);
+}
+.hireus p { /* tekstas po paveiksleliu */
+    display: inline-block;
+    padding: 20px 3px;
+    text-align: center;
+}
+.hireus p > u {
+    font-family: Cerebri-SemiBold;
+}
+.hireus > div:last-of-type { /* apatinio linko konteineris */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hireus .underline-link { /* apatinio linko statiskas stilius */
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.hireus .underline-link span {
+    color: var(--font-blue);
+    font-size: 18px;
+    font-family: Cerebri-SemiBold;
+}
+
+.hireus .underline-link::after {
+    background-color: var(--font-blue);
+    height: 1px;
+    bottom: -1px; /* pazeminta vienu pikseliu, kad sutaptu su border bottomu */
+}
+.hireus .underline-link i { /* rodyklyte */
+    color: var(--font-blue);
+    display: inline-block;
+    align-self: center;
+    font-size: 18px;
+    margin-left: 10px; /* kad neprilitpu prie teksto */
+}
+.hireus .underline-link:hover {
+    color: var(--font-blue); /* kad custome esanti teksto default orange spalve neperrasytu melynos */
+}
+
+@media (max-width: 1300px) {
+    .linklist {
+        gap: 46px;
+    }
+    .overflow h5 {
+        padding: 0% 5%;
+    }
+    .learn span:nth-of-type(2) {  /* is Learn more pasidaro tik Learn */
+        display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .hireus {
+        margin-top: 30px;
+    }
+    .linklist {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    .learn span:nth-of-type(2) {
+        display: inline;
+    }
+    .hireus-container {
+        width: 94%;
+    }
+    .hireus-container:nth-of-type(odd) { /*kairej esantys paveiksliukai*/
+        margin: 8px 0% 0px 6%;
+    }
+    .hireus-container:nth-of-type(even) { /* desinej esantys paveiksliukai */
+        margin: 8px 6% 0px 0%;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .hireus {
+        margin-top: 25px;
+    }
+    .linklist {
+        grid-template-columns: 1fr;
+    }
+    .hireus-container {
+        width: 68%;
+    }
+    .hireus-container:nth-of-type(odd) {
+        margin: 8px 18% 0px 18%;
+    }
+    .hireus-container:nth-of-type(even) {
+        margin: 8px 18% 0px 18%;
+    }
+    .overflow h5 {
+        font-size: 24px;
+        padding: 0% 12%;
+    }
+}
+@media (max-width: 550px) {
+    .container.info-techno .hireus {
+        gap: 5px
+    }
+    .hireus-container {
+        width: 90%;
+    }
+    .hireus-container:nth-of-type(odd) {
+        margin: 8px 5% 0px 5%;
+    }
+    .hireus-container:nth-of-type(even) {
+        margin: 8px 5% 0px 5%;
+    }
+}

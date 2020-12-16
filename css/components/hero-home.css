@@ -1,0 +1,44 @@
+.container.hero {
+    background-color: #F4EFE9;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+} 
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 10%;
+   }
+h1.hero {
+    width: 100%;
+    font-size: 56px;
+    color: #333333;
+}
+h5.hero {
+    color: var(--font-blue);
+    font-size: 18px;
+}
+p.hero {
+    color: var(--font-grey);
+    font-size: 15px;
+}
+img.hero {
+    max-width: 100%;
+    height: auto;
+    margin-left: 10%;
+    visibility: visible;
+   
+    z-index: 1;
+    position: relative;
+}
+img.hero-back-img {
+    max-width: 30%;
+    height: auto;
+    position: absolute;
+    top: 1%;
+    left: 54%;
+}

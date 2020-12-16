@@ -1,0 +1,21 @@
+.container.services {
+    background-color: var(--bg-color);
+    text-align: center;
+    max-width: 100vw;
+    
+}
+.service.col-4 {
+    background-color: #ffffff;
+    margin-top: 60px;
+    padding: 50px 30px 63px 30px;
+    position: relative;
+}
+p.service {
+    padding-top: 30px;
+    margin-top: 60px;
+}
+.fa.btn {
+    position: absolute;
+    top: 92%;
+    left: 40%;
+}

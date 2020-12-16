@@ -1,17 +1,30 @@
 /* reset/main */
+@import './components/variables.css';
 @import './components/reset.css';
+@import './components/fonts.css';
 @import './components/layout.css';
 /* 3rd party components */
+@import './components/font-awesome.min.css';
 /* your components */
 @import './components/button.css';
-@import './components/faq.css';
-@import './components/footer.css';
-@import './components/form.css';
 @import './components/gallery.css';
+@import './components/toast.css';
 @import './components/header.css';
+@import './components/blog-news.css';
+@import './components/brand-slider.css';
+@import './components/case-studies.css';
+@import './components/contacts.css';
+@import './components/fact-wrapper.css';
+@import './components/footer.css';
 @import './components/hero-home.css';
-@import './components/pricing.css';
+@import './components/hire-us.css';
+@import './components/info-techno.css';
+@import './components/social-icons.css';
+@import './components/services.css';
 @import './components/testimonials.css';
+@import './components/video.css';
+@import './components/back-to-top.css';
+
 
 /*
 ***********************************************
@@ -20,18 +33,68 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
+.hover-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: var(--font-blue);
+    transition: 0.6s;
+}
+.hover-link:hover {
+    color: var(--font-orange);
+}
+.underline-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: var(--font-grey);
+    transition: 0.6s;
+}
+.underline-link::after { /* creates a pseudo element underlining the text block*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);/*initial pseudo element size = 0. */
+    height: 2px;
+    bottom: 0; /*positioned at the bottom of the text block */
+    left: 0; /*positioned at the left of the text block */
+    background-color: var(--font-orange);
+    transform-origin: bottom right;/* transition starts there */
+    transition: transform 0.6s ease-out; /* changes to transform occur over 0.6s with an ease-out timing function, which is equivalent to cubic-bezier (0, 0, 0.58, 1.0) */
+}
+.underline-link:hover::after {
+    transform: scaleX(1); /* transitions the width of the pseudo-element to 100% */
+    transform-origin: bottom left; /* reverses where transition ends, after hover */
+}
+.underline-link:hover {
+    color: var(--font-orange);
+}
 /* header */
+
 /* hero */
-/* features */
-/* app promo */
-/* app promo 2 */
-/* how works */
-/* gallery */
+
+/* brand slider */
+
+/* services */
+
+/* info-techno*/
+
+/* hire us */
+
+/* fact wrapper */
+
+/* video */
+
+/* case studies */
+
 /* testimonials */
-/* pricing */
-/* faq */
-/* team */
-/* app store */
-/* subscribe */
-/* contact */
+
+/* blog & news */
+
+/* contact us */
+
 /* footer */
+
+/* social icon & copyright */
+
+/* toast */
