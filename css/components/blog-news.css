@@ -1,6 +1,3 @@
-h3 {
-    line-height: 1.41;
-}
 .news-column {
     width: 100%;
     margin-top: 30px;
@@ -27,12 +24,6 @@ h3 {
 }
 .news-column> li > a::after {
    
-}
-.news-frequency {
-    font-size: 32px;
-    color: var(--font-blue);
-    font-weight: 700;
-    font-family: Cerebri-SemiBold;
 }
 .blog-column {
     transform: translateY(-2px);
