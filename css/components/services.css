@@ -10,12 +10,31 @@
     padding: 50px 30px 63px 30px;
     position: relative;
 }
-p.service {
-    padding-top: 30px;
-    margin-top: 60px;
-}
+
 .fa.btn {
     position: absolute;
     top: 92%;
     left: 40%;
 }
+
+.service-challenge {
+    margin-top: 100px;
+    /* text-align: center; */
+}
+.service-challenge p, a {
+    /* justify-content: center; */
+    line-height: 1.4;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+}
+
+    .service-challenge > p > .underline-link {
+        color: var(--font-blue);
+        border-bottom: 1px solid #ccc;
+    }
+    .service-challenge .underline-link::after {
+        background-color: var(--font-blue);
+        height: 1px;
+        bottom: -1px;
+    }
