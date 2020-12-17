@@ -11,21 +11,35 @@
     line-height: 1;
     margin-top: 20px;
     font-weight: 900;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.6s;
 }
 .news-column > li::before { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
-    float: left;
-    width: 1.5em;
     font-family: FontAwesome;
     content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
     color: var(--font-darkgrey);
     margin-right: 10px;
 }
-.news-column > li:hover::marker {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(-100%);
+.news-column > li::after {
+    font-family: FontAwesome;
+    content: "\f178";
+    color: transparent;
+    position: absolute;
+    top: 7px;
+    left: 0;
 }
+.news-column > li:hover::before {
+    transform: translateX(-100%);
+    /* color: var(--font-blue); */
+    /* color: transparent; */
+}
+.news-column > li:hover::after {
+    transform: translateX(100%);
+    /* width: 1.5em; */
+    color: var(--font-blue); 
+    left: 0%;
+    
+}
+
 .blog-column {
     transform: translateY(-2px);
 }
