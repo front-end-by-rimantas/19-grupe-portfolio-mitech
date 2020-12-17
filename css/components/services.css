@@ -62,9 +62,8 @@ p.service {
 .fa.btn {
     position: absolute;
     top: 92%;
-    left:42%;
-    
-}
+    left:40%;
+    }
 .fa.btn:hover:after {  /* Ant btn paspausdus pelyte atsiranda pulsavimas */
     content: "";
     display: block;
@@ -79,3 +78,4 @@ p.service {
     animation: pulse 2s cubic-bezier(0, 0, 0.5, 1) infinite;
     opacity: 0;
 } 
+
