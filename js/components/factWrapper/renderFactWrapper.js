@@ -18,7 +18,7 @@ function renderFactWrapper (selector, factData) {
     
         HTML += `<div class="facts">
                     <span class="upper" >${fact.description}</span>
-                    <div class="numbers">${fact.count}</div>
+                    <div class="numbers">0</div>
                     <span class="bottom">${fact.title}</span>
                 </div>`;
     }
