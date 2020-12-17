@@ -15,26 +15,19 @@
     position: absolute;
     top: 92%;
     left: 40%;
+    
 }
-
-.service-challenge {
-    margin-top: 100px;
-    /* text-align: center; */
-}
-.service-challenge p, a {
-    /* justify-content: center; */
-    line-height: 1.4;
-    font-weight: 600;
-    color: black;
-    font-size: 20px;
-}
-
-    .service-challenge > p > .underline-link {
-        color: var(--font-blue);
-        border-bottom: 1px solid #ccc;
-    }
-    .service-challenge .underline-link::after {
-        background-color: var(--font-blue);
-        height: 1px;
-        bottom: -1px;
-    }
+    .fa.btn:hover:after {  /* Ant btn paspausdus pelyte atsiranda pulsavimas */
+                content: "";
+                display: block;
+                position: absolute;
+                color: #ffffff;
+                border-radius: 50%;
+                border: 1px solid var(--font-blue);
+                top: -1px;
+                right: -1px;
+                bottom: -1px;
+                left: -1px;
+                animation: pulse 2s cubic-bezier(0, 0, 0.5, 1) infinite;
+                opacity: 0;
+            }
