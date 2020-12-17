@@ -18,4 +18,19 @@ p.service {
     position: absolute;
     top: 92%;
     left: 40%;
+    
 }
+    .fa.btn:hover:after {  /* Ant btn paspausdus pelyte atsiranda pulsavimas */
+                content: "";
+                display: block;
+                position: absolute;
+                color: #ffffff;
+                border-radius: 50%;
+                border: 1px solid var(--font-blue);
+                top: -1px;
+                right: -1px;
+                bottom: -1px;
+                left: -1px;
+                animation: pulse 2s cubic-bezier(0, 0, 0.5, 1) infinite;
+                opacity: 0;
+            }
