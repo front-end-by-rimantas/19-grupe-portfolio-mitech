@@ -13,9 +13,16 @@ function renderFactWrapper (selector, factData) {
     const amount = factData.maxLimit || factData.data.length;
 
     for (let i = 0; i < amount; i++) {
-        const feature = factData.data[i];
-        console.log(feature);
+        const fact = factData.data[i];
+        
+        HTML += `<div class="facts">
+                    <span class="upper" >${fact.description}</span>
+                    <div class="numbers">${fact.count}</div>
+                    <span class="bottom">${fact.title}</span>
+                </div>`;
     }
+    
+    DOM.innerHTML = HTML
 }
 
 
