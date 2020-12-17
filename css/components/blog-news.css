@@ -1,29 +1,30 @@
 .news-column {
+    position: relative; /* to enable absolute positioning for the arrow pseudo-element */
     width: 100%;
     margin-top: 30px;
-    margin-left: 1.5em;
     padding: 0;
     list-style: outside none none; /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
 }
 .news-column > li {
-    position: relative;
-    padding-left: 1em;
-
+    display: flex;
+    align-items: baseline; /* aligns the arrow pseudo-element vertically in the middle against the first line of text in the <li> element */
+    line-height: 1;
+    margin-top: 20px;
+    font-weight: 900;
+    transition: ease-in-out 0.5s;
 }
-.news-column > li::marker { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
+.news-column > li::before { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
     float: left;
     width: 1.5em;
     font-family: FontAwesome;
     content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
-    
+    color: var(--font-darkgrey);
+    margin-right: 10px;
 }
-.news-column > li > a::before {
+.news-column > li:hover::marker {
     visibility: hidden;
     opacity: 0;
     transform: translateX(-100%);
-}
-.news-column> li > a::after {
-   
 }
 .blog-column {
     transform: translateY(-2px);
