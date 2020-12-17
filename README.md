@@ -5,22 +5,26 @@
 
 
 # Portfolio
-### 19 group portfolio website project
+### BIT cohort 19 portfolio website project
 
-This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
+This project is for educational porpuses only. Pull requests are welcome, but priority is given to the team assigned to it! Thank you for your cooperation!
 
-Site published at https://front-end-by-rimantas.github.io/19-grupe-portfolio/
+Site published at https://front-end-by-rimantas.github.io/19-grupe-portfolio-mitech/
 
-Design: [React theme five](https://react.theme-land.com/theme-five)
+Design: [React theme seven](https://demo.hasthemes.com/mitech-preview/index-infotechno.html)
 
 
 ## Project features
 - Node.js
-- responsive design
-- repetitive content is generated/rendered;
-- css animations
-- form validations
-- no AJAX (data sending)
+- Responsive design
+- Repetitive content is generated/rendered;
+- CSS animations
+- Form validations
+- No AJAX (data sending)
 
 ## Authors
-[Rimantas](https://github.com/belauzas)
+[Andrius](https://github.com/pigma15)
+[Jokūbas](https://github.com/JRybelis)
+[Mantas](https://github.com/bemze)
+[Marius](https://github.com/2MariusG)
+[Martynas](https://github.com/martynas3113)
