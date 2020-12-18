@@ -31,30 +31,31 @@ p.service {
     margin-bottom: 30px;
 }
 .service.col-12 > p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #333333;
-    margin-top: 60px;
-    padding-top: 30px;
-}
-.challenge > p {
     line-height: 1.4;
     font-weight: 600;
     color: black;
     font-size: 20px;
-    
+    margin-top: 60px;
+    padding-top: 30px;
 }
-    .service > p > a {
+.service.col-12 > a {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 60px;
+    padding-top: 30px;
+}
+
+    /* .service > p > a {
         font-size: 20px;
         text-decoration: none;
         color: var(--font-blue);
-}
+} */
     .service > p > .underline-link {
         color: var(--font-blue);
         border-bottom: 1px solid #ccc;
 }
-.service .underline-link::after {
+    .service .underline-link::after {
     background-color: var(--font-blue);
     height: 1px;
     bottom: -1px;
