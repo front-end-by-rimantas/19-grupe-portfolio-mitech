@@ -5,6 +5,12 @@
     padding: 0;
     list-style: outside none none; /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
 }
+.news-column::marker { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
+    font-family: FontAwesome;
+    content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
+    color: var(--font-darkgrey);
+    margin-right: 10px;
+}
 .news-column > li {
     display: flex;
     align-items: baseline; /* aligns the arrow pseudo-element vertically in the middle against the first line of text in the <li> element */
@@ -13,31 +19,81 @@
     font-weight: 900;
     transition: ease-in-out 0.6s;
 }
-.news-column > li::before { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
+.news-column > li::before {
     font-family: FontAwesome;
-    content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
+    content: "\f178";
     color: var(--font-darkgrey);
-    margin-right: 10px;
+    margin-right: 15px;
+    visibility: visible;
+}
+.news-column > li:hover::before {
+    color: var(--font-blue);
+    animation-name: slide-out-right;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+@keyframes slide-out-right {
+    0%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+    60%{
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+      }
+  
+    61%{
+        -webkit-transform: translateX(-30%);
+        transform: translateX(-30%);
+        opacity: 0.6;
+      }
+
+    99%{
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+        }
+        100%{
+        /* visibility: hidden; */
+        color: transparent;
+        }
 }
 .news-column > li::after {
     font-family: FontAwesome;
-    content: "\f178";
+    /* content: "\f178"; */
     color: transparent;
     position: absolute;
     top: 7px;
     left: 0;
 }
-.news-column > li:hover::before {
-    transform: translateX(-100%);
-    /* color: var(--font-blue); */
-    /* color: transparent; */
-}
 .news-column > li:hover::after {
     transform: translateX(100%);
-    /* width: 1.5em; */
     color: var(--font-blue); 
-    left: 0%;
-    
+    margin-right: 15px;
+    /* left: 0%; */
+    animation-name: slide-in-left;
+    animation-duration: .6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+  @keyframes slide-in-left {
+    0%{
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
 
 .blog-column {
