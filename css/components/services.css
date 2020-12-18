@@ -10,10 +10,7 @@
     padding: 50px 30px 63px 30px;
     position: relative;
 }
-p.service {
-    padding-top: 30px;
-    margin-top: 60px;
-}
+
 .fa.btn {
     position: absolute;
     top: 92%;
