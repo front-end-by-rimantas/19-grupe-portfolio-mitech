@@ -62,7 +62,8 @@ p.service {
 .fa.btn {
     position: absolute;
     top: 92%;
-    left:40%;
+    left: 50%;
+    transform: translateX( -50%);
     }
 .fa.btn:hover:after {  /* Ant btn paspausdus pelyte atsiranda pulsavimas */
     content: "";
