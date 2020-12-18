@@ -14,7 +14,7 @@ ALL IMPORTS
 /* hire us */
 
 /* fact wrapper */
-import { renderFactWrapper } from './components/factWrapper/renderFactWrapper.js';
+import { FactWrapper } from './components/factWrapper/FactWrapper.js';
 import { factWrapperData } from './data/factWrapperData.js';
 
 /* video */
@@ -48,7 +48,10 @@ EXECUTION
 /* hire us */
 
 /* fact wrapper */
-renderFactWrapper('#factWrapper', factWrapperData);
+new FactWrapper({
+    selector: '#factWrapper',
+    data: factWrapperData,
+})
 
 /* video */
 
