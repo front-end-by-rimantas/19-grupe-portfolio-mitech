@@ -13,6 +13,7 @@
     margin: 10px;   
 }
 
+
 /* Right column */
 
 .contact-us .contact-now {
@@ -33,34 +34,37 @@
 }
 
 .contact-us h6 {
-      font-size: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+
 }
-.contact-now  u {
-    text-decoration: none;
-    color: var(--font-blue);
-    font-size: 44px;
-    font-family: Cerebri-Bold;
-    line-height: 0px;   
+ .contact-now .phone-nr {
+    font-size: 0px;
 }
-#underline-link {
+.phone-nr .underline-link {
     text-decoration: none;
-    color: var(--font-blue);
-    font-size: 30px;
+    color: var(--phone-colore);
+    font-size: 48px;
     font-family: Cerebri-Bold;
 }
 
-#underline-link:hover::after {
-    content: "";
-    color: var(--font-blue);
+.phone-nr .underline-link::after {
+    background-color: var(--phone-colore);
+    height: 1px;
+    bottom: 10px;   
 }
-
+.underline-link:hover {
+    color: var(--phone-colore);
+}
+.phone-nr .underline-link:hover {
+    color: var(--phone-colore);
+}
 
 .btn {
     background-color: #d2a98e;
     margin-bottom: 0 px;
     margin-top: 5px;
 }
-
  .btn:hover {
          opacity: 1;
          transform: translateY(-3px);
