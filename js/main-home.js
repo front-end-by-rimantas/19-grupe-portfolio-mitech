@@ -8,6 +8,9 @@ ALL IMPORTS
 /* brand slider */
 
 /* services */
+import { serviceRenderFeatures } from './components/serviceSection/serviceRenderFeatures.js';
+import { serviceData } from './data/serviceData.js';
+
 
 /* info-techno */
 
@@ -44,7 +47,7 @@ EXECUTION
 /* brand slider */
 
 /* services */
-
+serviceRenderFeatures('#service_features_block', serviceData)
 /* info-techno */
 
 /* hire us */
