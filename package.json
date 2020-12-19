@@ -1,14 +1,14 @@
 {
-  "name": "16-portfolio",
+  "name": "19-grupe-portfolio-mitech",
   "version": "1.0.0",
-  "description": "",
+  "description": "Grupinis projektas: https://demo.hasthemes.com/mitech-preview/index-infotechno.html",
   "main": "index.js",
   "scripts": {
     "dev": "live-server --port=8080",
     "test": "jest --watchAll"
   },
   "keywords": [],
-  "author": "Rimantas Belovas",
+  "author": "Marius Genys, Andrius Kairys, Mantas Zabiela, Jokubas Rybelis, Martynas Pazusis,",
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
