@@ -12,6 +12,8 @@ ALL IMPORTS
 /* info-techno */
 
 /* hire us */
+import { renderHireUs } from './components/hireUs/renderHireUs.js';
+import { hireUsData } from './data/hireUsData.js';
 
 /* fact wrapper */
 import { FactWrapper } from './components/factWrapper/FactWrapper.js';
@@ -46,6 +48,7 @@ EXECUTION
 /* info-techno */
 
 /* hire us */
+renderHireUs('#hireUs', hireUsData)
 
 /* fact wrapper */
 new FactWrapper({
