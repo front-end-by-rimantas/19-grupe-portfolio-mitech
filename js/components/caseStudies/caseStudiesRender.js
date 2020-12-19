@@ -4,6 +4,9 @@ class CaseStudiesRender {
         this.data = parameters.data.data;
         this.DOM = null;
         this.clones = 2;
+
+        this.activeBubbleIndex = 0;
+        this.bubblesDOM = null;
         this.init()
     }
     init() {
@@ -34,8 +37,10 @@ class CaseStudiesRender {
     }
     generate() {
         let HTML = '';
-        for (let item of this.data) {
-            HTML += ` <div class="card">
+        const itemWidth = 31 / (this.data.length + 2 * this.clones);
+        const dataCopy = [this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
+        for (let item of dataCopy) {
+            HTML += ` <div class="card" style="width:${itemWidth}%">
             <img src="${item.img}" alt="card1">
             <div class="content">
                 <h4>${item.title}</h4>
@@ -52,8 +57,8 @@ class CaseStudiesRender {
     }
 
     render() {
-
-        const HTML = `<div class="cards-block"> ${this.generate()}</div>
+        const blockWidth = (this.data.length + 2 * this.clones) * 100;
+        const HTML = `<div class="cards-block"style="width:${blockWidth}%; margin-left: -${this.clones + 65}%"> ${this.generate()}</div>
         ${this.generateControls()}`
 
         this.DOM.innerHTML = HTML;
