@@ -1,22 +1,24 @@
 
 .btn {
     display: inline-block;
-    padding: 18px 36px;
-    background-color: var(--btn-color);
-    opacity: 0.9;
-    color: #fff;
-    font-size: 15px;
+    line-height: 54px;
     height: 54px;
+    font-size: 15px;
+    font-weight: 500;
+    border-style: solid;
     line-height: 54px;
     border-radius: 5px;
-    border-width: 1px;
-    cursor: pointer;
+    border-color: transparent;
+    padding: 0 36px;
     text-align: center;
-    border: none;
+    color: #ffffff;
+    background: var(--btn-color);
+    border-width: 1px;
     transform: translateY(0px);
     text-decoration: none;
-    border-color: transparent;
+    font-family: Cerebri-Regular;
     transition: ease-in-out 0.5s;
+    letter-spacing: 0.7px; 
     font-weight: 500;
     letter-spacing: 0em;
 }
@@ -26,6 +28,7 @@
     } 
 .fa.btn {
     background-color: #d2a98e;
+    font-family: FontAwesome;
     color: #fff;
     width: 60px;
     height: 60px;
