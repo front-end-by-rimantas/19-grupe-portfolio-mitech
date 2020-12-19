@@ -27,7 +27,7 @@ function renderHireUs(selector, data) {
         } */ /* no validation yet */
 
         HTML += `<div class="hireus-container" >
-                    <a href="#">
+                    <a href="${feature.link}">
                         <div class="curtain"></div>
                         <img src="./img/${data.imgFolder}/${feature.img}" alt="${feature.title} image">
                         <div class="learn">
