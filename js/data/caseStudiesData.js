@@ -13,6 +13,11 @@ const caseStudiesData = {
             img: "./img/case-study/aqua.jpg",
             title: "Aqua - Research and Energy",
             description: "The prospects for a company operating in this new market are varied and exciting. The potential…"
+        },
+        {
+            img: "./img/case-study/aqua.jpg",
+            title: "Aqua - Research and Energy",
+            description: "The prospects for a company operating in this new market are varied and exciting. The potential…"
         }
 
     ]

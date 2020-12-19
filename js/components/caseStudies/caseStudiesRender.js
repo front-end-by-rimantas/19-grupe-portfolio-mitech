@@ -3,6 +3,7 @@ class CaseStudiesRender {
         this.selector = parameters.selector;
         this.data = parameters.data.data;
         this.DOM = null;
+        this.clones = 2;
         this.init()
     }
     init() {
@@ -18,6 +19,18 @@ class CaseStudiesRender {
         }
         this.DOM = DOM;
         return true;
+    }
+
+    generateControls() {
+        const cardCount = this.data.length;
+        let bubbleHTML = '<div class="bubble active"></div>';
+        bubbleHTML += `<div class="bubble"></div>`.repeat(cardCount - 1);
+        console.log(cardCount);
+
+        let HTML = `<div class="bubbles">${bubbleHTML}
+        </div>`
+
+        return HTML;
     }
     generate() {
         let HTML = '';
@@ -39,13 +52,10 @@ class CaseStudiesRender {
     }
 
     render() {
-        const HTML = ` ${this.generate()}
-    <div class="bubbles">
-        <span class="bubble active"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-    </div>`
+
+        const HTML = `<div class="cards-block"> ${this.generate()}</div>
+        ${this.generateControls()}`
+
         this.DOM.innerHTML = HTML;
     }
 }

@@ -59,7 +59,7 @@ new FactWrapper({
 
 /* case studies */
 new CaseStudiesRender({
-    selector: '.cards-block',
+    selector: '.cards',
     data: caseStudiesData,
 })
 
