@@ -37,7 +37,7 @@
     background-color: white;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    box-shadow: 8px 13px 5px 3px #f4f4f4;
+    box-shadow: 0 0 5px 7px #f4f4f4;
 }
 
 .card>img {
@@ -46,8 +46,8 @@
     border-top-right-radius: 10px;
 }
 
-.cards-block .card+.card {
-    margin-left: 30px;
+.cards-block .card {
+    margin-left: 28px;
 }
 
 .cards-block>.card:hover {
