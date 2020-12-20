@@ -3,13 +3,11 @@
     width: 100%;
     margin-top: 30px;
     padding: 0;
-    list-style: outside none none; /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
-}
-.news-column::marker { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
-    font-family: FontAwesome;
-    content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
-    color: var(--font-darkgrey);
-    margin-right: 10px;
+    /* margin-left: -10px; */
+    list-style-position: outside;
+    /* list-style: outside none none;  */
+    /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
+    
 }
 .news-column > li {
     display: flex;
@@ -17,85 +15,48 @@
     line-height: 1;
     margin-top: 20px;
     font-weight: 900;
-    transition: ease-in-out 0.6s;
+    position: relative;
+    /* overflow: hidden; */
 }
-.news-column > li::before {
-    font-family: FontAwesome;
-    content: "\f178";
-    color: var(--font-darkgrey);
-    margin-right: 15px;
-    visibility: visible;
-}
-.news-column > li:hover::before {
-    color: var(--font-blue);
-    animation-name: slide-out-right;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0.1s;
-    animation-direction: normal;
-    animation-fill-mode: none;
-}
-@keyframes slide-out-right {
-    0%{
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      opacity: 1;
-    }
-    60%{
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-        opacity: 0;
-      }
-  
-    61%{
-        -webkit-transform: translateX(-30%);
-        transform: translateX(-30%);
-        opacity: 0.6;
-      }
-
-    99%{
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
-        opacity: 1;
-        }
-        100%{
-        /* visibility: hidden; */
-        color: transparent;
-        }
-}
+.news-column > li::before,
 .news-column > li::after {
+    display: inline-block;
     font-family: FontAwesome;
-    /* content: "\f178"; */
-    color: transparent;
-    position: absolute;
-    top: 7px;
-    left: 0;
+    content:"\f178"; /* the code value of the fa  fa-long-arrow-right icon */
+    color: var(--font-darkgrey);
+    position: absolute; 
+    top: 4px; /*both pseudo-element classes vertically center in line */  
+    left: 0; /* both pseudo-element classes align to the left */
+    -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.news-column > li:hover::after {
+.news-column > li::before { /* invisible and located to the left of default pseudo-element position (0) */
+    opacity: 0; 
+    visibility: hidden;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); 
+}
+.news-column >li:hover::before { /* becomes visible and moves into the default position */
+    color: var(--font-blue);
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.news-column > li:hover::after { /* becomes invisible as it shifts right to leave  its default position */
+    color: var(--font-blue);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
-    color: var(--font-blue); 
-    margin-right: 15px;
-    /* left: 0%; */
-    animation-name: slide-in-left;
-    animation-duration: .6s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0.1s;
-    animation-direction: normal;
-    animation-fill-mode: none;
-  }
-  @keyframes slide-in-left {
-    0%{
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100%{
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      opacity: 1;
-    }
 }
-
+.news-column > li > a {
+    padding: 0 0 0 36px; /* pushes the arrow pseudo-elements off */
+}
 .blog-column {
     transform: translateY(-2px);
 }
