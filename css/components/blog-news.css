@@ -58,12 +58,15 @@
     padding: 0 0 0 36px; /* pushes the arrow pseudo-elements off */
 }
 .blog-column {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
 }
 .blog-thumbnail {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+.blog-thumbnail:hover {
+    transform: translateY(-5px);
 }
 .blog-post {
     margin-top: 20px;
