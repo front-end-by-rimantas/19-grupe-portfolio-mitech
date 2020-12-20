@@ -89,6 +89,19 @@
     font-family: Cerebri-Bold;
     text-decoration: none;
 }
-.hover-link {
+.post-exerpt {
+    margin: 20px 0 30px;
     border-bottom: 1px solid #CCC;
+    position: relative;
+    padding-right: 25px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.post-exerpt::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: FontAwesome;
+    content:"\f178";
 }
