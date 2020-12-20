@@ -11,34 +11,41 @@
     flex-flow: column;
     flex-wrap: wrap;
     gap: 15px;
-    margin-left: 10%;
    }
 h1.hero {
     width: 100%;
     font-size: 56px;
     color: #333333;
 }
-h5.hero {
+h6.hero {
     color: var(--font-blue);
     font-size: 18px;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-family: "CerebriSans";
+    
 }
 p.hero {
     color: var(--font-grey);
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0 30px;
 }
 img.hero {
     max-width: 100%;
     height: auto;
-    margin-left: 10%;
     visibility: visible;
-   
     z-index: 1;
     position: relative;
 }
+.hero-img {
+    z-index: 1;
+    
+}
 img.hero-back-img {
-    max-width: 30%;
+    max-width: 80%;
     height: auto;
     position: absolute;
     top: 1%;
-    left: 54%;
+    left: 50%;
 }
