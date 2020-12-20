@@ -1,0 +1,88 @@
+.contact-us {
+    background-color: #fbfbfb;
+    background-image: url(../../img/contacts/contact-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
+/* Left column */
+.text-message > h3 {
+    position: relative;
+}
+
+.text-message p {
+    color: var(--font-darkgrey);
+    margin: 10px 0px;   
+}
+
+.text-message > h3::before {
+  
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 3px;
+    height: 94%;
+    transform: translateY(-50%);
+    background-color: #d2a98e;
+}
+
+/* Right column */
+
+.contact-us .contact-now {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-us .phone-icon  {
+    font-size: 50px;
+    transform: scaleX(-1);
+    margin-top: 30px;
+    height: 50px;
+}
+.contact-us .phone-icon  .fa {
+    color: var(--font-blue);
+}
+
+.contact-us h6 {
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+ .contact-now .phone-nr {
+    font-size: 0px;
+}
+.phone-nr .underline-link {
+    text-decoration: none;
+    color: var(--phone-colore);
+    font-size: 48px;
+    font-family: Cerebri-Bold;
+}
+
+.phone-nr .underline-link::after {
+    background-color: var(--phone-colore);
+    height: 1px;
+    bottom: 10px;   
+}
+.underline-link:hover {
+    color: var(--phone-colore);
+}
+.phone-nr .underline-link:hover {
+    color: var(--phone-colore);
+}
+
+.btn {
+    background-color: #d2a98e;
+    margin-bottom: 0 px;
+    margin-top: 5px;
+}
+ .btn:hover {
+         opacity: 1;
+         transform: translateY(-3px);
+         background-color: var(--btn-color);
+    } 
+
+    

@@ -1,3 +1,7 @@
+.backtotop {
+    z-index: 2;
+}
+
 .backtotop > a {
     display: flex;
     justify-content: center;
@@ -21,6 +25,7 @@
 }
 
 .backtotop > a > i {
+    color: white;
     display: inline-block;
     padding: 50%;
     transform: translateY(50%);
