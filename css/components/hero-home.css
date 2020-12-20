@@ -1,51 +1,59 @@
 .container.hero {
     background-color: #F4EFE9;
-    position: relative;
     padding: 0;
-    z-index: 1;
 } 
-
 .hero-text {
-    display: flex;
+    display: inline-block;
+    width: 100%;
+    float: right;
     justify-content: center;
     flex-flow: column;
     flex-wrap: wrap;
     gap: 15px;
+    margin-top: 30%;
+    padding-left: 30px;
    }
-h1.hero {
-    width: 100%;
-    font-size: 56px;
-    color: #333333;
-}
+
 h6.hero {
     color: var(--font-blue);
     font-size: 18px;
     text-transform: none;
     letter-spacing: 1px;
     font-family: "CerebriSans";
-    
 }
 p.hero {
     color: var(--font-grey);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin: 20px 0 30px;
 }
 img.hero {
-    max-width: 100%;
-    height: auto;
+    display: inline-block;
+    width: 100%;
+    /* max-width: 100%;
+    height: auto; */
     visibility: visible;
     z-index: 1;
     position: relative;
 }
-.hero-img {
-    z-index: 1;
-    
+.col-6.hero-img {
+    position: relative;
 }
 img.hero-back-img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     position: absolute;
     top: 1%;
     left: 50%;
+    transform: translateX( -50%);
+}
+@media (max-width: 1080px) {
+    .hero-text {
+      margin-top: 20%;
+    }
+}
+@media (max-width: 860px) {
+    .hero-text {
+      text-align: center;
+    }
 }
