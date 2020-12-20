@@ -1,7 +1,6 @@
 function animateBackToTop() {
     const backToTop = document.querySelector('.backtotop > a')
     addEventListener('wheel', event => {
-        console.log(window.scrollY);
         if (window.scrollY < window.innerHeight / 2) /* back to top never appears while at the top of website */ {
             backToTop.classList.add('hidden')
         } else {
