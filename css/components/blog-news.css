@@ -57,9 +57,6 @@
 .news-column > li > a {
     padding: 0 0 0 36px; /* pushes the arrow pseudo-elements off */
 }
-.blog-column {
-    /* transform: translateY(-2px); */
-}
 .blog-thumbnail {
     max-width: 100%;
     height: auto;
@@ -72,10 +69,13 @@
     margin-top: 20px;
 }
 .post-date {
-    margin-left: 15px;
+    padding-left: 25px;
+    position: relative;
 }
 .post-date::before {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: -7px;
     font-family: FontAwesome;
     content:"\f133";
 }
