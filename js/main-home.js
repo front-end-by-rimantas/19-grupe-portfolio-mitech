@@ -58,10 +58,17 @@ new FactWrapper({
 /* video */
 
 /* case studies */
+console.log(innerWidth)
 new CaseStudiesRender({
     selector: '.cards',
     data: caseStudiesData,
 })
+window.addEventListener('resize', ()=> {
+    new CaseStudiesRender({
+         selector: '.cards',
+         data: caseStudiesData,
+        })
+}) 
 
 /* testimonials */
 
