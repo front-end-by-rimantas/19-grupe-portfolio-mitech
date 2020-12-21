@@ -1,14 +1,43 @@
-.container {
 
-} 
-.brand-logo {
-    display: inline-block;
+
+.container.brands .row {
     background-color: aqua;
+    height: auto;
+    
 }
 
-.brand-logo > img { 
-    background-color: blueviolet;  
-    display: flex;
-    width: 100%;
+.row .brand.col-2 {
+    display: inline-block;
+    background-color: beige;
+
 }
-   
+.container.brands a {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.container.brands a > div {
+    display: inline-block;
+    position: absolute;
+    transition: ease-in-out 0.7s;
+}
+.container.brands a > .brand-logo {
+    opacity: 100%;
+    transform: scale(1);
+}
+.container.brands a > .brand-logo-hover {
+    opacity: 0%;
+    transform: scale(0);
+    
+  
+}
+.container.brands a:hover > .brand-logo {
+    opacity: 0%;
+    transform: scale(0);
+}
+.container.brands a:hover > .brand-logo-hover {
+    opacity: 100%;
+    transform: scale(1);
+    
+}
