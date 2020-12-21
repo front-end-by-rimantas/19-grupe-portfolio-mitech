@@ -14,12 +14,16 @@
 .info-techno h3 {
     margin: 20px 0px;
 }
+.info-techno .ourcompany a.btn {
+    margin: 30px 0px;
+}
 
 .ourcompany > div:last-of-type { /* desinio stulpelio pozicionavimas */
     margin: 0px 10px 0px 100px;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    height: 90%;
 }
 .info { /* bendras skaiciuoko, uzraso ir rodyklytes konteineris */
     display: flex;
@@ -100,6 +104,7 @@
     }
     .ourcompany > div:last-of-type {
         margin: 10px 8% 0px 6%;
+        height: auto;
     }
     .info {
         height: 100px;

@@ -1,3 +1,7 @@
+.backtotop {
+    z-index: 2;
+}
+
 .backtotop > a {
     display: flex;
     justify-content: center;
@@ -17,10 +21,18 @@
     text-decoration: none;
     border-radius: 50%;
     background-color: var(--font-blue);
+    transition: ease-in-out 0.5s;
+    opacity: 100%;
 
 }
 
+.backtotop > a.hidden {
+    bottom: -60px;
+    opacity: 0%;
+}
+
 .backtotop > a > i {
+    color: white;
     display: inline-block;
     padding: 50%;
     transform: translateY(50%);

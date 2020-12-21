@@ -43,14 +43,55 @@
             width: 70px;
             height: 70px;
             position: relative;
+            color: whitesmoke;
         }
-            .video .video-play > a > .fa::before {
+            .video-play > a > .fa > .icon { /* Priskirtas dar vienas atskiras DIV iconai */
                 color: white;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             }
+            .video-play > a > .fa::before, /* Before ir after, du ziedai kurie pulsuoja vienas po kito */
+            .video-play > a > .fa::after {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                border: 1px solid var(--font-blue);
+                top: -25px; /* Sitais dydziais reguliuoji pulsuojanciu ziedu issipudtimo dydi */
+                right: -25px;
+                bottom: -25px;
+                left: -25px;
+                animation: pulse 4s cubic-bezier(0, 0, 0.5, 1) infinite;
+                opacity: 0;
+            }
+        
+.video-play > a > .fa::after { /* Antro ziedo pulse uzlaikymas */
+    animation-delay: 0.8s;
+}
+@keyframes pulse {
+
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    60% {
+        transform: scale(1.5);
+        opacity: 0;
+    }                       /* Paliktas laiko tarpas tarp                       pulsaciju,kad pasibaigus vienam ciklui,butu uzlaikymas ir prasidetu kitas ciklas */
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
 
 @media (max-width: 1080px) {
     .video {

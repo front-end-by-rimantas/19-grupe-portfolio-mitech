@@ -14,50 +14,37 @@
     <header class="container header">
         <!-- top message begin -->
         <div class="row top">
-            <a href="#">now hiring</a>
-            <p> Are you a driven and motivated 1st Line IT Support Engineer?</p>
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="#">
+                    <span>now hiring: 
+                        <u> Are you a driven and motivated 1st Line IT Support Engineer?</u>
+                    </span>
+                </a>
+            <!--    <p> Are you a driven and motivated 1st Line IT Support Engineer?</p> -->
+            </div>
         </div>
         <!-- top message end -->
         <!-- navigation begin -->
         <div class="row navigation">
-            <div class="logo">
-                <a href="#">
-                    <img src="./img/header/logo-dark.png" alt="logo-dark">
-                </a>
+            <a class="logo col-3 col-lg-2" href="#">
+                <img src="./img/header/logo-dark.png" alt="logo-dark">
+            </a>
+            <nav class="col-6 col-lg-7">
+                <a href="#" class="fa" aria-hidden="true">Home</a>
+                <a href="#" class="fa" aria-hidden="true">Company</a>
+                <a href="#" class="fa" aria-hidden="true">IT solutions</a>
+                <a href="#" class="fa" aria-hidden="true">Elements</a>
+                <a href="#" class="fa" aria-hidden="true">Case Studies</a>
+                <a href="#" class="fa" aria-hidden="true">Blog</a>
+            </nav>
+            <div class="searchlang col-3">
+                <a class="language fa" href="#"> english</a>
+                <form>
+                    <input class="search" type="text" placeholder="Search...">
+                    <button class="searchsubmit fa fa-search" aria-hidden="true"></button>
+                </form>
             </div>
-            <div class="hamburger">
-                <div class="dropdown">
-                    <span>home</span>
-                </div>
-                <div class="dropdown">
-                    <span>company</span>
-                </div>
-                <div class="dropdown">
-                    <span>IT solutions</span>
-                </div>
-                <div class="dropdown">
-                    <span>elements</span>
-                </div>
-                <div class="dropdown">
-                    <span>case studies</span>
-                </div>
-                <div class="dropdown">
-                    <span>blog</span>
-                </div>
-            </div>
-            <div class="searchlang">
-                <!-- <div>english</div> -->
-                <!-- <div> -->
-                <div class="language">
-                    english
-                </div>
-                <div>
-                    <form class="search">
-                        <input type="text" placeholder="Search...">
-                        <input type="submit">
-                    </form>
-                </div>
-            </div>
+        <!--    <div class="hamburger fa fa-bars" aria-hidden="true"></div> -->
         </div>
         <!-- navigation end -->
     </header>
@@ -123,32 +110,18 @@
     
     <!-- section SERVICES begin -->
     <section class="container services">
-        <div class="row"> 
-            <h6 class="service col-12"> Our Services</h6>
-            <h3 class="service col-12" > For your very specific industry, we have <u>highly-tailored IT solutions.</u></h3>
+        <div class="row "> 
+            <div class="service col-12">
+                <h6> Our Services</h6>
+                <h3> For your very specific industry,<br> we have <u>highly-tailored IT solutions.</u></h3>
+            </div>
         </div>
-        <div class="row"> 
-            <div class="service col-4 col-md-6 col-sm-12">
-                <img src="./img/services-foto/it-design.png" alt="IT design">
-                <h3> IT Design</h3>
-                <p>We provide the most responsive and functional IT design for companies and businesses worldwide.</p>
-                <i class="fa fa-long-arrow-right btn" aria-hidden="true"></i>
-            </div>
-            <div class="service col-4 col-md-6 col-sm-12">
-                <img src="./img/services-foto/it-management.png" alt="IT Management">
-                <h3> IT Management</h3>
-                <p>It's possible to simultaneously manage and transform information from one server to another</p>
-                <i class="fa fa-long-arrow-right btn" aria-hidden="true"></i>
-            </div>
-            <div class="service col-4 col-md-6 col-sm-12">
-                <img src="./img/services-foto/data-security.png" alt="Data Security">
-                <h3> Data Security</h3>
-                <p>Back up your database, store in a safe and secure place while still maintaining its accessibility.</p>
-                <i class=" fa fa-long-arrow-right btn" aria-hidden="true"></i> 
-            </div>
+        <div class="row"  id="service_features_block"> 
         </div>
         <div  class="row"> 
-            <p class="service col-12">Challenges are just opportunities in disguise.<a href="#">Take the challenge!</a></p>
+            <div class="service challenge col-12">
+                <p>Challenges are just opportunities in disguise. <a href="#" class="underline-link">Take the challenge!</a></p>
+            </div> 
         </div>
     </section>
     <!-- section SERVICES end -->
@@ -197,8 +170,8 @@
                 <h6>hire us, why not?</h6>
                 <h3>How we claim to <u>excel?</u></h3>
             </div>
-            <div class="linklist col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="hireus-container" >
+            <div id="hireUs" class="linklist col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!--    <div class="hireus-container" >
                     <a href="#">
                         <div class="curtain"></div>
                         <img src="./img/info-techno-hire-us/mms-thumbnail.jpg" alt="">
@@ -245,8 +218,8 @@
                     <p>Our technical experts have a flair for developing 
                         <u>clean-coded websites</u> based on customers' needs, global guidelines and trends.
                     </p>
-                </div>
-            </div>
+                </div> -->
+            </div> 
             <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <a class="underline-link" href="#">
                     <span>Learn more about how we work span</span>
@@ -259,8 +232,8 @@
 
     <!-- section FACT WRAPPER begin -->
     <section class="container factwrapper">
-        <div class="row">
-            <div class="facts">
+        <div id="factWrapper" class="row">
+        <!--    <div class="facts">
                 <span class="upper" >Successfully work<br>with</span>
                 <div class="numbers">1056</div>
                 <span class="bottom">happy clients</span>
@@ -279,7 +252,7 @@
                 <span class="upper" >Blog<br>update</span>
                 <div class="numbers">1090</div>
                 <span class="bottom">media posts</span>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- section FACT WRAPPER end -->
@@ -295,7 +268,9 @@
                 </div>
                 <div class="video-play">
                     <a href="##">
-                    <div class="fa fa-play"></div>
+                    <div class="fa fa-play">
+                        <div class="icon fa fa-play"></div>
+                    </div>
                     <div class="video-text">Watch video <br> intro</div>
                     </a>
                 </div>
@@ -526,9 +501,31 @@
     <!-- section BLOG & NEWS end -->
 
     <!-- section CONTACT US begin -->
-    <section class="container">
+    <section class="container contact-us">   
         <div class="row">
-            CONTACT US
+            <div class="col-6 col-sm-12 col-xs-12">
+                <div class="text-message">
+                  <h3>Obtaining further information by <u>make a contact</u> with 
+                    our experienced IT staffs.</h3>
+                  <p>We’re available for 8 hours a day!
+                   Contact to require a detailed analysis and assessment of your plan.</p>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 col-xs-12">
+                <div class="contact-now">
+                    <div class="phone-icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <h6 class="reach-now">reach out now!</h6>
+                    <h2 class="phone-nr">
+                        <a class="underline-link" href="phone:900 181818">900 181818</a>
+                    </h2>
+                    <div class="contact-us-now">
+                        <a href="#" class="btn">Conatct us</a>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section CONTACT US end -->
@@ -640,16 +637,16 @@
     <!-- section SOCIAL ICON & Copyright begin -->
     <section class="copyrights container">
         <div class="row">
-            <div class="copyright col-6">
+            <div class="copyright col-6 col-xs-12">
                 © 2019 Mitech. <a href="#">All rights reserved</a>
             </div>
-            <div class="socials col-6">
-                <ul>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                </ul>
+            <div class="socials col-6 col-xs-12">
+                
+                    <a href="#" class="fa fa-twitter"><span class="tooltiptext">Twitter</span></a>
+                    <a href="#" class="fa fa-facebook"><span class="tooltiptext">Facebook</span></a>
+                    <a href="#" class="fa fa-instagram"><span class="tooltiptext">Instagram</span></a>
+                    <a href="#" class="fa fa-linkedin"><span class="tooltiptext">Linkedin</span></a>
+                
             </div>
         </div>
     </section>
@@ -669,7 +666,7 @@
         </a>
     </div>
     <div class="backtotop">
-        <a href="#">
+        <a class="hidden" href="#">
             <i class="fa fa-long-arrow-up"></i>
             <i class="fa fa-long-arrow-up"></i>
         </a>
