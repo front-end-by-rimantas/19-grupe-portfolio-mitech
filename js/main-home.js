@@ -35,6 +35,9 @@ import { factWrapperData } from './data/factWrapperData.js';
 /* footer */
 
 /* social icon & copyright */
+import { iconsData } from './data/socialiconsData.js';
+import { renderIcons } from './components/socialIcons/renderSocialIcons.js';
+
 
 
 /***************
@@ -72,3 +75,4 @@ new FactWrapper({
 /* footer */
 
 /* social icon & copyright */
+renderIcons('#social_icons_block', iconsData)
