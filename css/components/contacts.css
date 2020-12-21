@@ -74,12 +74,12 @@
     color: var(--phone-colore);
 }
 
-.btn {
+.contact-us .btn {
     background-color: #d2a98e;
     margin-bottom: 0 px;
     margin-top: 5px;
 }
- .btn:hover {
+ .contact-us .btn:hover {
          opacity: 1;
          transform: translateY(-3px);
          background-color: var(--btn-color);
