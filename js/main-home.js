@@ -27,6 +27,8 @@ import { factWrapperData } from './data/factWrapperData.js';
 /* case studies */
 
 /* testimonials */
+import { testimonialsData } from './data/testimonialsData.js';
+import { Testimonials } from './components/testimonials/Testimonials.js';
 
 /* blog & news */
 
@@ -67,6 +69,10 @@ new FactWrapper({
 /* case studies */
 
 /* testimonials */
+new Testimonials({
+    selector: '#testimonials',
+    data: testimonialsData,
+})
 
 /* blog & news */
 
