@@ -36,6 +36,9 @@ import { factWrapperData } from './data/factWrapperData.js';
 
 /* social icon & copyright */
 
+/* back to top */
+import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
+
 
 /***************
 EXECUTION
@@ -72,3 +75,6 @@ new FactWrapper({
 /* footer */
 
 /* social icon & copyright */
+
+/* back to top */
+animateBackToTop();
