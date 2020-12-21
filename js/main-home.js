@@ -58,7 +58,6 @@ new FactWrapper({
 /* video */
 
 /* case studies */
-console.log(innerWidth)
 new CaseStudiesRender({
     selector: '.cards',
     data: caseStudiesData,

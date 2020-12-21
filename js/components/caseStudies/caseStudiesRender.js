@@ -9,7 +9,7 @@ class CaseStudiesRender {
         this.cardsBlockDOM = null;
         this.innerWidthLg = window.matchMedia("(min-width: 1080px) and (max-width: 1300px)"); //Tkrina ar ekran dydis yra tarp 1080 ir 1300px (Atsakymas true arba false)
         this.innerWidthMed = window.matchMedia("(min-width: 860px) and (max-width: 1080px)"); //TIkrina ar ekrano dydis yra tarp 860 ir 1080px (Atsakymas true arba false)
-        console.log(this.innerWidthLg.matches);
+        this.innerWidthSm = window.matchMedia("(min-width: 680px) and (max-width: 860px)"); //TIkrina ar ekrano dydis yra tarp 680 ir 860px (Atsakymas true arba false)
         this.init();
 
     }
@@ -19,7 +19,7 @@ class CaseStudiesRender {
         }
         this.render();
         this.addEvents();
-        this.generate();
+        // this.generate();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector)
@@ -40,9 +40,10 @@ class CaseStudiesRender {
     }
     generate() {
         let itemWidth = 0;
-        let HTML =''
-        if(this.innerWidthMed.matches == true) { //Jeigu ekranas yra mazesnis nei 1080px
-            itemWidth = 46.8 / (this.data.length + 2 * this.clones);
+        let HTML ='';
+        
+        if(this.innerWidthSm.matches) { //Jeigu ekranas yra tarp 860 ir 1080px
+            itemWidth = 47.5 / (this.data.length + 2 * this.clones);
             const dataCopy = [this.data[0], this.data[3], ...this.data, this.data[0], this.data[1]];
             for (let item of dataCopy) {
                 HTML += ` <div class="card" style="width:${itemWidth}%">
@@ -55,14 +56,14 @@ class CaseStudiesRender {
                     <div class="view">View case study
                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                     </div>
-                </div>
+                </div>                                                                         
             </div>`
             }
             return HTML;
         }
         
-        if(this.innerWidthLg.matches == true){ //jeigu ekranas didesnis nei 1080 px
-            itemWidth = 31 / (this.data.length + 2 * this.clones);
+        if(this.innerWidthMed.matches){ //jeigu ekranas yra tarp 1080 ir 1300px
+            itemWidth = 46.8 / (this.data.length + 2 * this.clones);
              const dataCopy = [this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
         for (let item of dataCopy) {
             HTML += ` <div class="card" style="width:${itemWidth}%">
@@ -79,14 +80,32 @@ class CaseStudiesRender {
         </div>`
         }
         return HTML;
+        } 
+        if(this.innerWidthLg.matches == true){ //jeigu ekranas yra tarp 680 ir 860px
+            itemWidth = 31/ (this.data.length + 2 * this.clones);
+             const dataCopy = [this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
+        for (let item of dataCopy) {
+            HTML += ` <div class="card" style="width:${itemWidth}%">
+            <img src="${item.img}" alt="card1">
+            <div class="content">
+                <h4>${item.title}</h4>
+                <u>Cyber security</u>
+                <p>${item.description}
+                </p>
+                <div class="view">View case study
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>`
         }
-        console.log(itemWidth);
-    
+        return HTML;
+        }       
     }
+    
 
 
     render() {
-        if(this.innerWidthMed.matches == true) {
+        if(this.innerWidthMed.matches) {
             const marginLeft = 100;
         const blockWidth = (this.data.length + 2 * this.clones) * 100;
         const HTML = `<div class="cards-block"style="width:${blockWidth}%; margin-left:-${marginLeft}%"> ${this.generate()}</div>
@@ -94,8 +113,16 @@ class CaseStudiesRender {
 
         this.DOM.innerHTML = HTML;
         }
-        if(this.innerWidthLg.matches == true) {
+        if(this.innerWidthLg.matches) {
             const marginLeft = 66 + this.clones;
+        const blockWidth = (this.data.length + 2 * this.clones) * 100;
+        const HTML = `<div class="cards-block"style="width:${blockWidth}%; margin-left:-${marginLeft}%"> ${this.generate()}</div>
+        ${this.generateControls()}`
+
+        this.DOM.innerHTML = HTML;
+        }
+        if(this.innerWidthSm.matches) {
+            const marginLeft = 104;
         const blockWidth = (this.data.length + 2 * this.clones) * 100;
         const HTML = `<div class="cards-block"style="width:${blockWidth}%; margin-left:-${marginLeft}%"> ${this.generate()}</div>
         ${this.generateControls()}`
@@ -109,7 +136,7 @@ class CaseStudiesRender {
     }
 
     clickBubble(bubbleIndex) {
-        if(this.innerWidthMed.matches == true){
+        if(this.innerWidthMed.matches){
             const scroll = -50 * (bubbleIndex + this.clones) + '%';
         this.cardsBlockDOM = this.DOM.querySelector('.cards-block');
         const bubble = this.bubblesDOM[bubbleIndex];
@@ -118,8 +145,17 @@ class CaseStudiesRender {
         this.activeBubbleIndex = bubbleIndex;
         bubble.classList.add('active')
         }
-        if(this.innerWidthLg.matches == true){
+        if(this.innerWidthLg.matches){
             const scroll = -33.6 * (bubbleIndex + this.clones) + '%';
+        this.cardsBlockDOM = this.DOM.querySelector('.cards-block');
+        const bubble = this.bubblesDOM[bubbleIndex];
+        this.cardsBlockDOM.style.marginLeft = scroll
+        this.bubblesDOM[this.activeBubbleIndex].classList.remove('active');
+        this.activeBubbleIndex = bubbleIndex;
+        bubble.classList.add('active')
+        }
+        if(this.innerWidthSm.matches){
+            const scroll = -51.6 * (bubbleIndex + this.clones) + '%';
         this.cardsBlockDOM = this.DOM.querySelector('.cards-block');
         const bubble = this.bubblesDOM[bubbleIndex];
         this.cardsBlockDOM.style.marginLeft = scroll
