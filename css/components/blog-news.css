@@ -1,55 +1,81 @@
-h3 {
-    line-height: 1.41;
-}
 .news-column {
+    position: relative; /* to enable absolute positioning for the arrow pseudo-element */
     width: 100%;
     margin-top: 30px;
-    margin-left: 1.5em;
-    padding: 0;
-    list-style: outside none none; /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
-}
-.news-column > li {
-    position: relative;
-    padding-left: 1em;
-
-}
-.news-column > li::marker { /* this pseudo-element specifically targets the space for ul li item bulletpoint */ 
-    float: left;
-    width: 1.5em;
-    font-family: FontAwesome;
-    content:"\f178"; /*the code value of the fa  fa-long-arrow-right icon */
+    padding-bottom: 20px;
+    /* margin-left: -10px; */
+    list-style-position: outside;
+    /* list-style: outside none none;  */
+    /* removes default bulletpoints from the li items in the ul, :marker pseudo-elements are placed immediately before all :before pseudo-elements  */
     
 }
-.news-column > li > a::before {
+.news-column > li {
+    display: flex;
+    align-items: baseline; /* aligns the arrow pseudo-element vertically in the middle against the first line of text in the <li> element */
+    line-height: 1;
+    margin-top: 20px;
+    font-weight: 900;
+    position: relative;
+    /* overflow: hidden; */
+}
+.news-column > li::before,
+.news-column > li::after {
+    display: inline-block;
+    font-family: FontAwesome;
+    content:"\f178"; /* the code value of the fa  fa-long-arrow-right icon */
+    color: var(--font-darkgrey);
+    position: absolute; 
+    top: 4px; /*both pseudo-element classes vertically center in line */  
+    left: 0; /* both pseudo-element classes align to the left */
+    -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.news-column > li::before { /* invisible and located to the left of default pseudo-element position (0) */
+    opacity: 0; 
     visibility: hidden;
-    opacity: 0;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); 
 }
-.news-column> li > a::after {
-   
-}
-.news-frequency {
-    font-size: 32px;
+.news-column >li:hover::before { /* becomes visible and moves into the default position */
     color: var(--font-blue);
-    font-weight: 700;
-    font-family: Cerebri-SemiBold;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
 }
-.blog-column {
-    transform: translateY(-2px);
+.news-column > li:hover::after { /* becomes invisible as it shifts right to leave  its default position */
+    color: var(--font-blue);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.news-column > li > a {
+    padding: 0 0 0 36px; /* pushes the arrow pseudo-elements off */
 }
 .blog-thumbnail {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
+.blog-thumbnail:hover {
+    transform: translateY(-5px);
+}
 .blog-post {
     margin-top: 20px;
 }
 .post-date {
-    margin-left: 15px;
+    padding-left: 25px;
+    position: relative;
 }
 .post-date::before {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: -7px;
     font-family: FontAwesome;
     content:"\f133";
 }
@@ -63,6 +89,19 @@ h3 {
     font-family: Cerebri-Bold;
     text-decoration: none;
 }
-.hover-link {
+.post-exerpt {
+    margin: 20px 0 30px;
     border-bottom: 1px solid #CCC;
+    position: relative;
+    padding-right: 25px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.post-exerpt::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: FontAwesome;
+    content:"\f178";
 }
