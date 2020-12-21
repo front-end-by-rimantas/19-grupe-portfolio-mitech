@@ -28,6 +28,7 @@
     overflow: hidden;
     /* width: 200%; */
     padding: 20px 0px;
+    transition: all 1s;
     
     
 }
