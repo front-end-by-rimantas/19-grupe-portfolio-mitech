@@ -6,7 +6,7 @@ const caseStudiesData = {
         },
         {
             img: "./img/case-study/arden.jpg",
-            title: "Arden - Internal networking technology",
+            title: "Arden - Internal networking ",
             description: "The prospects for a company operating experience technological in this new market are varied and exciting. The potential…"
         },
         {
