@@ -8,6 +8,8 @@ class Testimonials {
         this.cloneCount = 5; //how many clones
         this.itemView = 3; //how many testimonials visible
 
+        this.testimcardsDOM = null;
+
         this.init();
     }
     
@@ -16,6 +18,7 @@ class Testimonials {
             return;
         };
         this.render();
+        this.itemViewAdjust();
     }
 
     isValidSelector() {
@@ -47,9 +50,10 @@ class Testimonials {
         return afterArray;
     }
 
+
     generateTestimonials() {
         let HTML = '';
-        const itemWidth = 100 / this.itemView;
+        let itemWidth = 100 / this.itemView;
         const dataCopy = [...this.generateBeforeCloneArray(), ...this.data, ...this.generateAfterCloneArray()];
         for (let testimonial of dataCopy) {
             
@@ -71,17 +75,37 @@ class Testimonials {
     }
 
     render() {
-        const firstOriginalposition = -100 / this.itemView * this.generateAfterCloneArray().length; // centers first original testimonial
         const itemCount = this.originalCount + this.cloneCount;
-        const itemWidth = 100 * itemCount / this.itemView;
+        let itemWidth = 100 * itemCount / this.itemView;
+        // centers first original testimonial
+        let positionAdjust = 1.5 - (this.itemView / 2);
+        const firstOriginalPosition = -itemWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
         const HTML =    `<div class="testimonialslide">              
-                            <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${firstOriginalposition}%">
+                            <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${firstOriginalPosition}%">
                                 ${this.generateTestimonials()}
                             </div>
                         </div>`;
 
         this.DOM.innerHTML = HTML;
+        this.testimcardsDOM = document.querySelector('.testimcards');
+        console.log(this.testimcardsDOM);
     }
+
+    itemViewAdjust() {
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1300) {
+                this.itemView = 3;
+            } else if (window.innerWidth < 859) {
+                this.itemView = 1;
+            } else {
+                this.itemView = 2;
+            }
+            const itemCount = this.originalCount + this.cloneCount;
+            this.testimcardsDOM.style.width = `${100 * itemCount / this.itemView}%`;
+            console.log(this.testimcardsDOM.style.width);
+        })
+    }
+
 }
 
 export { Testimonials }
