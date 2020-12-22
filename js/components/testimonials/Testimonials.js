@@ -4,6 +4,11 @@ class Testimonials {
         this.data = parameters.data.data;
         this.imgFolder = parameters.data.imgFolder;
 
+        this.count = parameters.data.data.length;
+        this.clones = 5; //how many clones
+
+        this.width = 3; //how many testimonials visible
+
         this.init();
     }
     
@@ -26,8 +31,9 @@ class Testimonials {
 
     generateTestimonials() {
         let HTML = '';
+        this.count += this.clones;
         const itemWidth = 100 / this.data.length;
-        const dataCopy = [...this.data];
+        const dataCopy = [this.data[1], this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
 
         for (let testimonial of dataCopy) {
             /* if (!this.isValidTestimonial(testimonial)) {
@@ -35,15 +41,15 @@ class Testimonials {
             } */
 
 
-            HTML += `<div class="card">
+            HTML += `<div class="card" style="width: ${ 100 / this.width }%">
                         <div class="box">
-                            <h6>${testimonial.descriptionOne}</h6>
-                            <span class="testimo-text">${testimonial.descriptionTwo}</span>
+                            <h4>${testimonial.descriptionOne}</h4>
+                            <p class="testimo-text">${testimonial.descriptionTwo}</p>
                             <div class="author-info">
                                 <img src="../${this.imgFolder}${testimonial.img}" alt="${testimonial.name} image">
                                 <div class="author-title"> 
-                                    <h6 class=author-name>${testimonial.name}</h6>
-                                    <p class="author-specialty">${testimonial.duties}</p>
+                                    <h4 class=author-name>${testimonial.name}</h4>
+                                    <p class="author-specialty"> /  ${testimonial.duties}</p>
                                 </div>
                             </div>
                         </div>
@@ -53,11 +59,13 @@ class Testimonials {
     }
 
     render() {
-        const HTML = `<div class="testimonialslide" >              
-                        <div class="testimcards">
-                            ${this.generateTestimonials()}
-                        </div>
-                    </div>`;
+        this.count += this.clones;
+        console.log(this.count);
+        const HTML =    `<div class="testimonialslide">              
+                            <div class="testimcards" style="width: ${ 100 * this.count / this.width }%; margin-left: ${ -100 / this.width * 2}%">
+                                ${this.generateTestimonials()}
+                            </div>
+                        </div>`;
 
         this.DOM.innerHTML = HTML;
     }

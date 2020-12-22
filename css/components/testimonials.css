@@ -1,5 +1,6 @@
 .testimonialmain {
   display: inline-block;
+  width: 100vw;
   padding: 80px 0;
   background-color: #f6f2ed;
 }
@@ -22,83 +23,73 @@
 }
 
 .testimonialslide {
-  background-color: red;
   display: inline-block;
-/*  overflow: hidden; */
+  overflow: hidden;
   width: 90%;
-  margin: 0 5%;
+  margin: 30px 5%;
 }
 
 .testimcards {
-  background-color: #5558;
+  display: flex;
+}
+
+.testimcards .card {
   display: inline-block;
-  width: 300%;
-/**/  min-height: 100px;
+  padding: 0 24px;
 }
 
-
-
-
-
-
-
-
-/* .box {
-  width: 100%;
+.card .box {
+  background-color: white;
+  display: inline-block;
   text-align: left;
-  padding: 20px;
+  padding: 10% 6%;
+  height: 100%;
 }
-  .card > .box > h6 {
-    font-size: 18px;
-    line-height: 20px;
-    float: right;
-    padding-bottom: 10px;
-    text-transform: none;
-    color: black;
-    letter-spacing: normal;
-  }
-  .testimo-text {
-    font-size: 16px;
-    text-decoration: none;
-    line-height: 20px;
-    color: var(--font-blue);
-  }
+
+.testimo-text {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--phone-colore);
+}
+
 .author-info {
   display: flex;
   align-items: center;
   width: 100%;
   margin-top: 20px;
 }
-  .author-info .author-title {
-    display: flex;
-    flex-flow: column;
-    width: 80%;
-    padding-left: 25px;
-    justify-content: space-around;
-  }
-    .author-info .author-title > .author-name {
-      color: black;
 
-    }
-  .author-info p {
-    display: inline-block;
-    font-size: 14px;
-    float: right;
-  }
-  .author-info h6 {
-    display: inline-block;
-    font-size: 18px;
-    float: left;
-    padding-left: px;
-  }
-  .author-info > img {
-    display: inline-block;
-    width: 20%;
-    border-radius: 50%;
-    float: left;
-    height: auto;
-  }
-*/
+.author-info .author-title {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  padding-left: 25px;
+  justify-content: space-around;
+}
+
+.author-info .specialty {
+  display: inline-block;
+  font-size: 14px;
+  float: right;
+  white-space: pre;
+}
+
+.author-info h6 {
+  display: inline-block;
+  font-size: 18px;
+  float: left;
+  padding-left: px;
+}
+.author-info > img {
+  display: inline-block;
+  width: 20%;
+  border-radius: 50%;
+  float: left;
+  height: auto;
+}
+
+/*
 .swiper-btn {
   margin-top: 10px;
   display: inline-block;
@@ -116,3 +107,4 @@
 .dot:hover {
   background-color: var(--font-grey);
 }
+*/
