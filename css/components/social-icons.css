@@ -28,6 +28,7 @@
     .socials a {
         text-decoration: none;
         margin-right: 20px;
+        text-align: center;
         padding:17px;
         border-radius: 50%;
         background-color: blue;
