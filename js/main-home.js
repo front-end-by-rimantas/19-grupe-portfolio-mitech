@@ -37,6 +37,9 @@ import { Testimonials } from './components/testimonials/Testimonials.js';
 /* footer */
 
 /* social icon & copyright */
+import { iconsData } from './data/socialiconsData.js';
+import { renderIcons } from './components/socialIcons/renderSocialIcons.js';
+
 
 /* back to top */
 import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
@@ -81,6 +84,8 @@ new Testimonials({
 /* footer */
 
 /* social icon & copyright */
+
+renderIcons('#social_icons_block', iconsData)
 
 /* back to top */
 animateBackToTop();
