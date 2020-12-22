@@ -33,22 +33,38 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
-.hover-link {
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    color: var(--font-blue);
-    transition: 0.6s;
-}
-.hover-link:hover {
-    color: var(--font-orange);
-}
+.link-hover-black,
+.link-hover-blue,
+.link-hover-orange,
 .underline-link {
     text-decoration: none;
     display: inline-block;
     position: relative;
+    transition: 0.6s;    
+}
+.link-hover-black {
+    color: black;
+}
+.link-hover-black:hover {
+    color: var(--font-blue);
+}
+.link-hover-blue {
+    color: var(--font-darkgrey);
+}
+.link-hover-blue:hover {
+    color: var(--font-blue);
+}
+.link-hover-orange {
+    color: var(--font-blue);
+}
+.link-hover-orange:hover {
+    color: var(--font-orange);
+}
+.underline-link {
     color: var(--font-grey);
-    transition: 0.6s;
+}
+.underline-link:hover {
+    color: var(--font-orange);
 }
 .underline-link::after { /* creates a pseudo element underlining the text block*/
     content: "";
@@ -65,9 +81,6 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 .underline-link:hover::after {
     transform: scaleX(1); /* transitions the width of the pseudo-element to 100% */
     transform-origin: bottom left; /* reverses where transition ends, after hover */
-}
-.underline-link:hover {
-    color: var(--font-orange);
 }
 /* header */
 

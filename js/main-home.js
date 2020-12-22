@@ -8,6 +8,9 @@ ALL IMPORTS
 /* brand slider */
 
 /* services */
+import { serviceRenderFeatures } from './components/serviceSection/serviceRenderFeatures.js';
+import { serviceData } from './data/serviceData.js';
+
 
 /* info-techno */
 
@@ -33,6 +36,9 @@ import { factWrapperData } from './data/factWrapperData.js';
 
 /* social icon & copyright */
 
+/* back to top */
+import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
+
 
 /***************
 EXECUTION
@@ -44,7 +50,7 @@ EXECUTION
 /* brand slider */
 
 /* services */
-
+serviceRenderFeatures('#service_features_block', serviceData)
 /* info-techno */
 
 /* hire us */
@@ -69,3 +75,6 @@ new FactWrapper({
 /* footer */
 
 /* social icon & copyright */
+
+/* back to top */
+animateBackToTop();
