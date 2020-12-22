@@ -18,7 +18,7 @@ class Testimonials {
             return;
         };
         this.render();
-        this.itemViewAdjust();
+        this.viewWidthAdjust();
     }
 
     isValidSelector() {
@@ -91,7 +91,7 @@ class Testimonials {
         console.log(this.testimcardsDOM);
     }
 
-    itemViewAdjust() {
+    viewWidthAdjust() {
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1300) {
                 this.itemView = 3;
