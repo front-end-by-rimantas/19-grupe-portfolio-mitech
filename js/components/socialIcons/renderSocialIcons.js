@@ -31,6 +31,6 @@ function renderIcons(selector, data) {
                 return false;
             }
         socialsDOM.innerHTML += HTML;
-        console.log(HTML);
+       
     }
 export { renderIcons }
