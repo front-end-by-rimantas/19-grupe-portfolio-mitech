@@ -6,9 +6,10 @@ class Testimonials {
 
         this.originalCount = parameters.data.data.length;
         this.cloneCount = 5; //how many clones
-        this.itemView = 3; //how many testimonials visible
+        this.cardView = 3; //how many testimonials visible
 
         this.testimcardsDOM = null;
+        this.cardDOM = null;
 
         this.init();
     }
@@ -17,8 +18,9 @@ class Testimonials {
         if (!this.isValidSelector()) {
             return;
         };
+        this.cardViewCount();
         this.render();
-        this.viewWidthAdjust();
+        this.widthAdjust();
     }
 
     isValidSelector() {
@@ -28,6 +30,17 @@ class Testimonials {
         }
         this.DOM = DOM;
         return true;
+    }
+
+    //changes how many testimonial cards are going to be visisble depending on screen width
+    cardViewCount() {
+        if (window.innerWidth > 1300) {
+            this.cardView = 3;
+        } else if (window.innerWidth < 859) {
+            this.cardView = 1;
+        } else {
+            this.cardView = 2;
+        }
     }
 
     // generates clone array which is gonna be added before original array
@@ -53,11 +66,11 @@ class Testimonials {
 
     generateTestimonials() {
         let HTML = '';
-        let itemWidth = 100 / this.itemView;
+        let itemWidth = 100 / this.cardView;
         const dataCopy = [...this.generateBeforeCloneArray(), ...this.data, ...this.generateAfterCloneArray()];
         for (let testimonial of dataCopy) {
             
-            HTML += `<div class="card" style="width: ${itemWidth}%">
+            HTML += `<div class="testimonialcard" style="width: ${itemWidth}%">
                         <div class="box">
                             <h4>${testimonial.descriptionOne}</h4>
                             <p class="testimo-text">${testimonial.descriptionTwo}</p>
@@ -76,9 +89,9 @@ class Testimonials {
 
     render() {
         const itemCount = this.originalCount + this.cloneCount;
-        let itemWidth = 100 * itemCount / this.itemView;
-        // centers first original testimonial
-        let positionAdjust = 1.5 - (this.itemView / 2);
+        const itemWidth = 100 * itemCount / this.cardView;
+        // makes first original testimonial in the center
+        const positionAdjust = 1.5 - (this.cardView / 2);
         const firstOriginalPosition = -itemWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
         const HTML =    `<div class="testimonialslide">              
                             <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${firstOriginalPosition}%">
@@ -88,21 +101,23 @@ class Testimonials {
 
         this.DOM.innerHTML = HTML;
         this.testimcardsDOM = document.querySelector('.testimcards');
-        console.log(this.testimcardsDOM);
+        this.cardDOM = document.querySelectorAll('.testimonialcard')
     }
 
-    viewWidthAdjust() {
+    //change width of elements depeneding on screen width
+    widthAdjust() {
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 1300) {
-                this.itemView = 3;
-            } else if (window.innerWidth < 859) {
-                this.itemView = 1;
-            } else {
-                this.itemView = 2;
-            }
+            this.cardViewCount();
             const itemCount = this.originalCount + this.cloneCount;
-            this.testimcardsDOM.style.width = `${100 * itemCount / this.itemView}%`;
-            console.log(this.testimcardsDOM.style.width);
+            let containerWidth = 100 * itemCount / this.cardView;
+            let itemWidth = 100 / this.cardView;
+            let positionAdjust = 1.5 - (this.cardView / 2);
+            let firstOriginalPosition = -containerWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
+            this.testimcardsDOM.style.width = `${containerWidth}%`;
+            this.testimcardsDOM.style.marginLeft = `${firstOriginalPosition}%`;
+            for (let i = 0; i < this.cardDOM.length; i++) {
+                this.cardDOM[i].style.width = `${itemWidth}%`
+            }
         })
     }
 
