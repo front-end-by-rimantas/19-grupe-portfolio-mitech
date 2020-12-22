@@ -24,7 +24,7 @@
 
 .testimonialslide {
   display: inline-block;
-  overflow: hidden;
+/*  overflow: hidden; */
   width: 90%;
   margin: 30px 5%;
 }

@@ -4,10 +4,10 @@ class Testimonials {
         this.data = parameters.data.data;
         this.imgFolder = parameters.data.imgFolder;
 
-        this.count = parameters.data.data.length;
-        this.clones = 5; //how many clones
+        this.originalCount = parameters.data.data.length;
+        this.cloneCount = 5; //how many clones
 
-        this.width = 3; //how many testimonials visible
+        this.itemView = 3; //how many testimonials visible
 
         this.init();
     }
@@ -31,17 +31,12 @@ class Testimonials {
 
     generateTestimonials() {
         let HTML = '';
-        this.count += this.clones;
-        const itemWidth = 100 / this.data.length;
+        const itemWidth = 100 / this.itemView;
         const dataCopy = [this.data[1], this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
 
         for (let testimonial of dataCopy) {
-            /* if (!this.isValidTestimonial(testimonial)) {
-                continue;
-            } */
-
-
-            HTML += `<div class="card" style="width: ${ 100 / this.width }%">
+            
+            HTML += `<div class="card" style="width: ${itemWidth}%">
                         <div class="box">
                             <h4>${testimonial.descriptionOne}</h4>
                             <p class="testimo-text">${testimonial.descriptionTwo}</p>
@@ -59,10 +54,10 @@ class Testimonials {
     }
 
     render() {
-        this.count += this.clones;
-        console.log(this.count);
+        const itemCount = this.originalCount + this.cloneCount;
+        const itemWidth = 100 * itemCount / this.itemView;
         const HTML =    `<div class="testimonialslide">              
-                            <div class="testimcards" style="width: ${ 100 * this.count / this.width }%; margin-left: ${ -100 / this.width * 2}%">
+                            <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${0}%">
                                 ${this.generateTestimonials()}
                             </div>
                         </div>`;
