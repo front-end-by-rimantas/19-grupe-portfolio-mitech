@@ -22,6 +22,12 @@
   padding-bottom: 10px;
 }
 
+#testimonials {
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 .testimonialslide {
   display: inline-block;
   overflow: hidden;
@@ -87,6 +93,12 @@
   border-radius: 50%;
   float: left;
   height: auto;
+}
+
+.tobedeleted {
+  display:inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 /*
