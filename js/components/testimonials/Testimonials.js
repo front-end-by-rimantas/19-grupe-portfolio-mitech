@@ -6,7 +6,6 @@ class Testimonials {
 
         this.originalCount = parameters.data.data.length;
         this.cloneCount = 5; //how many clones
-
         this.itemView = 3; //how many testimonials visible
 
         this.init();
@@ -17,7 +16,6 @@ class Testimonials {
             return;
         };
         this.render();
-        /* this.addEvents(); */
     }
 
     isValidSelector() {
@@ -29,11 +27,30 @@ class Testimonials {
         return true;
     }
 
+    // generates clone array which is gonna be added before original array
+    generateBeforeCloneArray() {
+        const cloneBeforeCount = Math.ceil(this.cloneCount / 2);
+        let beforeArray = [];
+        for ( let i = this.originalCount - cloneBeforeCount; i < this.originalCount ; i++) {
+            beforeArray.push(this.data[i])
+        };
+        return beforeArray;
+    }
+
+    // generates clone array which is gonna be added after original array
+    generateAfterCloneArray() {
+        const cloneAfterCount = Math.floor(this.cloneCount / 2);
+        let afterArray = [];
+        for ( let i = 0; i < cloneAfterCount ; i++) {
+            afterArray.push(this.data[i])
+        };
+        return afterArray;
+    }
+
     generateTestimonials() {
         let HTML = '';
         const itemWidth = 100 / this.itemView;
-        const dataCopy = [this.data[1], this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
-
+        const dataCopy = [...this.generateBeforeCloneArray(), ...this.data, ...this.generateAfterCloneArray()];
         for (let testimonial of dataCopy) {
             
             HTML += `<div class="card" style="width: ${itemWidth}%">
