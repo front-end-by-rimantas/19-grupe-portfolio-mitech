@@ -71,10 +71,11 @@ class Testimonials {
     }
 
     render() {
+        const firstOriginalposition = -100 / this.itemView * this.generateAfterCloneArray().length; // centers first original testimonial
         const itemCount = this.originalCount + this.cloneCount;
         const itemWidth = 100 * itemCount / this.itemView;
         const HTML =    `<div class="testimonialslide">              
-                            <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${0}%">
+                            <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${firstOriginalposition}%">
                                 ${this.generateTestimonials()}
                             </div>
                         </div>`;
