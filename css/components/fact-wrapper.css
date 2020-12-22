@@ -1,5 +1,5 @@
 .container.factwrapper {
-    width: 100vw; /* will be removed after completion of every section so there is no horizontal scroll */
+    width: 100%; /* will be removed after completion of every section so there is no horizontal scroll */
     gap: 0px;
     padding: 0%;
 }
