@@ -43,6 +43,14 @@ class Testimonials {
         }
     }
 
+    generateBubbles() {
+        let HTML = '<div class="dot active"></div>';
+        for (let i = 1; i < this.originalCount; i++) {
+            HTML += `<div class="dot"></div>`;
+        }
+        return HTML;
+    }
+
     // generates clone array which is gonna be added before original array
     generateBeforeCloneArray() {
         const cloneBeforeCount = Math.ceil(this.cloneCount / 2);
@@ -97,6 +105,9 @@ class Testimonials {
                             <div class="testimcards" style="width: ${itemWidth}%; margin-left: ${firstOriginalPosition}%">
                                 ${this.generateTestimonials()}
                             </div>
+                        </div>
+                        <div class="bubblerow">
+                            ${this.generateBubbles()}
                         </div>`;
 
         this.DOM.innerHTML = HTML;

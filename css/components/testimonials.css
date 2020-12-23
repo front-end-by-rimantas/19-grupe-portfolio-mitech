@@ -94,11 +94,7 @@
   height: auto;
 }
 
-.testimonialmain .tobedeleted {
-  display:inline-block;
-  width: 100%;
-}
-/* #testimonials */ .testimonialmain .bubblerow {
+.testimonialmain .bubblerow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,24 +127,3 @@
   background-color: var(--font-blue);
   cursor: pointer;
 }
-
-
-/*
-.swiper-btn {
-  margin-top: 10px;
-  display: inline-block;
-  margin-left: 45%;
-}
-.dot {
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  background-color: var(--font-blue);
-  border-radius: 50%;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.dot:hover {
-  background-color: var(--font-grey);
-}
-*/
