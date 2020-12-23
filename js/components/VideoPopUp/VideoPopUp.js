@@ -2,6 +2,7 @@ class VideoPopUp {
     constructor(parameters){
         this.selector = parameters.selector;
         this.data = parameters.data.data;
+        this.PlayDOM = document.querySelector('.video-play > a')
         this.DOM = null;
         this.init();
     }
@@ -23,6 +24,7 @@ class VideoPopUp {
         return false;
         }
         this.render();
+        this.addEvents();
     }
 
     generate(){
@@ -43,6 +45,17 @@ class VideoPopUp {
     </div>`
     this.DOM.innerHTML = HTML
 
+    }
+
+    addEvents(){
+        this.PlayDOM.addEventListener('click', () => {
+            this.DOM.classList.remove('hidden')
+
+        })
+
+        this.closeVideo.addEventListener('click', ()=>{
+            this.closeVideo.classList.remove('hidden')
+        })
     }
 
 }
