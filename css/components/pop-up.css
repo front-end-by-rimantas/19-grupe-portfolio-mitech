@@ -39,3 +39,16 @@
             opacity: 0.8;
             margin-top: 10px;
         }
+    .pop-up.video-content {
+        width: 100%;
+        
+        position: relative;
+    }
+        .video-content > .video-object  {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 50%;
+        }
