@@ -27,7 +27,6 @@ function serviceRenderFeatures(selector, duomenys) {
     }
     
     DOM.innerHTML = HTML;
-    
 }
 
 

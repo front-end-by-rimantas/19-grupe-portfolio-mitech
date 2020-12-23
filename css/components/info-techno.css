@@ -4,7 +4,7 @@
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 0px 20%; /* kad siek tiek nusileistu background image */
-    width: 100vw; /* will be deleted after horizontal scroll fix */
+    width: 100%; 
 }
 
 .ourcompany > div:first-of-type {
