@@ -29,6 +29,8 @@ import { caseStudiesData } from './data/caseStudiesData.js'
 import { CaseStudiesRender } from './components/caseStudies/caseStudiesRender.js'
 
 /* testimonials */
+import { testimonialsData } from './data/testimonialsData.js';
+import { Testimonials } from './components/testimonials/Testimonials.js';
 
 /* blog & news */
 
@@ -86,6 +88,10 @@ window.addEventListener('resize', ()=> {
 }) 
 
 /* testimonials */
+new Testimonials({
+    selector: '#testimonials',
+    data: testimonialsData,
+})
 
 /* blog & news */
 
