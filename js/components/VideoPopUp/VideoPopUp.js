@@ -60,6 +60,14 @@ class VideoPopUp {
         this.closeVideo.addEventListener('click', ()=>{
             this.DOM.classList.add('hidden')
         })
+
+        addEventListener('keyup',({ key })=> {
+            if(key === 'Escape'){
+                this.DOM.classList.add('hidden')
+            }
+        })
+
+
     }
 
 }
