@@ -41,7 +41,7 @@
     /* width: 200%; */
     padding: 20px 0px;
     transition: all 1s;
-    
+}
 
 .cards-block >.col-4 > .card {
     max-width: 100%;
