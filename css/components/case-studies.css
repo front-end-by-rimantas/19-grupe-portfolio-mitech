@@ -6,13 +6,25 @@
     max-width: 100vw;
 }
 
-#case-head {
-    text-align: center;
-}
 
-#case-head>h6 {
-    margin-bottom: 30px;
-}
+   .case {
+       background-color: #fbfbfb;
+       background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
+       background-repeat: no-repeat;
+       background-position: 0% 100%;
+       max-width: 100%;
+   }
+    #case-head {
+        text-align: center;   
+    }
+        #case-head > h6 {
+            margin-bottom: 30px;
+        }
+        #case-head > h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
 
 #case-head>h3 {
     margin-bottom: 20px;
@@ -30,6 +42,10 @@
     padding: 20px 0px;
     transition: all 1s;
     
+
+.cards-block >.col-4 > .card {
+    max-width: 100%;
+
     
 }
 
