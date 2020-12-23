@@ -12,7 +12,7 @@ const hireUsData = {
         {
             img: 'eds-thumbnail.jpeg',
             link: '#',
-            title: 'Efficient Database Security<',
+            title: 'Efficient Database Security',
             description: `Our technical experts have a flair for developing 
             <u>clean-coded websites</u> based on customers' needs, global guidelines and trends.`
         },
