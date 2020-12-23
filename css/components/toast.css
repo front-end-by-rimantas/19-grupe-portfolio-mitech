@@ -47,7 +47,7 @@
         }
 
     .toast >.middle > .tooltiptext {
-        /* visibility: hidden; */
+        visibility: hidden;
         width: 150px;
         background-color: black;
         color: #fff;
