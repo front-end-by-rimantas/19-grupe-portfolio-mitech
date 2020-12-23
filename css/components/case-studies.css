@@ -43,20 +43,16 @@
     transition: all 1s;
 }
 
-.cards-block >.col-4 > .card {
-    max-width: 100%;
-
-    
-}
 
 .cards-block .card {
-    /* width: 370px; */
     float: left;
-    /* background-color: white; */
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     border-radius: 20px;
     padding: 0px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
     
 }
 
@@ -88,6 +84,7 @@
     
 
 }
+
 
     .content>h4 {
         font-weight: 500;

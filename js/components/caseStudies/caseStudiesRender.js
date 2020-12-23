@@ -91,7 +91,7 @@ class CaseStudiesRender {
             let itemWidth = 0;
             let HTML ='';
             itemWidth = 100 / (this.data.length + 2 * this.clones);
-            const dataCopy = [this.data[0], this.data[3], ...this.data, this.data[0], this.data[1]];
+            const dataCopy = [this.data[2], this.data[3], ...this.data, this.data[0], this.data[1]];
             for (let item of dataCopy) {
                 HTML += ` <div class="card" style="width:${itemWidth / this.showCards }%">
                 <img src="${item.img}" alt="card1">
