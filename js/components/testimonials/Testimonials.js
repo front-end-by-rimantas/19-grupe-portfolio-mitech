@@ -8,15 +8,11 @@ class Testimonials {
         this.cloneCount = 5; //how many clones
         this.cardView = 3; //how many testimonials visible
 
-        this.animationDuration = 600;
-
         this.testimcardsDOM = null;
         this.cardDOM = null;
         this.bubblesDOM = null;
 
         this.activeBubbleIndex = 0;
-
-        this.isAnimating = false;
 
         this.init();
     }
@@ -82,7 +78,8 @@ class Testimonials {
 
     generateTestimonials() {
         let HTML = '';
-        let itemWidth = 100 / this.cardView;
+        const itemCount = this.originalCount + this.cloneCount;
+        let itemWidth = 100 / itemCount;
         const dataCopy = [...this.generateBeforeCloneArray(), ...this.data, ...this.generateAfterCloneArray()];
         for (let testimonial of dataCopy) {
             
@@ -130,18 +127,15 @@ class Testimonials {
             this.cardViewCount();
             const itemCount = this.originalCount + this.cloneCount;
             let containerWidth = 100 * itemCount / this.cardView;
-            let itemWidth = 100 / this.cardView;
             let positionAdjust = 1.5 + this.activeBubbleIndex - (this.cardView / 2);
             let firstOriginalPosition = -containerWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
             this.testimcardsDOM.style.width = `${containerWidth}%`;
             this.testimcardsDOM.style.marginLeft = `${firstOriginalPosition}%`;
-            for (let i = 0; i < this.cardDOM.length; i++) {
-                this.cardDOM[i].style.width = `${itemWidth}%`
-            }
         })
     }
 
     clickBubble(bubbleIndex) {
+        // activates/deactivates bubble
         for (let i = 0; i < this.bubblesDOMs.length; i++) {
             const bubble = this.bubblesDOMs[i];
             if (i != bubbleIndex) {
@@ -152,11 +146,12 @@ class Testimonials {
             }
         }
         this.activeBubbleIndex = bubbleIndex;
+        // slides testimonials
         const itemCount = this.originalCount + this.cloneCount;
         let containerWidth = 100 * itemCount / this.cardView;
         let positionAdjust = 1.5 + this.activeBubbleIndex - (this.cardView / 2);
-        let firstOriginalPosition = -containerWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
-        this.testimcardsDOM.style.marginLeft = `${firstOriginalPosition}%`;
+        let activeTestimonialPosition = -containerWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);
+        this.testimcardsDOM.style.marginLeft = `${activeTestimonialPosition}%`;
     }
 
     clickBubbleEvent() {

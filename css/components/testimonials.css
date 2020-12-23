@@ -6,6 +6,7 @@
 }
 .testimonial-head {
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
@@ -92,7 +93,7 @@
   display: inline-block;
   width: 20%;
   border-radius: 50%;
-  float: left;
+  /*float: left;*/
   height: auto;
 }
 
