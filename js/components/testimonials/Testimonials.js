@@ -9,8 +9,8 @@ class Testimonials {
         this.cardView = 3; //how many testimonials visible
 
         this.testimcardsDOM = null;
-        this.cardDOM = null;
-        this.bubblesDOM = null;
+        this.cardDOMs = null;
+        this.bubblesDOMs = null;
 
         this.activeBubbleIndex = 0;
 
@@ -23,6 +23,7 @@ class Testimonials {
         };
         this.cardViewCount();
         this.render();
+        this.cardDOMs[this.generateBeforeCloneArray().length].classList.remove('transparent'); // makes only active 
         this.widthAdjust();
         this.clickBubbleEvent();
     }
@@ -83,7 +84,7 @@ class Testimonials {
         const dataCopy = [...this.generateBeforeCloneArray(), ...this.data, ...this.generateAfterCloneArray()];
         for (let testimonial of dataCopy) {
             
-            HTML += `<div class="testimonialcard" style="width: ${itemWidth}%">
+            HTML += `<div class="testimonialcard transparent" style="width: ${itemWidth}%">
                         <div class="box">
                             <h4>${testimonial.descriptionOne}</h4>
                             <p class="testimo-text">${testimonial.descriptionTwo}</p>
@@ -117,7 +118,7 @@ class Testimonials {
 
         this.DOM.innerHTML = HTML;
         this.testimcardsDOM = document.querySelector('.testimcards');
-        this.cardDOM = document.querySelectorAll('.testimonialcard');
+        this.cardDOMs = document.querySelectorAll('.testimonialcard');
         this.bubblesDOMs = document.querySelectorAll('#testimonials .bubble');
     }
 
@@ -135,6 +136,7 @@ class Testimonials {
     }
 
     clickBubble(bubbleIndex) {
+        const itemCount = this.originalCount + this.cloneCount;
         // activates/deactivates bubble
         for (let i = 0; i < this.bubblesDOMs.length; i++) {
             const bubble = this.bubblesDOMs[i];
@@ -145,9 +147,21 @@ class Testimonials {
                 bubble.classList.add('active')
             }
         }
+
+        // changes transparencys of active/non-active testimonial
+        const testimonialIndex = bubbleIndex + this.generateBeforeCloneArray().length;
+        for (let i = 0; i < itemCount ; i++) {
+            const testimonial = this.cardDOMs[i];
+            if (i != testimonialIndex) {
+                testimonial.classList.add('transparent')
+            }
+            if (i === testimonialIndex) {
+                testimonial.classList.remove('transparent')
+            }
+        }
+
         this.activeBubbleIndex = bubbleIndex;
         // slides testimonials
-        const itemCount = this.originalCount + this.cloneCount;
         let containerWidth = 100 * itemCount / this.cardView;
         let positionAdjust = 1.5 + this.activeBubbleIndex - (this.cardView / 2);
         let activeTestimonialPosition = -containerWidth / itemCount * (this.generateAfterCloneArray().length + positionAdjust);

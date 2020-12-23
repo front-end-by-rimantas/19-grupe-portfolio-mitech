@@ -44,6 +44,12 @@
   display: inline-block;
   padding: 0 24px;
   float: left;
+  opacity: 100%;
+  transition: ease-in-out 0.6s;
+}
+
+.testimcards .testimonialcard.transparent {
+  opacity: 50%;
 }
 
 .testimonialcard .box {
