@@ -25,6 +25,8 @@ import { factWrapperData } from './data/factWrapperData.js';
 /* video */
 
 /* case studies */
+import { caseStudiesData } from './data/caseStudiesData.js'
+import { CaseStudiesRender } from './components/caseStudies/caseStudiesRender.js'
 
 /* testimonials */
 
@@ -68,6 +70,16 @@ new FactWrapper({
 /* video */
 
 /* case studies */
+new CaseStudiesRender({
+    selector: '.cards',
+    data: caseStudiesData,
+})
+window.addEventListener('resize', ()=> {
+    new CaseStudiesRender({
+         selector: '.cards',
+         data: caseStudiesData,
+        })
+}) 
 
 /* testimonials */
 
