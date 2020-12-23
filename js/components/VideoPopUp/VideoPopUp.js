@@ -2,8 +2,9 @@ class VideoPopUp {
     constructor(parameters){
         this.selector = parameters.selector;
         this.data = parameters.data.data;
-        this.PlayDOM = document.querySelector('.video-play > a')
+        this.PlayDOM = null;
         this.DOM = null;
+        this.closeVideo = null;
         this.init();
     }
 
@@ -48,13 +49,16 @@ class VideoPopUp {
     }
 
     addEvents(){
+        const playButtonDOM = document.querySelector('.video-play > a')
+        this.PlayDOM = playButtonDOM;
         this.PlayDOM.addEventListener('click', () => {
             this.DOM.classList.remove('hidden')
 
         })
-
+        const closeDOM = document.querySelector('.toolbar > span .fa-times')
+        this.closeVideo = closeDOM;
         this.closeVideo.addEventListener('click', ()=>{
-            this.closeVideo.classList.remove('hidden')
+            this.DOM.classList.add('hidden')
         })
     }
 
