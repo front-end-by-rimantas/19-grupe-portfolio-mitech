@@ -12,7 +12,12 @@ function renderIcons(selector, data) {
             console.error('Error: nera turinio generavimo vietos');
             return false;
         }
-        let HTML = '';
+            let yearUpdate = new Date().getFullYear();
+            
+            let HTML = `<div class="copyright col-6 col-xs-12">
+        &copy; ${yearUpdate} Mitech. <a href="#">All rights reserved</a>
+    </div>
+    <div class="socials col-6 col-xs-12" > `;
     
         for (let i = 0; i < data.length; i++) {
             const item = data[i];
@@ -26,6 +31,6 @@ function renderIcons(selector, data) {
                 return false;
             }
         socialsDOM.innerHTML += HTML;
-        
+       
     }
 export { renderIcons }
