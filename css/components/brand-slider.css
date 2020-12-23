@@ -1,24 +1,21 @@
-
-
-.container.brands .row {
-    background-color: aqua;
-    height: auto;
-    gap: 0;
+.row.slider {
+    display: inline;
+    width: 100%;
 }
 
 .row .brand {
-    display: inline-block;
-    background-color: beige;
+    display: inline-block;    
 }
-    .row .brand.kvadratinis {
-        padding: 60px;
+    .row .brand.square {
+        padding: 40px 30px;
     }
-    .row .brand.horintalus {
-        padding: 60px 10px;
+    .row .brand.horizontal {
+        padding: 70px 30px;
     }
-    .row .brand.statmenas {
-        padding: 60px 10px;
+    .row .brand.vertical {
+        padding: 60px 50px;
     }
+   
 .container.brands a {
     display: inline-block;
     width: 100%;
@@ -29,8 +26,7 @@
 .container.brands a > img {
     display: inline-block;
     width: 100%;
-
-    transition: ease-in-out 0.7s;
+    transition: ease-in-out 0.2s;
 }
 .container.brands a > .brand-logo {
     opacity: 100%;
