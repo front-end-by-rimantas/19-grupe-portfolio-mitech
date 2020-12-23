@@ -44,6 +44,10 @@ import { renderIcons } from './components/socialIcons/renderSocialIcons.js';
 /* back to top */
 import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
 
+/* Video pop up */
+import { VideoPopUp } from './components/VideoPopUp/VideoPopUp.js'
+import { PopUpData } from './data/videoPopUpdata.js'
+
 
 /***************
 EXECUTION
@@ -95,3 +99,9 @@ renderIcons('#social_icons_block', iconsData)
 
 /* back to top */
 animateBackToTop();
+
+/* Video pop up */
+new VideoPopUp({
+    data: PopUpData,
+    selector: '.pop-up'
+})
