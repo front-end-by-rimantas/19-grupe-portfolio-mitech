@@ -10,8 +10,6 @@ class VideoPopUp {
         
     }
 
-
-
     isValidSelector(){
         const DOM = document.querySelector('.pop-up')
         if(!DOM) {
@@ -66,12 +64,10 @@ class VideoPopUp {
         this.toolBarDOM = toolbar;
         addEventListener('mousemove',()=>{
             this.toolBarDOM.classList.remove('hidden')
-            setInterval(() => {
-                this.toolBarDOM.classList.add('hidden')
-            }, 5000);
+            // setInterval(() => {
+            //     this.toolBarDOM.classList.add('hidden')
+            // }, 5000);
 
-           
-           
         })
         
         addEventListener('keyup',({ key })=> {
@@ -81,8 +77,6 @@ class VideoPopUp {
             }
         })
     }
-
-
 
 }
 
