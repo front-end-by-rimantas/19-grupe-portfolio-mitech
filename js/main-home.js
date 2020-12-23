@@ -2,7 +2,8 @@
 ALL IMPORTS
 ****************/
 /* header */
-
+import { renderHeader } from './components/header/renderHeader.js';
+import { headerData } from './data/headerData.js';
 /* hero */
 
 /* brand slider */
@@ -47,7 +48,7 @@ import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
 EXECUTION
 ****************/
 /* header */
-
+renderHeader('navigation nav', headerData);
 /* hero */
 
 /* brand slider */
