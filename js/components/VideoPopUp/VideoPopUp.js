@@ -5,7 +5,9 @@ class VideoPopUp {
         this.PlayDOM = null;
         this.DOM = null;
         this.closeVideo = null;
+        this.toolBarDOM = null;
         this.init();
+        
     }
 
 
@@ -37,7 +39,7 @@ class VideoPopUp {
     }
 
     render(){
-        const HTML = `<div class="toolbar">
+        const HTML = `<div class="toolbar hidden">
         ${this.generate()}
         <div class="counter">1/1</div>
     </div>
@@ -60,15 +62,27 @@ class VideoPopUp {
         this.closeVideo.addEventListener('click', ()=>{
             this.DOM.classList.add('hidden')
         })
+        const toolbar = document.querySelector('.pop-up > .toolbar')
+        this.toolBarDOM = toolbar;
+        addEventListener('mousemove',()=>{
+            this.toolBarDOM.classList.remove('hidden')
+            setInterval(() => {
+                this.toolBarDOM.classList.add('hidden')
+            }, 5000);
 
+           
+           
+        })
+        
         addEventListener('keyup',({ key })=> {
             if(key === 'Escape'){
                 this.DOM.classList.add('hidden')
+                
             }
         })
-
-
     }
+
+
 
 }
 
