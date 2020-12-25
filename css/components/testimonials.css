@@ -40,6 +40,10 @@
   transition: ease-in-out 0.6s;
 }
 
+.testimcards.nonanimated {
+  transition: 0s;
+}
+
 .testimcards .testimonialcard {
   display: inline-block;
   padding: 0 24px;
