@@ -38,6 +38,7 @@
 .testimcards {
   display: inline-block;
   transition: ease-in-out 0.6s;
+  user-select: none;
 }
 
 .testimcards.nonanimated {

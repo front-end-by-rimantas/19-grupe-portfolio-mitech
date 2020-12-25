@@ -18,6 +18,9 @@ class Testimonials {
 
         this.activeBubbleIndex = 0;
 
+        this.dragState = false; //true, kai pradedama dragginti
+        this.sliderMargin = 0;
+
         this.init();
     }
     
@@ -186,52 +189,59 @@ class Testimonials {
         this.positioning();
     }
 
-
+    dragTeleport() {
+        const slider = this.sliderDOM;
+        slider.addEventListener('transitionend', () => {
+            slider.classList.add('nonanimated');
+            console.log('hi');
+            this.positioning();
+        });
+    }
 
     drag() {
         const slider = this.sliderDOM;
-        let state = 0;
         let pressPosition = 0;
         let offset = 0;
-        let sliderMargin = parseFloat(slider.style.marginLeft);
+        this.sliderMargin = parseFloat(slider.style.marginLeft);
         slider.addEventListener('mousedown', e => {
-            state = 1
+            this.dragState = true;
             slider.classList.add('nonanimated');
             pressPosition = e.clientX;
             }
         );
 
         slider.addEventListener('mousemove', e => {
-            if (state === 1) {
+            if (this.dragState === true) {
                 offset = (pressPosition - e.clientX) / this.containerDOM.offsetWidth;
-                let tempMovement = sliderMargin - (offset * 100);
+                let tempMovement = this.sliderMargin - (offset * 100);
                 slider.style.marginLeft = `${tempMovement}%`;
             } else {
                 return
             }
         });
         
-        slider.addEventListener('mouseup', e => {
-            state = 0;
+        slider.addEventListener('mouseup', () => {
+            this.dragState = false;
             this.activeBubbleIndex += Math.round(this.cardView * offset);
+            slider.classList.remove('nonanimated');
+            this.positioning();
             if (this.activeBubbleIndex < 0) {
                 this.activeBubbleIndex += this.originalCount;
             }
             if (this.activeBubbleIndex >= this.originalCount) {
                 this.activeBubbleIndex -= this.originalCount;
-            }           
-            this.positioning();
+            }
+            //this.positioning();
             this.bubbleVisual(this.activeBubbleIndex);
             this.testimonialVisual(this.activeBubbleIndex);
-            
-            slider.addEventListener('transitionend', () => {
-                console.log('jau');
-            })
 
-            slider.classList.remove('nonanimated');
             offset = 0;
-            sliderMargin = parseFloat(slider.style.marginLeft);
+            this.sliderMargin = parseFloat(slider.style.marginLeft);
         });
+
+        slider.addEventListener('transitionend', e => {
+            console.log(e);
+        })
     }
 
 
