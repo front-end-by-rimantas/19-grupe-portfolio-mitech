@@ -51,6 +51,10 @@
   float: left;
   opacity: 100%;
   transition: ease-in-out 0.6s;
+  cursor: grab;
+}
+.testimcards .testimonialcard:active {
+  cursor: grabbing;
 }
 
 .testimcards .testimonialcard.transparent {
@@ -114,31 +118,30 @@
   justify-content: center;
   align-items: center;
   width: 90%;
+  height: 30px;
   margin: 10px 5%;
 }
-.bubblerow .bubble {
+.bubblerow .testibubble {
   display: inline-block;
   width: 8px;
   height: 8px;
-  margin: 3px 12px;
+  margin: 0px 12px;
   border-radius: 50%;
   background-color: var(--font-grey);
   transition: ease-in-out 0.6s;
 }
 
-.bubblerow .bubble:hover {
+.bubblerow .testibubble:hover {
   width: 14px;
   height: 14px;
-  margin: 0 9px;
   border-radius: 50%;
   background-color: var(--font-grey);
   cursor: pointer;
 }
 
-.bubblerow .bubble.active {
+.bubblerow .testibubble.active {
   width: 14px;
   height: 14px;
-  margin: 0 9px;
   border-radius: 50%;
   background-color: var(--font-blue);
 }

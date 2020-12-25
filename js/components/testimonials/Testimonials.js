@@ -57,9 +57,9 @@ class Testimonials {
     }
 
     generateBubbles() {
-        let HTML = '<div class="bubble active"></div>';
+        let HTML = '<div class="testibubble active"></div>';
         for (let i = 1; i < this.originalCount; i++) {
-            HTML += `<div class="bubble"></div>`;
+            HTML += `<div class="testibubble"></div>`;
         }
         return HTML;
     }
@@ -126,7 +126,7 @@ class Testimonials {
         this.containerDOM = document.querySelector('.testimonialslide');
         this.sliderDOM = document.querySelector('.testimcards');
         this.testimonialsDOMs = document.querySelectorAll('.testimonialcard');
-        this.bubblesDOMs = document.querySelectorAll('#testimonials .bubble');
+        this.bubblesDOMs = document.querySelectorAll('#testimonials .testibubble');
         this.sliderPosition = parseFloat(this.sliderDOM.style.marginLeft);
     }
 
@@ -137,6 +137,8 @@ class Testimonials {
         this.sliderDOM.style.width = `${containerWidth}%`;
         this.sliderDOM.style.marginLeft = `${firstOriginalPosition}%`;
         this.sliderPosition = parseFloat(this.sliderDOM.style.marginLeft);
+
+        this.sliderMargin = parseFloat(this.sliderDOM.style.marginLeft);
     }
 
     //change width of elements depeneding on screen width
@@ -147,6 +149,15 @@ class Testimonials {
         })
     }
 
+    //changes element with bubble click
+    clickBubble(bubbleIndex) {
+        this.activeBubbleIndex = bubbleIndex;
+        this.bubbleVisual(bubbleIndex)
+        this.testimonialVisual(bubbleIndex)
+        this.positioning();
+    }
+
+    //recognises which bubble was pressed
     clickBubbleEvent() {
         for (let i = 0; i < this.bubblesDOMs.length; i++) {
             const bubble = this.bubblesDOMs[i];
@@ -155,7 +166,7 @@ class Testimonials {
             })
         }
     }
-
+     
     // activates/deactivates bubble
     bubbleVisual(index) {
         for (let i = 0; i < this.bubblesDOMs.length; i++) {
@@ -182,27 +193,14 @@ class Testimonials {
         }
     }
 
-    clickBubble(bubbleIndex) {
-        this.activeBubbleIndex = bubbleIndex;
-        this.bubbleVisual(bubbleIndex)
-        this.testimonialVisual(bubbleIndex)
-        this.positioning();
-    }
-
-    dragTeleport() {
-        const slider = this.sliderDOM;
-        slider.addEventListener('transitionend', () => {
-            slider.classList.add('nonanimated');
-            console.log('hi');
-            this.positioning();
-        });
-    }
-
+    // dragging section
     drag() {
         const slider = this.sliderDOM;
         let pressPosition = 0;
         let offset = 0;
         this.sliderMargin = parseFloat(slider.style.marginLeft);
+
+        // recognises which area of slider is pressed with mouse press
         slider.addEventListener('mousedown', e => {
             this.dragState = true;
             slider.classList.add('nonanimated');
@@ -210,6 +208,7 @@ class Testimonials {
             }
         );
 
+        // changes margin-left of slider so slider is dragged with mouse move
         slider.addEventListener('mousemove', e => {
             if (this.dragState === true) {
                 offset = (pressPosition - e.clientX) / this.containerDOM.offsetWidth;
@@ -220,30 +219,99 @@ class Testimonials {
             }
         });
         
+        // when mouse is released rearranges position of current bubble and testimonial
         slider.addEventListener('mouseup', () => {
+            if (!this.dragState) {
+                return
+            }
+            let teleportation = false;
             this.dragState = false;
+
             this.activeBubbleIndex += Math.round(this.cardView * offset);
+            
             slider.classList.remove('nonanimated');
             this.positioning();
+            this.testimonialVisual(this.activeBubbleIndex);
+        
             if (this.activeBubbleIndex < 0) {
+                teleportation = true;
                 this.activeBubbleIndex += this.originalCount;
+                this.bubbleVisual(this.activeBubbleIndex);
             }
             if (this.activeBubbleIndex >= this.originalCount) {
+                teleportation = true;
                 this.activeBubbleIndex -= this.originalCount;
+                this.bubbleVisual(this.activeBubbleIndex);
             }
-            //this.positioning();
-            this.bubbleVisual(this.activeBubbleIndex);
-            this.testimonialVisual(this.activeBubbleIndex);
 
+            this.bubbleVisual(this.activeBubbleIndex);
+
+            slider.addEventListener('transitionend', e => {
+                    
+                if (teleportation && e.target) {
+                    slider.classList.add('nonanimated');
+                    this.testimonialVisual(this.activeBubbleIndex);
+                    this.positioning();
+                    this.sliderMargin = parseFloat(slider.style.marginLeft);
+                    offset = 0;
+                    setTimeout(() => {
+                        slider.classList.remove('nonanimated');
+                    }, 50);
+                }
+
+            })
+                        
             offset = 0;
             this.sliderMargin = parseFloat(slider.style.marginLeft);
         });
 
-        slider.addEventListener('transitionend', e => {
-            console.log(e);
-        })
-    }
+        // when mouse goes outside slider area rearranges position of current bubble and testimonial (clone of mouseup event)
+        slider.addEventListener('mouseleave', () => {
+            if (!this.dragState) {
+                return
+            }
+            let teleportation = false;
+            this.dragState = false;
 
+            this.activeBubbleIndex += Math.round(this.cardView * offset);
+            
+            slider.classList.remove('nonanimated');
+            this.positioning();
+            this.testimonialVisual(this.activeBubbleIndex);
+        
+            if (this.activeBubbleIndex < 0) {
+                teleportation = true;
+                this.activeBubbleIndex += this.originalCount;
+                this.bubbleVisual(this.activeBubbleIndex);
+            }
+            if (this.activeBubbleIndex >= this.originalCount) {
+                teleportation = true;
+                this.activeBubbleIndex -= this.originalCount;
+                this.bubbleVisual(this.activeBubbleIndex);
+            }
+
+            this.bubbleVisual(this.activeBubbleIndex);
+
+            slider.addEventListener('transitionend', e => {
+                    
+                if (teleportation && e.target) {
+                    slider.classList.add('nonanimated');
+                    this.testimonialVisual(this.activeBubbleIndex);
+                    this.positioning();
+                    this.sliderMargin = parseFloat(slider.style.marginLeft);
+                    offset = 0;
+                    setTimeout(() => {
+                        slider.classList.remove('nonanimated');
+                    }, 50);
+                }
+
+            });
+                        
+            offset = 0;
+            this.sliderMargin = parseFloat(slider.style.marginLeft);
+        })
+
+    }
 
 }
 
