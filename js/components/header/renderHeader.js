@@ -7,13 +7,23 @@ function renderHeader(selector, data) {
 //input validation
 
 //logic
-
+    const DOM = document.querySelector(selector);
+    if (!DOM) {
+        return false;
+    }
+    let HTML = '';
+    for (let item of data) {
+        HTML += `<a href="${item.link}" class="fa" aria-hidden="true">${item.name}</a>`
+    } //item - mano saraso objektas (is headerData)
 
 //post logic validation
-
+    if (HTML === '') {
+        return false;
+    }
 
 //return
-
+    DOM.innerHTML = HTML;
+    return true;
 }
 
 export { renderHeader }

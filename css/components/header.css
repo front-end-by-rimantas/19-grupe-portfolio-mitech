@@ -159,7 +159,7 @@ header.container {
         .searchlang .searchsubmit::before {
             font-size: 20px;
         }
-
+       
 
 @media (max-width: 1300px) {
     .header .navigation .logo {
@@ -186,15 +186,18 @@ header.container {
         grid-column: 12/13;
         order: 3;
     }
+    #nav_block {
+        display: none;
+    }
     .header .row.navigation nav a:not(:first-of-type) {
         display: none; /* gonna be changed when hamburger is applied*/
     }
 }
-
 @media (max-width: 860px) {
     .navigation .logo {
         order: 1;
     }
+   
     .header .row.navigation .searchlang {
         display: none; /* gonna be changed when hamburger is applied*/
     }

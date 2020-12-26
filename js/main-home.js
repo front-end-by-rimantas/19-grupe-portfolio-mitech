@@ -48,7 +48,7 @@ import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
 EXECUTION
 ****************/
 /* header */
-renderHeader('navigation nav', headerData);
+renderHeader('#nav_block', headerData);
 /* hero */
 
 /* brand slider */
