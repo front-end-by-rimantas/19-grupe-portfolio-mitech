@@ -32,14 +32,36 @@
             <nav class="col-6 col-lg-7" id="nav_block">
                 <!-- info sugeneruota su JS -->
             </nav>
-            <div class="searchlang col-3">
-                <a class="language fa" href="#"> english</a>
+            <div class="searchlang col-3" id="lang_block">
+                <div class="dropdown">
+                    <div class="langbtn">
+                        <img class="lang" src="img/header/en.png" alt="en">English
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="#">
+                        <img class="lang" src="img/header/fr.png" alt="fr">Français</a>
+                      <a href="#">
+                        <img class="lang" src="img/header/de.png" alt="de">Deutsch</a>
+                    </div>
+                  </div>
+                <!-- <img src="./img/header/en.png" alt=""> -->
+                <!-- <select class="language fa" href="#">
+                    <option value="0" >English </option>
+                    <option value="1">French</option>
+                    <option value="2">Deutch</option>
+                </select> -->
+                <span class="custom-arrow"></span>
+                
                 <form>
                     <input class="search" type="text" placeholder="Search...">
                     <button class="searchsubmit fa fa-search" aria-hidden="true"></button>
                 </form>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
-        <!--    <div class="hamburger fa fa-bars" aria-hidden="true"></div> -->
         </div>
         <!-- navigation end -->
     </header>

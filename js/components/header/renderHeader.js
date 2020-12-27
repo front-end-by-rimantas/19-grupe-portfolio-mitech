@@ -7,8 +7,8 @@ function renderHeader(selector, data) {
 //input validation
 
 //logic
-    const DOM = document.querySelector(selector);
-    if (!DOM) {
+    const headerDOM = document.querySelector(selector);
+    if (!headerDOM) {
         return false;
     }
     let HTML = '';
@@ -20,9 +20,9 @@ function renderHeader(selector, data) {
     if (HTML === '') {
         return false;
     }
-
+    
 //return
-    DOM.innerHTML = HTML;
+    headerDOM.innerHTML = HTML;
     return true;
 }
 

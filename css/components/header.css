@@ -40,7 +40,7 @@ header.container {
         }
 .navigation .logo {
     display: inline-block;
-    margin-left: 30%;
+    margin-left: 20%;
     padding: 12px 0;
     order: 1;
 }
@@ -55,6 +55,7 @@ header.container {
     width: 100%;
     height: 100%;
     order: 2;
+    gap: 15px;
 }
     .navigation nav a {
         display: inline-block;
@@ -95,6 +96,48 @@ header.container {
             content: " \f107";
             white-space: pre;
         }
+/* Language Button */
+.langbtn {
+    display: flex;
+    width: auto;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    order: 3;
+    text-transform: uppercase;
+    font-family: Cerebri-SemiBold;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .langbtn::after{
+    font-family: FontAwesome;
+    content: " \f107";
+    margin-left: 10px;
+  }
+  img.lang {
+      margin-right: 10px;
+  }
+  /* Language Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 2;
+   
+}
+  .dropdown-content::after {
+   
+  }
+  
+  /* Links inside */
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+  }
+  /* Show menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
 .searchlang {
     display: flex;
     justify-content: center;
@@ -102,26 +145,22 @@ header.container {
     order: 3;
 }
     .searchlang a {
-        display: flex;
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
         align-items: center;
-        width: 45%;
+        width: 100%;
         height: 100%;
-        text-align: right;
+        background-color: #fff;
+        /* text-align: left; */
         text-decoration: none;
         text-transform: uppercase;
         font-family: Cerebri-SemiBold;
         font-size: 15px;
         margin-right: 5%;
         position: relative;
-    }
-    .searchlang a::before {
-        content: url(../../img/header/en.png);
-        padding-right: 12px;
-    }
-    .searchlang a::after {
+        cursor: pointer;
+    } 
+   .searchlang a::after {
         font-family: FontAwesome;
-        content: " \f107";
         white-space: pre;
         font-size: 12px;
         padding-left: 10px;
@@ -135,7 +174,7 @@ header.container {
     }
         .searchlang .search {
             display: inline-block;
-            width: 70%;
+            width: 100%;
             border: none;
             margin-left: 5%;
         }
@@ -159,7 +198,11 @@ header.container {
         .searchlang .searchsubmit::before {
             font-size: 20px;
         }
-       
+        .burger div {
+            width: 25px;
+            height: 5px;
+            order: 4;
+        }
 
 @media (max-width: 1300px) {
     .header .navigation .logo {
