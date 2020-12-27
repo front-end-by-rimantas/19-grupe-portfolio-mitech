@@ -13,7 +13,7 @@ function renderHeader(selector, data) {
     }
     let HTML = '';
     for (let item of data) {
-        HTML += `<a href="${item.link}" class="fa" aria-hidden="true">${item.name}</a>`
+        HTML += `<a href="${item.link}" class="fa header" aria-hidden="true">${item.name}</a>`
     } //item - mano saraso objektas (is headerData)
 
 //post logic validation

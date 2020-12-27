@@ -72,11 +72,11 @@ header.container {
     .navigation nav a:hover {
         color: var(--font-blue);
     }
-    .navigation nav a:first-of-type {
+    /* .navigation nav a:first-of-type {
         color: var(--font-blue);
         border-bottom: 4px var(--font-blue) solid;
-    }
-    .navigation nav a:not(:first-of-type):before { /* copy from underline-link with few tweaks*/
+    } */
+    .navigation nav a::before { /* copy from underline-link with few tweaks*/
     content: "";
     position: absolute;
     width: 100%;
@@ -88,14 +88,14 @@ header.container {
     transform-origin: bottom left;
     transition: transform 0.5s ease-out;
 }
-.navigation nav a:not(:first-of-type):hover::before {
+.navigation nav a:hover::before {
     transform: scaleX(1);
 }
         .navigation nav a::after {
             font-family: FontAwesome;
             content: " \f107";
-            white-space: pre;
         }
+    
 /* Language Button */
 .langbtn {
     display: flex;
@@ -123,12 +123,7 @@ header.container {
     position: absolute;
     min-width: 160px;
     z-index: 2;
-   
-}
-  .dropdown-content::after {
-   
-  }
-  
+    }
   /* Links inside */
   .dropdown-content a {
     padding: 12px 16px;
@@ -198,10 +193,19 @@ header.container {
         .searchlang .searchsubmit::before {
             font-size: 20px;
         }
+        .burger {
+            display: none;
+            
+        }
         .burger div {
-            width: 25px;
-            height: 5px;
+            width: 24px;
+            height: 3px;
+            cursor: pointer;
+            position: relative;
             order: 4;
+            background-color: var(--font-darkgrey);
+            margin: 5px;
+            
         }
 
 @media (max-width: 1300px) {
@@ -228,13 +232,23 @@ header.container {
     .header .row.navigation nav {
         grid-column: 12/13;
         order: 3;
+        
     }
-    #nav_block {
-        display: none;
+    .burger {
+        display: inline-block;
+        position: absolute;
+        top: 9%;
+        left: 95%;
+        z-index: 2;       
     }
-    .header .row.navigation nav a:not(:first-of-type) {
-        display: none; /* gonna be changed when hamburger is applied*/
-    }
+      #nav_block {
+          display: none;
+      }  
+   
+    
+    /*.header .row.navigation nav a:not(:first-of-type) {
+        display: none; /* gonna be changed when hamburger is applied
+    }*/
 }
 @media (max-width: 860px) {
     .navigation .logo {
@@ -247,5 +261,11 @@ header.container {
     .header .row.navigation nav{
         grid-column: 10/13;
         order: 2;
+    }
+}
+@media (max-width: 425px) {
+    .burger {
+       top: 15%;
+       left: 90%;
     }
 }
