@@ -195,7 +195,6 @@ header.container {
         }
         .burger {
             display: none;
-            
         }
         .burger div {
             width: 24px;
@@ -207,7 +206,9 @@ header.container {
             margin: 5px;
             
         }
-
+        .fa-ellipsis-h {
+            display: none;
+        }
 @media (max-width: 1300px) {
     .header .navigation .logo {
         order: 1;
@@ -220,7 +221,6 @@ header.container {
         order: 3;
     }
 }
-
 @media (max-width: 1080px) {
     .header .navigation .logo {
         order: 1;
@@ -232,7 +232,6 @@ header.container {
     .header .row.navigation nav {
         grid-column: 12/13;
         order: 3;
-        
     }
     .burger {
         display: inline-block;
@@ -244,8 +243,6 @@ header.container {
       #nav_block {
           display: none;
       }  
-   
-    
     /*.header .row.navigation nav a:not(:first-of-type) {
         display: none; /* gonna be changed when hamburger is applied
     }*/
@@ -254,13 +251,31 @@ header.container {
     .navigation .logo {
         order: 1;
     }
-   
+   #lang_block {
+       display: none;
+   }
     .header .row.navigation .searchlang {
         display: none; /* gonna be changed when hamburger is applied*/
     }
     .header .row.navigation nav{
         grid-column: 10/13;
         order: 2;
+    }
+    .burger {
+        left: 90%;
+    }
+    .fa-ellipsis-h {
+        display: inline-block;
+        position:absolute;
+        font-size: 30px;
+        top: 9%;
+        left: 95%;
+        color: var(--font-darkgrey);
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .fa-ellipsis-h:hover {
+       color: var(--btn-color);
     }
 }
 @media (max-width: 425px) {
