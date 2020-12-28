@@ -207,17 +207,8 @@ header.container {
         .burger {
             visibility: hidden;
         }
-        .burger .line1:hover {
-            background-color: var(--btn-color);
-            width: 18px;
-        }
-        .burger .line2:hover {
-            background-color: var(--btn-color);
-                    }
-        .burger .line3:hover {
-            background-color: var(--btn-color);
-            width: 10px;
-        }
+
+        /* Burger animation, kada keiciasi eilutes iki 231 eilutes*/
         .burger div {
             width: 24px;
             height: 3px;
@@ -226,10 +217,18 @@ header.container {
             order: 4;
             background-color: var(--font-darkgrey);
             margin: 5px;
+            transition: all 1s;
         }
-     
-
-
+        .burger:hover div {
+            background-color: var(--font-blue);
+        }
+        .burger:hover > .line1
+         {
+            width: 19px;
+        }
+        .burger:hover > .line3 {
+            width: 15px;
+        }
         .fa-ellipsis-h {
             display: none;
         }
