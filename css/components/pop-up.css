@@ -1,0 +1,56 @@
+.pop-up {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+.hidden {
+    visibility: hidden;
+}
+
+    .pop-up > .toolbar {
+        width: 100%;
+              
+    }
+    
+        .toolbar > span > i  {
+            font-weight: 200;
+            font-size: 18px;
+            color: white;
+            padding: 10px;
+            float: right;
+            opacity: 0.8;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+            .toolbar > span > i:hover {
+                opacity: 1;
+            }
+
+
+
+        .toolbar > .counter {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+    .pop-up.video-content {
+        width: 100%;
+        
+        position: relative;
+    }
+        .video-content > .video-object  {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 50%;
+        }
