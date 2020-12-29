@@ -25,8 +25,12 @@ import { factWrapperData } from './data/factWrapperData.js';
 /* video */
 
 /* case studies */
+import { caseStudiesData } from './data/caseStudiesData.js'
+import { CaseStudiesRender } from './components/caseStudies/caseStudiesRender.js'
 
 /* testimonials */
+import { testimonialsData } from './data/testimonialsData.js';
+import { Testimonials } from './components/testimonials/Testimonials.js';
 
 /* blog & news */
 
@@ -35,6 +39,9 @@ import { factWrapperData } from './data/factWrapperData.js';
 /* footer */
 
 /* social icon & copyright */
+import { iconsData } from './data/socialiconsData.js';
+import { renderIcons } from './components/socialIcons/renderSocialIcons.js';
+
 
 /* back to top */
 import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
@@ -65,8 +72,22 @@ new FactWrapper({
 /* video */
 
 /* case studies */
+new CaseStudiesRender({
+    selector: '.cards',
+    data: caseStudiesData,
+})
+window.addEventListener('resize', ()=> {
+    new CaseStudiesRender({
+         selector: '.cards',
+         data: caseStudiesData,
+        })
+}) 
 
 /* testimonials */
+new Testimonials({
+    selector: '#testimonials',
+    data: testimonialsData,
+})
 
 /* blog & news */
 
@@ -75,6 +96,8 @@ new FactWrapper({
 /* footer */
 
 /* social icon & copyright */
+
+renderIcons('#social_icons_block', iconsData)
 
 /* back to top */
 animateBackToTop();

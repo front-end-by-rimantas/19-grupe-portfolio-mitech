@@ -1,10 +1,18 @@
+.case {
+    background-color: #fbfbfb;
+    background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    max-width: 100vw;
+}
+
 
    .case {
        background-color: #fbfbfb;
        background-image: url(https://demo.hasthemes.com/mitech-preview/assets/images/patterns/mitech-home-infotechno-case-study-section-bg.png);
        background-repeat: no-repeat;
        background-position: 0% 100%;
-       max-width: 100vw;
+       max-width: 100%;
    }
     #case-head {
         text-align: center;   
@@ -17,44 +25,84 @@
             padding-bottom: 10px;
         }
 
-   
-   .cards-block > .col-4 {
-        gap: 20px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 8px 13px 5px 3px #f4f4f4;
-        cursor: pointer;
-        transition: all ease-in-out 0.5s;
-    
-    }
-.cards-block >.col-4 > .card {
-    max-width: 100vw;
+
+#case-head>h3 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.cards {
+    overflow: hidden;
+
+}
+
+.cards>.cards-block {
+    overflow: hidden;
+    /* width: 200%; */
+    padding: 20px 0px;
+    transition: all 1s;
+}
+
+
+.cards-block .card {
+    float: left;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
     
 }
 
-    .card > img {
-        width: 100%;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
+.card>img {
+    box-shadow: 3px 0px 8px 1px #f4f4f4;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
-    .content > h4 {
+
+.cards-block>.card:hover {
+    transform: translateY(-5px);
+    
+}
+
+.cards-block>.card:hover .view {
+    background-position: bottom left;
+    color: #ffff
+}
+
+.cards-block>.card:hover .view .fa {
+    color: white;
+}
+
+.cards-block .card > .content {
+    background-color: white;
+    box-shadow: 3px 6px 8px 3px #f4f4f4;
+    
+
+}
+
+
+    .content>h4 {
         font-weight: 500;
         font-size: 20px;
         padding: 20px 20px 0 20px;
     }
-    .content > u {
-       line-height: 36px;
-       color: var(--font-blue);
-       text-decoration: none;
-       padding: 0px 20px;
-       
+
+    .content>u {
+        line-height: 36px;
+        color: var(--font-blue);
+        text-decoration: none;
+        padding: 0px 20px;
     }
-    .content > p {
+
+    .content>p {
         margin-top: 10px;
         color: var(--font-grey);
         padding: 0px 20px;
-
     }
 
     .content>.view {
@@ -64,89 +112,92 @@
         padding: 20px 20px 20px 20px;
         color: var(--font-blue);
         border-top: 1px solid #ccc;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
         background: linear-gradient(to top, var(--font-blue) 50%, #fff 50%);
         background-size: 100% 200%;
         background-position: top left;
-        transition: all 0.5s ease-out;
+        transition: 0.5s ease-out;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: relative;
     }
-        .content>.view > .fa {
+
+        .content .view>.fa {
+            position: absolute;
             transition: all 0.5s ease-out;
             color: var(--font-blue);
             margin-left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
-    .cards-block > .col-4:hover {
-        
-        transform: translateY(-5px);
-    }
-    
-        .cards-block > .col-4:hover .view  {
-                background-position: bottom left;
-                color: #ffff
-            }
-            .cards-block > .col-4:hover .view .fa {
-                color: white;
-            }
-
 .bubbles {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
     font-size: 18px;
     display: inline-block;
+    width: 100%;
 }
 
-    .bubbles .bubble {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        background: var(--font-grey);
-        border-radius: 50%;
-        /* padding:5px; */
-        margin-right: 10px;
-        transition: all ease-in-out 0.5s;
-    }
-        .bubbles .bubble:hover {
-            transform: translateY(-2px);
-            width: 12px;
-            height: 12px;
-            background-color: var(--font-blue);
-        }
+.bubble.active {
+    transform: translateY(-2px);
+    width: 12px;
+    height: 12px;
+    background-color: var(--font-blue);
+}
+
+.bubble {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--font-grey);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.bubbles .bubble:hover {
+    transform: translateY(-2px);
+    width: 12px;
+    height: 12px;
+    background-color: var(--font-blue);
+}
 
 .challenge {
     text-align: center;
 }
-.challenge > p {
+
+.challenge>p {
     line-height: 1.4;
     font-weight: 600;
     color: black;
     font-size: 20px;
 }
-    .challenge > p > a {
-        font-size: 20px;
-        text-decoration: none;
-        color: var(--font-blue);
-        
-    }
 
-    .challenge > p > .underline-link {
-        color: var(--font-blue);
-        border-bottom: 1px solid #ccc;
-    }
-    .challenge .underline-link::after {
-        background-color: var(--font-blue);
-        height: 1px;
-        bottom: -1px;
-    }
-@media (max-width: 1300px){
-    .cards-block > .col-4:nth-of-type(3){  
-        display: none;
-
+.challenge>p>a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--font-blue);
 }
+
+.challenge>p>.underline-link {
+    color: var(--font-blue);
+    border-bottom: 1px solid #ccc;
+}
+
+.challenge .underline-link::after {
+    background-color: var(--font-blue);
+    height: 1px;
+    bottom: -1px;
+}
+
+@media (max-width: 1300px) {
+    .cards-block>.col-4:nth-of-type(3) {
+        display: none;
     }
+}
+
 @media (max-width: 860px) {
-    .cards-block > .col-4:nth-of-type(2){
+    .cards-block>.col-4:nth-of-type(2) {
         display: none;
     }
 }
