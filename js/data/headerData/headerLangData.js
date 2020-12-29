@@ -1,4 +1,6 @@
-const languages = [
+const languages = {
+    // maxLimit: 3,
+    data: [
     {
         language: 'English',
         flag: 'img/header/en.png',
@@ -11,7 +13,8 @@ const languages = [
         language: 'Deutsch',
         flag: './img/header/de.png',
     },
-];
+]
+}
 
 export { languages }
 

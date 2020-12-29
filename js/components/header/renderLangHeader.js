@@ -1,38 +1,44 @@
 /**
+ * Duomenys bus aprasyti veliau
  * 
  */
-function renderLangHeader(selector, data) {
+function renderLangHeader(selector, duomenys) {
+    
+    if (typeof selector !== "string" || (!Array.isArray(duomenys.data))) {
+        console.error("Netinkami duomenys");
+        return false;
+    }  /* jei selektorius ne stringas ir jei Array yra ne array - blogi duomenys*/
+    
 
     const langDOM = document.querySelector(selector);
     if(!langDOM) {
         return false;
     }
     let HTML = '';
-    for (let item of data) {
-        HTML += `<select class="language fa"><img src="${item.flag}" alt="">
-        <option value="0">${item.language}</option></select>`;
-        
-        // <div class="kalbos">
-        // <select>
-        //     <option value="">English</option>
-        //  </select>
-        console.log(item.flag);
+    // const limit = duomenys.maxLimit;
+     const limit = duomenys.data.length;
+    HTML += `<div class="dropdown">
+    <div class="langbtn">
+        <img class="lang" src="${duomenys.data[0].flag}" alt="en">${duomenys.data[0].language}
+    </div>
+    <div class="dropdown-content">`;
+    for (let i = 1; i < limit; i++) {
+        const features = duomenys.data[i];
+        HTML += `
+          <a href="#">
+            <img class="lang" src="${features.flag}" alt="fr">${features.language}</a>`;
     }
-    if (HTML === '') {
+     HTML +=` </div></div> 
+        <span class="custom-arrow"></span>
+        <form>
+            <input class="search" type="text" placeholder="Search...">
+            <button class="searchsubmit fa fa-search" aria-hidden="true"></button>
+        </form>`;
+    
+     if (HTML === '') {
         return false
     }
-    console.log(HTML);
-    // langDOM.innerHTML = HTML;
-    
-    let HTML2 = `<form>
-    <input class="search" type="text" placeholder="Search...">
-    <button class="searchsubmit fa fa-search" aria-hidden="true"></button>
-</form>`;
-
-    langDOM.innerHTML = HTML + HTML2;
+    langDOM.innerHTML = HTML;
     return true;
-
 }
-
-
 export { renderLangHeader }

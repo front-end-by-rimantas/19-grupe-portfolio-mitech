@@ -51,7 +51,7 @@ EXECUTION
 ****************/
 /* header */
 renderHeader('#nav_block', headerData);
-// renderLangHeader('#lang_block', languages);
+renderLangHeader('#lang_block', languages);
 /* hero */
 
 /* brand slider */
