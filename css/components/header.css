@@ -3,6 +3,7 @@ header.container {
     padding: 5px 0 0 0;
     gap: 0px;
 }
+
     header.container > .row {
         grid-column: 1/2;
     }
@@ -38,33 +39,44 @@ header.container {
             color: var(--font-darkgrey);
             font-size: 14px;
         }
+        .row.navigation {
+            position: relative;
+        }
 .navigation .logo {
-    display: inline-block;
-    margin-left: 20%;
-    padding: 12px 0;
+    /* display: inline-block; */
+    align-self: center;
+  /* justify-self: center; */
+    padding: 8px 6px 10px;
+    align-items: center;
     order: 1;
 }
+.logo.col-3 {
+    display: inline-block;
+    /* width: 100%; */
+    height: 70px;
+}
     .navigation .logo > img {
-        display: inline-block;
         height: 50px;
     }
 .navigation nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    /* text-align: center; */
     width: 100%;
     height: 100%;
     order: 2;
-    gap: 15px;
+    /* gap: 15px; */
 }
     .navigation nav a {
         display: inline-block;
-        height: 100%;
+        /* align-items: center; */
+        /* height: 100%; */
         font-family: Cerebri-Bold;
         font-weight: 16px;
         text-decoration: none;
         color: var(--font-black);
-        padding: 29px 4px;
+        padding: 20px 10px;
         position: relative;
         transition: 0.5s ease-out;
         order: 2;
@@ -145,10 +157,10 @@ header.container {
 }
 .searchlang {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     order: 3;
-    position: relative;
+    /* position: relative; */
 }
     .searchlang a {
         /* justify-content: flex-end; */
@@ -260,7 +272,7 @@ header.container {
         visibility: visible;
         display: inline-block;
         position: absolute;
-        top: 9%;
+        top: 28%;
         left: 95%;
         z-index: 2;       
     }
@@ -289,15 +301,17 @@ header.container {
         order: 2;
     }
     .burger {
-        left: 90%;
+        left: 88%;
     }
     .fa-ellipsis-h {
         display: inline-block;
+        width: 100%;
+        border-radius: 50%;
         position:absolute;
         font-size: 30px;
-        top: 9%;
+        top: 28%;
         left: 95%;
-        color: var(--font-darkgrey);
+        color: #6D70A6;
         font-weight: 400;
         cursor: pointer;
     }
@@ -307,7 +321,11 @@ header.container {
 }
 @media (max-width: 425px) {
     .burger {
-       top: 15%;
-       left: 90%;
+       top: 28%;
+       left: 78%;
+    }
+    .fa-ellipsis-h {
+        top: 28%;
+        left: 90%;
     }
 }
