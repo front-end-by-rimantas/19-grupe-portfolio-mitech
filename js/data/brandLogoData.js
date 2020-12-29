@@ -1,0 +1,40 @@
+const brandLogoData = [
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+{
+    img:'',
+    img:'',
+},
+];
+
+export { brandLogoData }

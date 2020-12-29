@@ -6,6 +6,8 @@ ALL IMPORTS
 /* hero */
 
 /* brand slider */
+import { BrandLogo } from './components/brandLogo/BrandLogo.js';
+import { brandLogoData } from './data/brandLogoData.js';
 
 /* services */
 import { serviceRenderFeatures } from './components/serviceSection/serviceRenderFeatures.js';
@@ -55,6 +57,7 @@ EXECUTION
 /* hero */
 
 /* brand slider */
+new BrandLogo('#brands_slider', brandLogoData);
 
 /* services */
 serviceRenderFeatures('#service_features_block', serviceData)
