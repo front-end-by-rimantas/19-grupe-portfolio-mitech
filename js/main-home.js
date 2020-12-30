@@ -2,7 +2,10 @@
 ALL IMPORTS
 ****************/
 /* header */
-
+import { renderHeader } from './components/header/renderHeader.js';
+import { headerData } from './data/headerData/headerData.js';
+import { renderLangHeader } from './components/header/renderLangHeader.js';
+import { languages } from './data/headerData/headerLangData.js';
 /* hero */
 
 /* brand slider */
@@ -55,7 +58,8 @@ import { PopUpData } from './data/videoPopUpdata.js'
 EXECUTION
 ****************/
 /* header */
-
+renderHeader('#nav_block', headerData);
+renderLangHeader('#lang_block', languages);
 /* hero */
 
 /* brand slider */
