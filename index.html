@@ -26,25 +26,21 @@
         <!-- top message end -->
         <!-- navigation begin -->
         <div class="row navigation">
-            <a class="logo col-3 col-lg-2" href="#">
+            <a class="logo col-3 col-lg-2 col-xs-12" href="#">
                 <img src="./img/header/logo-dark.png" alt="logo-dark">
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="fa fa-ellipsis-h" aria-hidden="true"></div>
             </a>
-            <nav class="col-6 col-lg-7">
-                <a href="#" class="fa" aria-hidden="true">Home</a>
-                <a href="#" class="fa" aria-hidden="true">Company</a>
-                <a href="#" class="fa" aria-hidden="true">IT solutions</a>
-                <a href="#" class="fa" aria-hidden="true">Elements</a>
-                <a href="#" class="fa" aria-hidden="true">Case Studies</a>
-                <a href="#" class="fa" aria-hidden="true">Blog</a>
+            <nav class="col-6 col-lg-7" id="nav_block">
+                <!-- info sugeneruota su JS -->
             </nav>
-            <div class="searchlang col-3">
-                <a class="language fa" href="#"> english</a>
-                <form>
-                    <input class="search" type="text" placeholder="Search...">
-                    <button class="searchsubmit fa fa-search" aria-hidden="true"></button>
-                </form>
+            <div class="searchlang col-3" id="lang_block">
+               <!-- info sugeneruota su JS renderLangHeader.js -->
             </div>
-            <!--    <div class="hamburger fa fa-bars" aria-hidden="true"></div> -->
         </div>
         <!-- navigation end -->
     </header>
@@ -535,6 +531,7 @@
             <i class="fa fa-long-arrow-up"></i>
         </a>
     </div>
+    <div class="pop-up hidden"></div>
 
     <script src="./js/main-home.js" type="module"></script>
 </body>

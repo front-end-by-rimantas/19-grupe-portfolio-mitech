@@ -2,7 +2,10 @@
 ALL IMPORTS
 ****************/
 /* header */
-
+import { renderHeader } from './components/header/renderHeader.js';
+import { headerData } from './data/headerData/headerData.js';
+import { renderLangHeader } from './components/header/renderLangHeader.js';
+import { languages } from './data/headerData/headerLangData.js';
 /* hero */
 
 /* brand slider */
@@ -46,12 +49,17 @@ import { renderIcons } from './components/socialIcons/renderSocialIcons.js';
 /* back to top */
 import { animateBackToTop } from './components/backToTop/animateBackToTop.js'
 
+/* Video pop up */
+import { VideoPopUp } from './components/VideoPopUp/VideoPopUp.js'
+import { PopUpData } from './data/videoPopUpdata.js'
+
 
 /***************
 EXECUTION
 ****************/
 /* header */
-
+renderHeader('#nav_block', headerData);
+renderLangHeader('#lang_block', languages);
 /* hero */
 
 /* brand slider */
@@ -101,3 +109,9 @@ renderIcons('#social_icons_block', iconsData)
 
 /* back to top */
 animateBackToTop();
+
+/* Video pop up */
+new VideoPopUp({
+    data: PopUpData,
+    selector: '.pop-up'
+})
