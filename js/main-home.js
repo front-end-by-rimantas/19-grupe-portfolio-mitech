@@ -65,7 +65,11 @@ renderLangHeader('#lang_block', languages);
 /* hero */
 
 /* brand slider */
-new BrandLogo('#brands_slider', brandLogoData);
+new BrandLogo({
+    selector:'#brands_slider',
+    data: brandLogoData,
+})
+;
 
 /* services */
 serviceRenderFeatures('#service_features_block', serviceData)
