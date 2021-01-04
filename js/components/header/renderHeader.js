@@ -13,16 +13,30 @@ function renderHeader(selector, data) {
     }
     let HTML = '';
     for (let item of data) {
-        HTML += `<a href="${item.link}" class="fa header" aria-hidden="true">${item.name}</a>`
+        HTML += `<a href="${item.link}" class="fa header" aria-hidden="true">${item.name}</a>
+        <ul class="header-ul"> `;
+
+        for (let menu of Object.entries(item.submenu)) {
+            console.log(Object.values(menu)[1].name);
+            HTML +=`  <li class="header-li"><a href="${Object.values(menu)[1].link}" id="submenu">${Object.values(menu)[1].name}</a></li>
+            `;
+        }
+     //   for (let menu  of item.submenu) {
+        //     HTML +=`  <li><a href="#" id="submenu">${item.submenu}</a></i>
+        //    `;
+     //   }
+        HTML +=` </ul>`;
+       //     
     } //item - mano saraso objektas (is headerData)
 
 //post logic validation
     if (HTML === '') {
         return false;
     }
-    
+    console.log(HTML);
 //return
     headerDOM.innerHTML = HTML;
+    
     return true;
 }
 

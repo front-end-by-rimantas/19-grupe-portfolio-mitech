@@ -130,7 +130,6 @@ header.container {
   }
   img.lang {
       margin-right: 10px;
-      
   }
   /* Language Content (Hidden by Default) */
   .dropdown-content {
@@ -247,6 +246,24 @@ header.container {
         .fa-ellipsis-h {
             display: none;
         }
+        #nav_block {
+            position: relative;
+        }
+      
+       
+       
+        .header-ul {
+            display: block;
+            list-style: none;
+            background-color: #6D70A6;
+            width: 200px;
+            /* height: 200px; */
+            position: absolute;
+            top: 50%;
+            justify-content: center;
+            align-self: center;
+        }
+       
 @media (max-width: 1300px) {
     .header .navigation .logo {
         order: 1;
