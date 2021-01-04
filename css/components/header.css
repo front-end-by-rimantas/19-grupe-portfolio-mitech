@@ -246,23 +246,16 @@ header.container {
         .fa-ellipsis-h {
             display: none;
         }
-        #nav_block {
+        .header-nav {
             position: relative;
         }
-      
-       
-       
+
         .header-ul {
-            display: block;
-            list-style: none;
-            background-color: #6D70A6;
-            width: 200px;
-            /* height: 200px; */
             position: absolute;
-            top: 50%;
-            justify-content: center;
-            align-self: center;
+            justify-content: space-around;
+            background-color: #6D70A6;
         }
+      
        
 @media (max-width: 1300px) {
     .header .navigation .logo {

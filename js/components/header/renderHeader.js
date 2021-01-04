@@ -13,7 +13,7 @@ function renderHeader(selector, data) {
     }
     let HTML = '';
     for (let item of data) {
-        HTML += `<a href="${item.link}" class="fa header" aria-hidden="true">${item.name}</a>
+        HTML += `<div class="header-block"><div class="header-nav"><a href="${item.link}" class="fa header" aria-hidden="true">${item.name}</a>
         <ul class="header-ul"> `;
 
         for (let menu of Object.entries(item.submenu)) {
@@ -25,7 +25,7 @@ function renderHeader(selector, data) {
         //     HTML +=`  <li><a href="#" id="submenu">${item.submenu}</a></i>
         //    `;
      //   }
-        HTML +=` </ul>`;
+        HTML +=` </ul></div></div>`;
        //     
     } //item - mano saraso objektas (is headerData)
 
